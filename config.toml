@@ -1,4 +1,4 @@
-BaseUrl= "https://blog.benchr.de/"
+BaseUrl= "https://blog.benchr.me/"
 LanguageCode= "en-us"
 Title= "benchr"
 theme= "casper"
@@ -35,7 +35,7 @@ canonifyurls = true
 	cover = "images/cover.jpg"
 	author = "Benjamin Herzog"
 	authorlocation = "Dresden, Germany"
-	authorwebsite = "https://blog.benchr.de"
+	authorwebsite = "https://blog.benchr.me"
 	bio= "iOS developer, master degree student in computer science"
 	googleAnalyticsUserID = "UA-90259105-1"
 	# Optional RSS-Link, if not provided it defaults to the standard index.xml
