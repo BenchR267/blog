@@ -22,7 +22,7 @@ Lugaer Straße 24f<br>
 01259 Dresden<br>
 
 E-Mail: mail@benchr.de<br>
-Internet: [https://blog.benchr.de](https://blog.benchr.de)<br>
+Internet: [https://blog.benchr.me](https://blog.benchr.me)<br>
 
 <br>
 Disclaimer
