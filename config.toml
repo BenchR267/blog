@@ -1,0 +1,48 @@
+BaseUrl= "https://blog.benchr.de/"
+LanguageCode= "en-us"
+Title= "benchr"
+theme= "casper"
+paginate = 10
+DisqusShortname = "blog-benchr"
+Copyright = "All rights reserved - 2017"
+canonifyurls = true
+
+[[menu.main]]
+	identifier = "blog"
+	name = "Blog"
+	url = "/"
+	weight = -120
+
+[[menu.main]]
+	identifier = "rss"
+	name = "RSS feed"
+	url = "/index.xml"
+	weight = -119
+
+[[menu.main]]
+	name = "Mail"
+	pre = "<h2>Contact me</h2>"
+	url = "mailto:mail@benchr.de"
+	weight = 109
+	
+[[menu.main]]
+	name = "Keybase"
+	url = "https://Keybase.io/benchr"
+	weight = 110
+
+[params]
+	description = "iOS developer, master degree student in computer science"
+	cover = "images/cover.jpg"
+	author = "Benjamin Herzog"
+	authorlocation = "Dresden, Germany"
+	authorwebsite = "https://blog.benchr.de"
+	bio= "iOS developer, master degree student in computer science"
+	googleAnalyticsUserID = "UA-90259105-1"
+	# Optional RSS-Link, if not provided it defaults to the standard index.xml
+	RSSLink = "/index.xml"
+	githubName = "BenchR267"
+	twitterName = "benchr"
+	facebookName = "benschr"
+	linkedinName = "benjamin-herzog-1a7a9478"
+	# set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
+	hideHUGOSupport = false
