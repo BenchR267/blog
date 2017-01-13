@@ -1,0 +1,3 @@
+#!/bin/bash
+
+hugo && ssh benchr@bootes.uberspace.de 'rm -rf subdomains/blog.benchr.de/*' && scp -r public/* benchr@bootes.uberspace.de:subdomains/blog.benchr.de/
