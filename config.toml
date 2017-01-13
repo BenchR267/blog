@@ -17,14 +17,14 @@ canonifyurls = true
 	identifier = "rss"
 	name = "RSS feed"
 	url = "/index.xml"
-	weight = -119
+	weight = -118
 
 [[menu.main]]
 	name = "Mail"
 	pre = "<h2>Contact me</h2>"
 	url = "mailto:mail@benchr.de"
 	weight = 109
-	
+
 [[menu.main]]
 	name = "Keybase"
 	url = "https://Keybase.io/benchr"
