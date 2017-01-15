@@ -5,7 +5,7 @@ title = "A New Beginning"
 draft = false
 share = true
 tags = ["blog"]
-slug = "A New Beginning"
+slug = "beginning"
 author = "Benjamin Herzog"
 image = "images/A_New_Beginning.jpg"
 

@@ -5,13 +5,13 @@ title = "Some Thoughts"
 draft = false
 share = true
 tags = ["blog", "decisions"]
-slug = "Some Thoughts"
+slug = "thoughts"
 author = "Benjamin Herzog"
 image = "images/Some_Thoughts.jpg"
 
 +++
 
-This week I want to share some of my thoughts about my **new programming language**. Or to be a bit more specific: about some technical details for building the toolchain.
+This week I want to share some of my thoughts about my [**new programming language**](/post/beginning). Or to be a bit more specific: about some technical details for building the toolchain.
 There are a lot of things that need to be decided which are also very important for the **planning process**. Here is an overview over some of them:
 
 - Will the language be **compiled** or **interpreted**?
