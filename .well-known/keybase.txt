@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/benchr
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blog.benchr.de
+  * I am benchr (https://keybase.io/benchr) on keybase.
+  * I have a public key with fingerprint 3A1C F189 19E3 C5C6 27FF  B26D 34E9 4570 01C6 1685
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01014bba9468b6a0eac4bf87ba3ac433c3761357fd402ccd68b21733c581c0aeec070a",
+            "fingerprint": "3a1cf18919e3c5c627ffb26d34e9457001c61685",
+            "host": "keybase.io",
+            "key_id": "34e9457001c61685",
+            "kid": "01014bba9468b6a0eac4bf87ba3ac433c3761357fd402ccd68b21733c581c0aeec070a",
+            "uid": "5d20c0aaee4cefd9e950d947884e8100",
+            "username": "benchr"
+        },
+        "service": {
+            "hostname": "blog.benchr.de",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1485933536,
+    "expire_in": 157680000,
+    "prev": "5e6125246bdc851c4a40926ce0ab59ecb0e88200876c3248a2c6413f3ef7702c",
+    "seqno": 41,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.62
+Comment: https://keybase.io/crypto
+
+yMImAnicrZJbbAxRGMe32rosq4QQsXZlKvqgWefMnLkt0ShJSUnjUqEtmzlnznRH
+tztjdrZVLCWbNqlI3IIIEVEiEbdqNYIGKRIeiFuiRBs8iISERkRfOFO8eXRe5pz/
++f3/831fTm8g1+fP6Vryc37HWPwi5+HtI2nf2n27B7Zy2NKbuOhWro4Of2hCpyk3
+VmfqXJQDEECEsaYiScGSBqhGEDYUGWsC2wkCEWQJCqJs6AjwhOiM4qHMdFGBBGiU
+EiADjSvmDDNZSx3bMZMuixU0SAyoqFClDCUSLxsG5iVdQFRFogwAJBKUFJEZ41bK
+c7DisJaiEdNiGjvEhsv7B/+f604Px4k6D5jMdESooatUFYGuIllREFUgAB6Yok5S
+q6eMxjRJ4g6XKeaY1mAS6o3V6+PvfcKqjfyGIjplXtuxXItYCXYXd107FfW8bpPt
+wY0Ux/7ExLCZ1NkcmaOBOinTSnJRyEjiml4uRIqoCoIoSMUc3WybDo2ZHiHKkgLY
+8v5DG7xuqAR5kUcS1okiQoI0BFReIhRoWFQpwYAqCg+AIktE4JGi8URCUDAEasgy
+GxfnNbYpaXFRBFmdWi3LTJm1Sc1NO5TL3LlVk+fL8ftG5o/wHpjPP2bC32fXO3W0
+71pf3+pnz2uqI7PHNN66+9bFpUNr3Mz1JntjycUZ56LBy9m2ufLivvINJ+onlt2u
+ar5Z+ONR2F5yNu/ry5aeVUUFxwdhd26o4ME1uKhmR8mOF1Xh9UunVPZDbuBk8PO2
+wLLO9Le6ozPd0Lz8ro8V9dPLsuP4zqfBBVf04J7evDhBpVv2jurXKsMJcWn7vQ8D
+g4fHBRa+HvKXH5j8ZKX4SS4MrR+6v2Jx+8wvN1rf94SfvXsze9Z5O1s0zb7aPfij
+v/T6URqqvrDukBwoIT0tDzLby5bjg7uyHZeePt5ZMb45dO5VoPWU1X3vTHvbyTXP
+j53O/R5CXQWNGydMOjMncWP/p7Zf9n06HQ==
+=pxta
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/benchr
+
+==================================================================
+

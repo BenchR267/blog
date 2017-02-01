@@ -19,6 +19,7 @@ ssh benchr@bootes.uberspace.de 'rm -rf subdomains/blog.benchr.de/*'
 echo "Uploading generated files"
 separator
 scp -qr public/* benchr@bootes.uberspace.de:subdomains/blog.benchr.de/
+scp -qr .well-known benchr@bootes.uberspace.de:subdomains/blog.benchr.de/
 
 echo "Creating and pushing tag"
 separator
