@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+function separator {
+	echo '=========================='
+}
+
+now=`date +%s`
+
+echo "Building the site: $now"
+separator
+hugo
+separator
+echo "Removing old version"
+separator
+ssh benchr@bootes.uberspace.de 'rm -rf html/blog/*'
+
+echo "Uploading generated files"
+separator
+scp -qr public/* benchr@bootes.uberspace.de:html/blog/
+scp -qr .well-known benchr@bootes.uberspace.de:html/blog/
+
+separator
+echo "Done!"
