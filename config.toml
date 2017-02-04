@@ -26,8 +26,8 @@ canonifyurls = true
 	weight = 109
 
 [[menu.main]]
-	name = "Keybase"
-	url = "https://Keybase.io/benchr"
+	name = "PGP public key"
+	url = "https://keybase.io/benchr/key.asc"
 	weight = 110
 
 [params]
