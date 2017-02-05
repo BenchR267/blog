@@ -16,7 +16,7 @@ In the [**first part**]({{< ref "post/POP_Network_1.md" >}}) I built the **found
 
 Safety is mostly about the **rules** you define how the component can be used. In the best scenario the user **can't even compile** the program if the component is wrong configured. Of course, this is the **perfect case** which is just not reachable. But by defining different **protocols** for different http methods, it is possible to distinguish between them on the level of Swift's **type system** instead of comparing Strings.
 
-Code quality is a very generic term and I bet that everyone will think different about this. In my eyes code quality is defined by **readability** and the structure of the code. A **rule of thumb** is that code is written in 10% of the productive time but it is read in **90%** of it. That means you are fighting yourself when writing '*spaghetti code*'. Related to the rest component I'm building code quality means structuring the code that well that a user could **fix a bug** by himself if he experiences one.
+Code quality is a very generic term and I bet that everyone will think different about this. In my eyes code quality is defined by **readability** and the structure of the code. A **rule of thumb** is that code is written in 10% of the productive time but it is read in **90%** of it. That means you are fighting yourself when writing '*spaghetti code*'. Related to the rest component building code quality means to structure the code that well a user could **fix a bug** by himself.
 
 API design is a **subset** of code quality since it defines how the interface of the component is built. Even while there should be documentation it should not be necessary to read it to be able to use the code. It is also bound to **safety** in this case because the API should be strongly typed though **generics** since the concrete types are not even defined in this module.
 
@@ -86,6 +86,6 @@ let authenticator = SimpleAuthenticator { req in
 }
 ```
 
-But since the `Authenticator` is declared as a **protocol** it's also possible to implement very **complex authentication algorithms**. The authenticator gets the complete request with all informations which he could use to calculate and manipulate.
+But since the `Authenticator` is declared as a **protocol** it's also possible to implement very **complex authentication algorithms**. The authenticator gets the complete request with all information which he could use to calculate and manipulate.
 
 Thanks for reading and see you next week!
