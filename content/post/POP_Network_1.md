@@ -12,7 +12,7 @@ slug = "pop-network-1"
 
 +++
 
-Todays topic is very **technically**. So if you are not interested in programming (or especially in Swift programming), this post might **not** be for you.
+Todays topic is very **technically**. So if you aren't interested in programming (or especially in Swift programming), this post might **not** be for you.
 
 This is the **first** blog post of a short **series**. Before starting with the structure and the implementation details, I would like to explain how that **topic** came up.
 
@@ -20,7 +20,7 @@ In summer **2014**, right after the announcement of **Swift**, I created a [**Yo
 
 In my eyes one of the main parts about this challenge was the general **over-engineering** which is just not possible in daily business. It was a **manageable feature** set: Build a Github-Client which is able to search for Users, show their repositories and open the README-file of the selected one. There was one **rule**: don't use any **third party** dependencies! In my opinion this was a downer but it also forced me and the others to **rethink very basic stuff**. Since my implementation got very **complex**, I wasn't able to describe it completely in the live stream. But the topic is so interesting that I thought I could write about it. So here it is: writing a protocol oriented network abstraction in Swift!
 
-The code I’m showing here is not complete but will be **available on Github** when the last post of this series is online.  The implementation of the challenge solution was made up of three parts: the **network** abstraction, the **mapping** logic and the **UI wrapper** for UITableView. I rewrote the network abstraction to be as **protocol oriented** as possible in order to make sense. Protocol oriented programming feels very naturally to Swift since the [standard library](https://github.com/apple/swift/tree/master/stdlib) is built that way. It's also not a complex paradigm and quite **easy to understand**. The aim is to make parts of the code as **reusable** as possible *(if it makes sense to reuse this code)*. Since Swift classes can only inherit from one superclass it also brings a lot of freedom and new patterns to use protocols because all Swift types can *'inherit'* from **multiple** protocols. And protocols can bring their one implementation via extensions which is extremly powerful!
+The code I’m showing here isn't complete but will be **available on Github** when the last post of this series is online.  The implementation of the challenge solution was made up of three parts: the **network** abstraction, the **mapping** logic and the **UI wrapper** for UITableView. I rewrote the network abstraction to be as **protocol oriented** as possible in order to make sense. Protocol oriented programming feels very naturally to Swift since the [standard library](https://github.com/apple/swift/tree/master/stdlib) is built that way. It's also not a complex paradigm and quite **easy to understand**. The aim is to make parts of the code as **reusable** as possible *(if it makes sense to reuse this code)*. Since Swift classes can only inherit from one superclass it also brings a lot of freedom and new patterns to use protocols because all Swift types can *'inherit'* from **multiple** protocols. And protocols can bring their one implementation via extensions which is extremly powerful!
 
 Don’t worry: this post isn’t only the **introduction**, now we are going to start with the code and the following part is coming in the **next couple of days**.
 

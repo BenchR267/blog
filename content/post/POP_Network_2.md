@@ -18,7 +18,7 @@ Safety is mostly about the **rules** you define on how the component can be used
 
 Code quality is a very generic term and I bet that everyone will think differently about this. In my eyes code quality is defined by **readability** and the structure of the code. A **rule of thumb** is that the code is written in 10% of the productive time but it's read in **90%** of it. That means you are fighting with yourself when writing '*spaghetti code*'. Related to the rest component building code quality means to structure the code that a user could easily **fix a bug** by himself.
 
-API design is a **subset** of code quality since it defines how the interface of the component is built. Even while there should be documentation it should not be necessary to read it to be able to use the code. It's also bound to **safety** in this case because the API should be strongly typed though **generics** since the concrete types are not even defined in this module.
+API design is a **subset** of code quality since it defines how the interface of the component is built. Even while there should be documentation it should not be necessary to read it to be able to use the code. It's also bound to **safety** in this case because the API should be strongly typed though **generics** since the concrete types aren't even defined in this module.
 
 So, what does the API of the client look like?
 
@@ -56,7 +56,7 @@ struct MessageEndpoint: POST, DELETE {
 }
 ```
 
-This endpoint describes the message service of our random backend. It's possible to **POST** (add) a new message or to **DELETE** an existing one. This is realized with the **multiple inheritance** via protocols. And since `MessageEndpoint` doesn't conform to `GET`, it's not possible to use it with the `get` method of `Client`. That's **safety enforced by the compiler**.
+This endpoint describes the message service of our random backend. It's possible to **POST** (add) a new message or to **DELETE** an existing one. This is realized with the **multiple inheritance** via protocols. And since `MessageEndpoint` doesn't conform to `GET`, it isn't possible to use it with the `get` method of `Client`. That's **safety enforced by the compiler**.
 
 In the next blog post I will tell more about the **associated type** in the `Endpoint` definition. But before that I would like to quickly describe the very basic authentication implementation:
 

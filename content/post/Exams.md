@@ -12,7 +12,7 @@ slug = "exams"
 
 +++
 
-Since I'm currently right before **examination period** time at my studies, I'd like to take a moment to talk about something I **learned** during the development of a task for my university. While the task itself was not that **exciting**, I think the overall principle is very nice!
+Since I'm currently right before **examination period** time at my studies, I'd like to take a moment to talk about something I **learned** during the development of a task for my university. While the task itself wasn't that **exciting**, I think the overall principle is very nice!
 
 The tool is a **framework** for developing new programming languages! Its name is [**Xtext**](http://www.eclipse.org/Xtext/). While I will propably never use it, I like the **idea** behind it.
 

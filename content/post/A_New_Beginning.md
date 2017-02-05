@@ -11,7 +11,7 @@ image = "images/A_New_Beginning.jpg"
 
 +++
 
-Year after year I thought about aspects that I could possibly change to create a **more positive** lifestyle. These were often things like '*eat healthier*', '*do more sports*', '*quit smoking*' and so on. None of those actually ever happened *(beside the smoking, but that was not at New Year's Eve)*. And that's the point about resolutions. They never happen if you choose another time for it than **now**. Don't let yourself restrict too much from events like New Year's Eve..
+Year after year I thought about aspects that I could possibly change to create a **more positive** lifestyle. These were often things like '*eat healthier*', '*do more sports*', '*quit smoking*' and so on. None of those actually ever happened *(beside the smoking, but that wasn't at New Year's Eve)*. And that's the point about resolutions. They never happen if you choose another time for it than **now**. Don't let yourself restrict too much from events like New Year's Eve..
 
 So this year I want to try something else. It's nothing new though, but something **challenging** I want to aim to get a deeper understanding about. I got inspired by [Mark Zuckerberg](https://www.facebook.com/zuck) who creates challenges for himself every year. I followed those on his Facebook account during the last years. He challenged himself with projects like '*read a book every week*', '*learn Mandarin*' or from this year: ['*build an AI like Jarvis from Iron Man*'](https://www.facebook.com/notes/mark-zuckerberg/building-jarvis/10154361492931634/). Those are **measurable accomplishments** and - most importantly - projects that **advance yourself**, I'm talking about real challenges here.
 
