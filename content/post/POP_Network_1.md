@@ -12,6 +12,8 @@ slug = "pop-network-1"
 
 +++
 
+All Parts: [**I**]({{< ref "post/POP_Network_1.md" >}}) [**II**]({{< ref "post/POP_Network_2.md" >}})
+
 Todays topic is very **technically**. So if you aren't interested in programming (or especially in Swift programming), this post might **not** be for you.
 
 This is the **first** blog post of a short **series**. Before starting with the structure and the implementation details, I would like to explain how that **topic** came up.

@@ -12,6 +12,8 @@ slug = "pop-network-2"
 
 +++
 
+All Parts: [**I**]({{< ref "post/POP_Network_1.md" >}}) [**II**]({{< ref "post/POP_Network_2.md" >}})
+
 In the [**first part**]({{< ref "post/POP_Network_1.md" >}}) I built the **foundation** for a protocol oriented network abstraction written in Swift. The main focus for the component lies on **safety**, **code quality** and a very **clean** [**API**](https://en.wikipedia.org/wiki/Application_programming_interface).
 
 Safety is mostly about the **rules** you define on how the component can be used. In the best scenario the user **can't even compile** the program if the component is configured wrongly. Of course, this is the **perfect case** which is just not reachable. But by defining different **protocols** for different http methods, it's possible to distinguish between them on the level of Swift's **type system** instead of comparing Strings.
