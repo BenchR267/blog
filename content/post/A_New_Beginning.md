@@ -22,7 +22,7 @@ Let's have a look at two projects that came to my mind:
 1. I want to write a **blog post every week**.
 2. I want to create an **own programming language** (with compiler/interpreter-toolchain).
 
-Both are measurable, but not 100% defined. A blog post every week doesn't mean that I have to publish something **valuable, technical** every week. It could also be some **random stuff**. The blog posts will be either [here](https://blog.benchr.de) or at my [swift blog](https://swift.benchr.de). Some (or maybe a lot of those) posts will be related to the second challenge.
+Both are measurable, but not 100% defined. A blog post every week doesn't mean that I have to publish something **valuable, technical** every week. It could also be some **random stuff**. The blog posts will all be published [here](https://blog.benchr.de). Some (or maybe a lot of those) posts will be related to the second challenge.
 
 I bought the freshly released book [Writing An Interpreter In Go](https://interpreterbook.com) and really enjoyed the first chapters so far. I learned the basics of **compiler and interpreters** during the exam phase of my bachelor degree and even created a very [basic compiler for the language pl0](https://github.com/BenchR267/pl0Compiler) during that time (Please don't look at the code 🙈). I definitely want to know more about that.
 
