@@ -12,7 +12,7 @@ slug = "exams"
 
 +++
 
-Since I'm currently right before **examination period** time at my studies, I'd like to take a moment to talk about something I **learned** during the development of a task for my university. While the task itself wasn't that **exciting**, I think the overall principle is very nice!
+Since I am currently right before **examination period** time at my studies, I'd like to take a moment to talk about something I **learned** during the development of a task for my university. While the task itself was not that **exciting**, I think the overall principle is very nice!
 
 The tool is a **framework** for developing new programming languages! Its name is [**Xtext**](http://www.eclipse.org/Xtext/). While I will propably never use it, I like the **idea** behind it.
 
@@ -28,7 +28,7 @@ The framework generates code for parsing and creates an [**AST**](https://en.wik
 
 Here is an example content of a **very basic** xtext file:
 
-```Xtext
+```html
 Equal:
 	Variable '==' Variable
 ;
@@ -43,4 +43,4 @@ The [task](https://github.com/BenchR267/prolog-xtext) was to describe the [**Pro
 
 This was just a short **introduction** to the tooling and I really consider to write something similiar so that the language will be much more extensible in the future.
 
-That's all for now, thanks for reading and have a nice week!
+That is all for now, thanks for reading and have a nice week!
