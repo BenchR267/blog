@@ -6,10 +6,8 @@ paginate = 10
 DisqusShortname = "blog-benchr"
 Copyright = "All rights reserved - 2017"
 canonifyurls = true
-
-[params.highlight]
-	style = "github"
-	languages = ["go", "ruby", "swift", "javascript", "bash"]
+PygmentsCodeFences=true
+pygmentsStyle="default"
 
 [[menu.main]]
 	identifier = "blog"
