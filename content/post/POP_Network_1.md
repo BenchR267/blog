@@ -6,13 +6,13 @@ comments = true
 image = "images/pop-network-1.jpg"
 menu = ""
 date = "2017-02-03T15:00:00+02:00"
-title = "Part I - Writing a protocol oriented network abstraction in Swift"
+title = "Part 1/3 - Writing a protocol oriented network abstraction in Swift"
 tags = ["swift", "pop", "code"]
 slug = "pop-network-1"
 
 +++
 
-All Parts: [**I**]({{< ref "post/POP_Network_1.md" >}}) [**II**]({{< ref "post/POP_Network_2.md" >}}) [**III**]({{< ref "post/POP_Network_3.md" >}})
+All Parts: [**1**]({{< ref "post/POP_Network_1.md" >}}) - [**2**]({{< ref "post/POP_Network_2.md" >}}) - [**3**]({{< ref "post/POP_Network_3.md" >}})
 
 Todays topic is very **technically**. So if you are not interested in programming (or especially in Swift programming), this post might **not** be for you.
 

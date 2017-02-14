@@ -6,13 +6,13 @@ comments = true
 image = "images/pop-network-1.jpg"
 menu = ""
 date = "2017-02-12T18:00:00+02:00"
-title = "Part III - Writing a protocol oriented network abstraction in Swift"
+title = "Part 3/3 - It's all about the mapping"
 tags = ["swift", "pop", "code"]
 slug = "pop-network-3"
 
 +++
 
-All Parts: [**I**]({{< ref "post/POP_Network_1.md" >}}) [**II**]({{< ref "post/POP_Network_2.md" >}}) [**III**]({{< ref "post/POP_Network_3.md" >}})
+All Parts: [**1**]({{< ref "post/POP_Network_1.md" >}}) - [**2**]({{< ref "post/POP_Network_2.md" >}}) - [**3**]({{< ref "post/POP_Network_3.md" >}})
 
 [Last week]({{< ref "post/POP_Network_2.md" >}}) I defined the interface of the **Client** and its **Authenticator**. Together with the definition of the endpoints ([first part]({{< ref "post/POP_Network_2.md" >}})) it is now possible to take a deeper look into the actual network request. But before doing that I need to clarify one important part: the **mapping of the response**. Mapping JSON (or other transport formats) is a different topic, especially in Swift. Just a side note:
 

@@ -6,13 +6,13 @@ comments = true
 image = "images/pop-network-1.jpg"
 menu = ""
 date = "2017-02-05T08:00:00+02:00"
-title = "Part II - Writing a protocol oriented network abstraction in Swift"
+title = "Part 2/3 - Defining a readable and safe interface"
 tags = ["swift", "pop", "code"]
 slug = "pop-network-2"
 
 +++
 
-All Parts: [**I**]({{< ref "post/POP_Network_1.md" >}}) [**II**]({{< ref "post/POP_Network_2.md" >}}) [**III**]({{< ref "post/POP_Network_3.md" >}})
+All Parts: [**1**]({{< ref "post/POP_Network_1.md" >}}) - [**2**]({{< ref "post/POP_Network_2.md" >}}) - [**3**]({{< ref "post/POP_Network_3.md" >}})
 
 In the [**first part**]({{< ref "post/POP_Network_1.md" >}}) I built the **foundation** for a protocol oriented network abstraction written in Swift. The main focus for the component lies on **safety**, **code quality** and a very **clean** [**API**](https://en.wikipedia.org/wiki/Application_programming_interface).
 
