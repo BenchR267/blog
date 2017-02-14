@@ -14,11 +14,11 @@ slug = "pop-network-3"
 
 All Parts: [**I**]({{< ref "post/POP_Network_1.md" >}}) [**II**]({{< ref "post/POP_Network_2.md" >}}) [**III**]({{< ref "post/POP_Network_3.md" >}})
 
-[Last week]({{< ref "post/POP_Network_2.md" >}}) I defined the interface of the **Client** and its **Authenticator**. Together with the definition of the endpoints ([first part]({{< ref "post/POP_Network_2.md" >}})) it is now possible to take a deeper look in the actual network request. But before doing that I need to clarify one important part: the **mapping of the response**. Mapping JSON (or other transport formats) is a different topic, especially in Swift. Just a side note:
+[Last week]({{< ref "post/POP_Network_2.md" >}}) I defined the interface of the **Client** and its **Authenticator**. Together with the definition of the endpoints ([first part]({{< ref "post/POP_Network_2.md" >}})) it is now possible to take a deeper look into the actual network request. But before doing that I need to clarify one important part: the **mapping of the response**. Mapping JSON (or other transport formats) is a different topic, especially in Swift. Just a side note:
 
 <center>{{< tweet 827486597650198529 >}}</center>
 
-I totally aggree [Cédric](https://twitter.com/0xced) on this point even I love overthinking technical tasks like parsing JSON! And since JSON parsing is (unfortunately) a [**really big thing**](https://github.com/search?utf8=✓&q=swift+json) in iOS/Swift, I do not want to create something fancy in this project.
+I totally aggree with [Cédric](https://twitter.com/0xced) on this point even though I love to overthink technical tasks like parsing JSON! And since JSON parsing is (unfortunately) a [**really big thing**](https://github.com/search?utf8=✓&q=swift+json) in iOS/Swift, I do not want to create something fancy in this project.
 
 But I need some protocol for **response** types to make it possible to map them from a raw format like **JSON** to a real Swift object. This protocol is as simple as possible:
 
@@ -28,7 +28,7 @@ public protocol JSONObject {
 }
 ```
 
-Using `Any` here totally **leverages Swifts strong type system**, but it is necessary because JSON objects can be arrays or dictionaries in Swift. It would be possible to create an **empty protocol** just for forcing the range of types that are usable, but that would not bring any more security to the code and would instead **decrease readability**.
+Using `Any` here totally **leverages Swifts strong type system** but it is necessary because JSON objects can be arrays or dictionaries in Swift. It would be possible to create an **empty protocol** just for forcing the range of types that are usable but that would not bring any more security to the code and would instead **decrease readability**.
 
 Speaking of Arrays, it would be **great** to have the possibility to write something like:
 
@@ -69,7 +69,7 @@ public func get<E: GET>(_ endpoint: E, completion: @escaping Completion<E.Respon
 }
 ```
 
-In `start` the first thing to do is creating the url out of the **saved base url** and the given url parameters. I created two **encoders** for encoding url parameters and post body parameters. They have a **common interface** so I created a protocol for that task:
+In `start` the first thing to do is creating the url out of the **saved base url** and the given url parameters. I created two **encoders** for encoding url parameters and post body parameters. They have a **common interface**; so I created a protocol for that task:
 
 ```swift
 public protocol ParameterEncoder {
@@ -81,7 +81,7 @@ public protocol ParameterEncoder {
 
 The actual implementation of the encoders can be found [here](https://github.com/BenchR267/Resty/blob/master/Sources/ParameterEncoder.swift).
 
-After the url parameters the **headers** are set on the request. This is just a loop over the given parameters and setting them on the request. The **http body** is more interesting:
+Afterwards the **headers** are set on the request. This is just a loop over the given parameters and setting them on the request. The **http body** is more interesting:
 
 ```swift
 // POST BODY
@@ -92,7 +92,7 @@ if let post = endpoint as? PostBodyType,
 }
 ```
 
-First of all I need to be sure the given endpoint has a **post body**. It is very **convenient** to have a **protocol** for that because now I only need to check whether or not the endpoint **conforms** to the protocol or not. If it does, I try to encode it and set the resulting data on the request.
+First of all; I need to be sure the given endpoint has a **post body**. It is very **convenient** to have a **protocol** for that because now I only need to check whether or not the endpoint **conforms** to the protocol or not. If it does, I try to encode it and set the resulting data on the request.
 
 Now the request itself is **completely configured**. The only thing that is missing is the **authentication data**. As described in the [last post]({{< ref "post/POP_Network_2.md" >}}) this is done by a given `Authenticator`. That authenticator is saved as a property on **initialization time** of the client. The authenticator gets the configured request and **manipulates** it so that it is authenticated with the web service.
 ```swift
@@ -100,7 +100,7 @@ Now the request itself is **completely configured**. The only thing that is miss
 self.authenticator.authenticate(request: &request)
 ```
 
-Notice the **`&` character** that indicates that we are passing a *'pointer'* in there. *(For clarification: this is no a traditional pointer, it is a so called inout variable in Swift.)* The request is now **ready** to be send to the web service. The next interesting part is in the completion handler of `URLSession`:
+Notice the **`&` character** that indicates that we are passing a *'pointer'* in there. *(For clarification: this is not a traditional pointer, it is a so called inout variable in Swift.)* The request is now **ready** to be send to the web service. The next interesting part is in the completion handler of `URLSession`:
 
 ```swift
 do {
@@ -114,7 +114,7 @@ do {
 
 `JSONSerialization` is Apples `Foundation` framework for parsing JSON data. It will **throw an error** if the given data is not correctly formatted json and return an `Any` value if everything worked out. This resulting json value is then passed to the `ResultType` of the `Endpoint` to create a **Swift type** out of it.
 
-**Finally** here is a working example to fetch all your repositories on Github:
+**Finally**; here is a working example to fetch all your repositories on Github:
 
 ```swift
 let githubToken = "xxx"
