@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/benchr
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blog.benchr.me
+  * I am benchr (https://keybase.io/benchr) on keybase.
+  * I have a public key with fingerprint 3A1C F189 19E3 C5C6 27FF  B26D 34E9 4570 01C6 1685
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01014bba9468b6a0eac4bf87ba3ac433c3761357fd402ccd68b21733c581c0aeec070a",
+            "fingerprint": "3a1cf18919e3c5c627ffb26d34e9457001c61685",
+            "host": "keybase.io",
+            "key_id": "34e9457001c61685",
+            "kid": "01014bba9468b6a0eac4bf87ba3ac433c3761357fd402ccd68b21733c581c0aeec070a",
+            "uid": "5d20c0aaee4cefd9e950d947884e8100",
+            "username": "benchr"
+        },
+        "revoke": {
+            "sig_ids": [
+                "1279baca74d51c696c8e556b2b6b35aad6d8e50341d3981ec348d79ac25181db0f"
+            ]
+        },
+        "service": {
+            "hostname": "blog.benchr.me",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1487244254,
+    "expire_in": 157680000,
+    "prev": "acc3ebf0040fcf28a04497b0331f35ea1eff9bfc6bf61c1ebc4ee24e2301c232",
+    "seqno": 46,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.62
+Comment: https://keybase.io/crypto
+
+yMJyAnicrVJdbBVFFL6lIKFEbHhB0RCcBH/wUmZ2ZmdnL1VsVCwEEktQGgFv5ufs
+7dLL7mXvbcuPWCOoib5Y4QEIlAesBUwFVB4MsVoEolACGiT+JJAAQkgohIQEQyJl
+tsIbj87LzHzzne98c845/HB1pqbqQONw/Vfj1Zmq4wM32zLNPR+fXYtUbFaj3FrU
+CiMbFA2UK/nW0KAcwgQTppT0GReKSwxSMxUIT0lqT5Rq6nFCXS8wDDtaG8tyiGdx
+VxCNJYDGHpYoi4IwKkBSSsKoYmWpJDogwic+WKrmjhcEyuGGMvCZ62FMNCdcuDaw
+JS6nEdackmWoC2OL2Ut+xN4D+P+z77YROdc42MIWZxoC44PvYuMzTwgGgmCcEsuQ
+RHIFWLaCSLckaF0WJdAet0Ja1XJYsJbLKLcEEcfzldTSY8a1vn2uBbguV47iirpS
+Gm4sgCkjhvqCgKZMGM+X2nGJIEbhAC2z2jZfe6hHxNMa3c9djAt1/xmos0AWlZK4
+Euu4aN9aKpVSOZf6qqwupeQOUPl7MnkVRsb2yEa0Q1IO4wjliGXqSpjqEiY8hzHH
+ZVkEq0phAvkwZbgeF9iuNA+0W0mpNQUVYMxwoANHSMyY7ylMKQmoC5JAEPgq0FwF
+nGgCSjMAh4FDbQ8d6qD0YyujGOUYtz5lwWra2kWy0pYAWnfoh6WjM1U1mYfGjEqH
+N1Mzrvb+SEfbxw4vOgk7e/deGZj13BtvDnacn7O4s3rGF1tPTurLbOs6dWLTzL+7
+Lzbt+vGRevHEvDv/Pr+5c6DQub7rwMUlG5qrpnUsW/XJk8duT9k9rWdBcsxvdD/n
+N57dvOid2Z/tWDzxjy0v7TBH/5rd0DShenJD05HdR/Y+9cG8d5svD72ebFo++Hj/
+wd/PrFcDja/xmUdrfvnzo58WDvez7l+/fDu752n3dN/tf17Ibm/aJYp9p9ma3p83
+vvqNR57ZUDp+rrhxaPShC4NvLW09uL9hyuVRjTffr+260z29R9Sfu9Ty3f7k1rbB
+uV9Pnzrmw5ffWzO2durWx6qv9r7y/dBheLH+0bp4wuT54+ZcvzZp36cT+/r93769
+C1lyXX4=
+=Lplc
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/benchr
+
+==================================================================
