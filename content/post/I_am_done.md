@@ -16,9 +16,11 @@ Today I wrote my **last exam** for this semester; so I am finally **done** with 
 
 I am very **glad** that I can concentrate on all these projects now. In this blog post I want to talk about some things I have planned in the near future. First of all I have **'holidays'**. That means there are no lectures until the **18th of March**. But I do not have free time because during this time I have **no limitations** on the amount of hours I can go to work. So if there is enough to do for me I will spend a lot of time in the **office** creating cool stuff for [LOVOO](https://www.lovoo.com).
 
-On the **21st** of March I am going to give a [talk](https://www.meetup.com/de-DE/Cocoaheads-Dresden/events/237722653/) about [**React Native**](https://github.com/facebook/react-native). I am really hyped by this framework currently and glad to make it a topic to bring the [**Cocoaheads Dresden**](https://www.meetup.com/de-DE/Cocoaheads-Dresden/) together after months of silence. React Native will also be a topic for a blog post later in March I guess. The talk itself is going to be **recorded** and uploaded to Youtube but the video is going to be in **German**.
+On the **21st** of March I am going to give a [talk](https://www.meetup.com/de-DE/Cocoaheads-Dresden/events/237722653/) about [**React Native**](https://github.com/facebook/react-native). I am really hyped by this framework currently and glad to make it a topic to bring the [**Cocoaheads Dresden**](https://www.meetup.com/de-DE/Cocoaheads-Dresden/) together after months of silence. React Native is also going to be a topic for a blog post later in March I guess. The talk itself is going to be **recorded** and uploaded to Youtube but the video is going to be in **German**.
 
 <center>{{< tweet 832673018094575618 >}}</center>
+
+Another project I will finally be able to start is the rewrite of the HTW-Dresden app. The [old implementation](https://github.com/HTWDD/htwcampus_old) was **my first iOS app** and definitely needs a rewrite! I am very glad my friend [Kilian](https://twitter.com/kiliankoe) has joined the team a while ago and is goint to write the app together with me.
 
 I am also **very excited** about starting to work on my [**compiler**]({{< ref "post/A_New_Beginning.md" >}}). **Next week** I want to start writing a first implementation of the **Lexer**. **Later this week** I am going to publish another blog post that contains all necessary information about the project. I want to point which language I am going to use and where the repository can be found.
 
