@@ -7,7 +7,7 @@ image = "images/Exams.jpg"
 menu = ""
 date = "2017-01-22T23:00:00+02:00"
 title = "Exams.."
-tags = ["exams","university","master"]
+tags = ["exams", "university", "master", "compiler"]
 slug = "exams"
 
 +++
