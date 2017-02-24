@@ -12,7 +12,7 @@ slug = "pop-network-1"
 
 +++
 
-All Parts: [**1**]({{< ref "post/POP_Network_1.md" >}}) - [**2**]({{< ref "post/POP_Network_2.md" >}}) - [**3**]({{< ref "post/POP_Network_3.md" >}})
+All Parts: [**1**]({{< ref "post/4-POP_Network_1.md" >}}) - [**2**]({{< ref "post/5-POP_Network_2.md" >}}) - [**3**]({{< ref "post/6-POP_Network_3.md" >}})
 
 Todays topic is very **technically**. So if you are not interested in programming (or especially in Swift programming), this post might **not** be for you.
 

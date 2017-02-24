@@ -22,7 +22,7 @@ On the **21st** of March I am going to give a [talk](https://www.meetup.com/de-D
 
 Another project I will finally be able to start is the rewrite of the HTW-Dresden app. The [old implementation](https://github.com/HTWDD/htwcampus_old) was **my first iOS app** and definitely needs a rewrite! I am very glad my friend [Kilian](https://twitter.com/kiliankoe) has joined the team a while ago and is goint to write the app together with me.
 
-I am also **very excited** about starting to work on my [**compiler**]({{< ref "post/A_New_Beginning.md" >}}). **Next week** I want to start writing a first implementation of the **Lexer**. **Later this week** I am going to publish another blog post that contains all necessary information about the project. I want to point out which language I am going to use and where the repository can be found.
+I am also **very excited** about starting to work on my [**compiler**]({{< ref "post/1-A_New_Beginning.md" >}}). **Next week** I want to start writing a first implementation of the **Lexer**. **Later this week** I am going to publish another blog post that contains all necessary information about the project. I want to point out which language I am going to use and where the repository can be found.
 
 Beside that I would like to continue and start **reading** some nice books. I am currently reading those two on my [Kindle](http://amzn.to/2m7fLsH):
 

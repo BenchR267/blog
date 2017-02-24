@@ -12,9 +12,9 @@ slug = "pop-network-3"
 
 +++
 
-All Parts: [**1**]({{< ref "post/POP_Network_1.md" >}}) - [**2**]({{< ref "post/POP_Network_2.md" >}}) - [**3**]({{< ref "post/POP_Network_3.md" >}})
+All Parts: [**1**]({{< ref "post/4-POP_Network_1.md" >}}) - [**2**]({{< ref "post/5-POP_Network_2.md" >}}) - [**3**]({{< ref "post/6-POP_Network_3.md" >}})
 
-[Last week]({{< ref "post/POP_Network_2.md" >}}) I defined the interface of the **Client** and its **Authenticator**. Together with the definition of the endpoints ([first part]({{< ref "post/POP_Network_2.md" >}})) it is now possible to take a deeper look into the actual network request. But before doing that I need to clarify one important part: the **mapping of the response**. Mapping JSON (or other transport formats) is a different topic, especially in Swift. Just a side note:
+[Last week]({{< ref "post/5-POP_Network_2.md" >}}) I defined the interface of the **Client** and its **Authenticator**. Together with the definition of the endpoints ([first part]({{< ref "post/5-POP_Network_2.md" >}})) it is now possible to take a deeper look into the actual network request. But before doing that I need to clarify one important part: the **mapping of the response**. Mapping JSON (or other transport formats) is a different topic, especially in Swift. Just a side note:
 
 <center>{{< tweet 827486597650198529 >}}</center>
 
@@ -94,7 +94,7 @@ if let post = endpoint as? PostBodyType,
 
 First of all; I need to be sure the given endpoint has a **post body**. It is very **convenient** to have a **protocol** for that because now I only need to check whether or not the endpoint **conforms** to the protocol or not. If it does, I try to encode it and set the resulting data on the request.
 
-Now the request itself is **completely configured**. The only thing that is missing is the **authentication data**. As described in the [last post]({{< ref "post/POP_Network_2.md" >}}) this is done by a given `Authenticator`. That authenticator is saved as a property on **initialization time** of the client. The authenticator gets the configured request and **manipulates** it so that it is authenticated with the web service.
+Now the request itself is **completely configured**. The only thing that is missing is the **authentication data**. As described in the [last post]({{< ref "post/5-POP_Network_2.md" >}}) this is done by a given `Authenticator`. That authenticator is saved as a property on **initialization time** of the client. The authenticator gets the configured request and **manipulates** it so that it is authenticated with the web service.
 ```swift
 // Authentication
 self.authenticator.authenticate(request: &request)
