@@ -12,7 +12,7 @@ slug = "mvp-lexer"
 
 +++
 
-If you have read [**last weeks blog post**]({{< ref "post/8-Updates.md" >}}) you might also have checked out the [repository of my **compiler** on Github](https://github.com/BenchR267/lbd). After deciding the programming language to use and the name for the repository I started creating the first fundamental files. One of them is the **lexer**. Before diving too deep into the topic here is a definition of **lexical analysis** from [Wikipedia](https://en.wikipedia.org/wiki/Lexical_analysis):
+If you have read [**last weeks blog post**]({{< ref "post/8-Updates.md" >}}) you might also have checked out the [repository of my **compiler** on Github](https://github.com/BenchR267/lbd). After deciding which programming language to use and decided on the name for the project I started creating the first fundamental files. One of them is the **lexer**. Before diving too deep into the topic here is a definition of **lexical analysis** from [Wikipedia](https://en.wikipedia.org/wiki/Lexical_analysis):
 
 > In computer science, lexical analysis is the process of converting a sequence of characters […] into a sequence of tokens […].
 
@@ -89,8 +89,8 @@ func CombineStreams(streams ...<-chan rune) <-chan rune
 
 When all runes from the input channel are processed and transformed into tokens, the lexer stops the whole process by **closing** the `NextToken` channel. 
 
-The real work of **building tokens** out of the runes is done by an internal type `lexer.tokenizer`. The tokenizer is some kind of **buffer** for the lexer. It holds a slice of runes until appending a new rune does not belong to the current buffered ones. That is important for tokens that need **more than one** rune to be finalized (`==`, `!=`, `return`).
+The real work of **building tokens** out of the runes is done by an internal type `lexer.tokenizer`. The tokenizer is some kind of **buffer** for the lexer. It holds a slice of runes inside until appending a new rune does not belong to the current buffered ones anymore. That is important for tokens that need **more than one** rune to be finalized (`==`, `!=`, `return`).
 
-Working with **channels** and **go routines** in Go is **really great**. It supports with a lot of **power** and brings also a lot of **performance** and **security** in communication between different parts of the app.
+Working with **channels** and **go routines** in Go is **really great**. It supports by a lot of **power** and brings also a lot of **performance** and **security** in communication between different parts of the app.
 
 So far, thanks for reading. Next week I am going to write about the [**REPL**](https://en.wikipedia.org/wiki/Read–eval–print_loop) which is very handy to get instant feedback on written code.
