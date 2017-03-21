@@ -43,7 +43,7 @@ The fastest way to get started is using the [**Expo**](https://expo.io)-App on y
 
 While this is great for fast **prototyping** or **mob programming** I would recommend to set up a project on your computer. You have two options to choose from. Either you continue to use your **phone** as executing device or you boot up a **simulator** (or emulator). For both you first need to initialize a project with the [create-react-native-app](http://facebook.github.io/react-native/blog/2017/03/13/introducing-create-react-native-app.html). I recommend using **yarn** as a package manager, but **npm** is also fine. After that initialize the project with an **awesome name**, change into the created directory and start the server:
 
-```Bash
+```
 $ yarn add global create-react-native-app
 $ create-react-native-app AwesomeProject
 $ cd AwesomeProject
