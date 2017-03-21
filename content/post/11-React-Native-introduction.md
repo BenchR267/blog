@@ -6,9 +6,9 @@ comments = true
 image = "images/react-native.jpg"
 menu = ""
 date = "2017-03-21T11:00:00+02:00"
-title = "Introduction to React Native"
+title = "About React Native"
 tags = ["react"]
-slug = "rn-introduction"
+slug = "about-rn"
 
 +++
 
@@ -39,4 +39,75 @@ React Native is available for [iOS](https://github.com/facebook/react-native), [
 
 ## How to set it up?
 
-The fastest way to get started is using the [Expo](https://expo.io)-App on your phone and the [Sketch-Expo-Service](https://sketch.expo.io) on your computer. After scanning the QR code with your phone you can edit the javascript file on your computer and without changing the app changes on your phone.
+The fastest way to get started is using the [Expo](https://expo.io)-App on your phone and the [Sketch-Expo-Service](https://sketch.expo.io) on your computer. After scanning the QR code with your phone you can edit the javascript file on your computer and without the need to save the file any changes in the code results in changes on your phone.
+
+While this is great for fast prototyping or mob programming I would recommend to set up a project on your computer. You have two options to choose from. Either you continue to use your phone as executing device or you boot up a simulator (or emulator). For both you first need to initialize a project with the [create-react-native-app](http://facebook.github.io/react-native/blog/2017/03/13/introducing-create-react-native-app.html). I recommend using **yarn** as a package manager, but **npm** is also fine. After that initialize the project with an **awesome name**, change into the created directory and start the server:
+
+```Bash
+$ yarn add global create-react-native-app
+$ create-react-native-app AwesomeProject
+$ cd AwesomeProject
+$ yarn [start|ios|android]
+```
+
+`npm start` starts the dev server, `npm ios` and `npm android` start a simulator or emulator instance of the given operating system and a development server in the background. But I do not want to dive deeper into an example project in this blog post; I would rather like to answer two other questions:
+
+## What technologies are being used?
+
+React Native is build in Typescript which is transpiled down to Javascript. That brings the big advantage of defined Typescript interfaces so you do not need to struggle with untyped Javascript interfaces *(which is especially hard when coming from a static typed language like Swift)*. When programming your apps you can use any language that transpiles down to Javascript. Recommended is using ES6 through Babel or Typescript.
+
+The development server that serves your bundled app code is powered by Nodejs. Another tool that is running with your server is watchmen which is responsible for watching changes on your files to rebuild the package when needed. The app is also able diff changes in the bundle to reload your app without invalidating the state. That is extremely powerful if you are working with data that is loaded from the internet.
+
+As a layout engine React (Native) uses Stylesheets powered by [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) which is very powerful and can be compared to `UIStackView`. If you would like to integrate React Native in your existing project it is recommended to use Cocoapods to integrate the React framework *(and its subspecs)*. The Pod is part of the node module dependency and I am going to write another blog post about this topic but there is also a great tutorial [here](http://facebook.github.io/react-native/docs/integration-with-existing-apps.html).
+
+## What are the major advantages / drawbacks when using React Native?
+
+**advantages**|**drawbacks**
+|---|---|
+|development on **speed**|**big** dependency (> 550 node modules)|
+|**faster** editor|no '**IDE**'|
+|lightning **fast** apps|for complex stuff native **bridging** needed|
+|Javascript|**Swift** > Javascript|
+|**flexbox** / **css**||
+|components||
+|**state** driven design||
+
+I think all points are self-explaining. There is another drawback thats mentioned in some [blog posts](http://react-etc.net/entry/your-license-to-use-react-js-can-be-revoked-if-you-compete-with-facebook) about this topic: license. This is a really important topic and [Ash Furrow](https://ashfurrow.com) started a really interesting discussion on [Github](https://github.com/facebook/react/issues/7293) about this topic. The original problem is that Facebook could theoretically reject the license in using React (Native) if you compete with their product. [Here is a great FAQ](https://code.facebook.com/pages/850928938376556) Facebook created for this topic. tl;dr version: this is not a problem you should ever face.
+
+## What means 'state driven design'?
+
+In this blog I did not post any actual code yet, so it might be a bit hard to follow. Imagine you have an app that fetches some user information and displays the users name in a text field. This is what an app doing that might look like:
+
+```Javascript
+class User extends Component {
+	render() {
+		return (<Text>{this.props.name}</Text>);
+	}
+}
+
+export default class App extends Component {
+	constructor(props)	{
+		super(props);
+		this.state = {
+			user: null
+		}
+	}
+
+	componentWillMount() {
+		this.fetchUser().then((user) => this.setState({user}));
+	}
+
+	fetchUser() {
+		return fetch('https://myservice.net/user')
+			.then((response) => response.json())
+	}
+
+	render() {
+		if (this.state.user == null) {
+			return (<Text>Loading...</Text>);
+		} else {
+			return (<User {...this.state.user}>);
+		}
+	}
+}
+```
