@@ -12,7 +12,7 @@ slug = "about-rn"
 
 +++
 
-In this blog post I would like to talk about [**React Native**](https://facebook.github.io/react-native/). Before starting: this evening I am going to **talk** about this topic at the [**Cococaheads Dresden**](http://meetu.ps/36GS6z) meetup. If you are more the **visual** type check out the **video** I will post here when it is finished processing.
+In this blog post I would like to talk about [**React Native**](https://facebook.github.io/react-native/). Before starting: this evening I am going to **talk** about this topic at the [**Cococaheads Dresden**](http://meetu.ps/36GS6z) meetup. If you are more the **visual** type and you are able to understand German check out the **video** of the talk [**here**](https://www.youtube.com/watch?v=L4SEep6Immk).
 
 > React Native - Learn one, write anywhere: Build mobile apps with React.
 
