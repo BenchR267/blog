@@ -8,11 +8,11 @@ menu = ""
 date = "2017-06-27T19:00:00+01:00"
 title = "Replacing @autoclosure in Swift"
 tags = ["swift"]
-slug = "swift"
+slug = "autoclosure"
 
 +++
 
-A short preamble before the actual topic: yes, I let the blog slide. I am pretty sure that now that many people are reading my posts and those few are not mad reading a bit less but I have to admit that I failed the challenge I started beginning this year. It is not about that it is hard writing blog posts every week (what it is), it is more about writing posts weekly just to have them written and published. I would love to write more posts on the blog but I would like to write them when I have a great topic I would like to write about. So in the future there are no regulary posts on this blog but hopefully some better ones. Now, let's come to this posts topic:
+A short preamble before the actual topic: yes, I let the blog slide. I am pretty sure that not that many people are reading my posts and those few are not mad reading a bit less but I have to admit that I failed the challenge I started beginning this year. It is not about that it is hard writing blog posts every week (what it is), it is more about writing posts weekly just to have them written and published. I would love to write more posts on the blog but I would like to write them when I have a great topic I would like to write about. So in the future there are no regulary posts on this blog but hopefully some better ones. Now, let's start with this posts topic.
 
 Before I start with this: I really love Swift! It is the best language in my eyes that is currently available. But I also hate a lot of stuff about the language design that I would like to help getting it fixed.
 
