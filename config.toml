@@ -7,7 +7,7 @@ DisqusShortname = "blog-benchr"
 Copyright = "All rights reserved - 2017"
 canonifyurls = true
 PygmentsCodeFences=true
-pygmentsStyle="xcode"
+pygmentsStyle="native"
 
 [[menu.main]]
 	identifier = "blog"
