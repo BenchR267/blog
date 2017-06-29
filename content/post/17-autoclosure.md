@@ -16,7 +16,7 @@ A short preamble before the actual topic: yes, I let the blog slide. I am pretty
 
 Before I start with this: I really love Swift! It is the best language in my eyes that is currently available. But I also hate a lot of stuff about the language design that I would like to help getting it fixed.
 
-One of those things is the way `@autoclosure` is implemented. But let me first explain what it is and why it is needed. Imagine you have a function that takes a boolean value and a string. If the boolean is true it prints the string to the console, otherwise it does nothing. This function actually exists and is called assert, it also stops the execution of the program.
+One of those things is the way `@autoclosure` is implemented. But let me first explain what it is and why it is needed. Imagine you have a function that takes a boolean value and a string. If the boolean is false it prints the string to the console, otherwise it does nothing. This function actually exists and is called assert, it also stops the execution of the program.
 
 ```Swift
 func assert(_ condition: Bool, _ message: String) {…}
