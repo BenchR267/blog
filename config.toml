@@ -10,16 +10,9 @@ PygmentsCodeFences=true
 pygmentsStyle="native"
 
 [[menu.main]]
-	identifier = "blog"
-	name = "Blog"
-	url = "/"
-	weight = -120
-
-[[menu.main]]
-	identifier = "rss"
-	name = "RSS feed"
-	url = "/index.xml"
-	weight = -118
+	name = "PGP public key"
+	url = "https://keybase.io/benchr/key.asc"
+	weight = 110
 
 [[menu.main]]
 	name = "Mail"
@@ -28,9 +21,21 @@ pygmentsStyle="native"
 	weight = 109
 
 [[menu.main]]
-	name = "PGP public key"
-	url = "https://keybase.io/benchr/key.asc"
-	weight = 110
+	name = "Curriculum Vitae"
+	url = "cv.pdf"
+	weight = 108
+
+[[menu.main]]
+	identifier = "rss"
+	name = "RSS feed"
+	url = "/index.xml"
+	weight = -118
+
+[[menu.main]]
+	identifier = "blog"
+	name = "Blog"
+	url = "/"
+	weight = -120
 
 [params]
 	description = "iOS developer, master degree student in computer science"
