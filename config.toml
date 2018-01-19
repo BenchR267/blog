@@ -1,4 +1,4 @@
-BaseUrl= "http://blog.benchr.de"
+BaseUrl= "http://blog.benchr.de/"
 LanguageCode= "en-us"
 Title= "benchr"
 theme= "casper"
