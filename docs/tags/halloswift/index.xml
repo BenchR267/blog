@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Halloswift on benchr</title>
-    <link>http://blog.benchr.de/tags/halloswift/</link>
+    <link>https://benchr267.github.io/blog/tags/halloswift/</link>
     <description>Recent content in Halloswift on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
     <lastBuildDate>Thu, 20 Apr 2017 11:00:00 +0100</lastBuildDate>
     
-	<atom:link href="http://blog.benchr.de/tags/halloswift/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://benchr267.github.io/blog/tags/halloswift/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Announcements</title>
-      <link>http://blog.benchr.de/post/announcements/</link>
+      <link>https://benchr267.github.io/blog/post/announcements/</link>
       <pubDate>Thu, 20 Apr 2017 11:00:00 +0100</pubDate>
       
-      <guid>http://blog.benchr.de/post/announcements/</guid>
+      <guid>https://benchr267.github.io/blog/post/announcements/</guid>
       <description>Todays blog post is less technical than the previous ones. I would like to talk about some events that happened in the last time.
 I am a registered Apple developer since November 2013. Since then I collected a lot of experiences, built a lot of apps and gained a ton of knowledge. But every product I built was for someone else, no matter if it was a company or a person.</description>
     </item>

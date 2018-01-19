@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on benchr</title>
-    <link>http://blog.benchr.de/tags/blog/</link>
+    <link>https://benchr267.github.io/blog/tags/blog/</link>
     <description>Recent content in Blog on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
     <lastBuildDate>Wed, 22 Feb 2017 15:30:00 +0200</lastBuildDate>
     
-	<atom:link href="http://blog.benchr.de/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://benchr267.github.io/blog/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>I am done</title>
-      <link>http://blog.benchr.de/post/i-am-done/</link>
+      <link>https://benchr267.github.io/blog/post/i-am-done/</link>
       <pubDate>Wed, 22 Feb 2017 15:30:00 +0200</pubDate>
       
-      <guid>http://blog.benchr.de/post/i-am-done/</guid>
+      <guid>https://benchr267.github.io/blog/post/i-am-done/</guid>
       <description>Today I wrote my last exam for this semester; so I am finally done with this stressful time. It feels like it is getting harder every time to concentrate only on the topics that are necessary to pass every single exam. Especially in this time my head is full of motivation for a lot of different projects but I am forcing myself to not start any of them during the exam period.</description>
     </item>
     
     <item>
       <title>Some Thoughts</title>
-      <link>http://blog.benchr.de/post/thoughts/</link>
+      <link>https://benchr267.github.io/blog/post/thoughts/</link>
       <pubDate>Sun, 15 Jan 2017 10:00:00 +0200</pubDate>
       
-      <guid>http://blog.benchr.de/post/thoughts/</guid>
+      <guid>https://benchr267.github.io/blog/post/thoughts/</guid>
       <description>This week I want to share some of my thoughts about my new programming language. Or to be a bit more specific: about some technical details for building the toolchain. There are a lot of things that need to be decided which are also very important for the planning process. Here is an overview over some of them:
  Will the language be compiled or interpreted? What exact features will the language support?</description>
     </item>
     
     <item>
       <title>A New Beginning</title>
-      <link>http://blog.benchr.de/post/beginning/</link>
+      <link>https://benchr267.github.io/blog/post/beginning/</link>
       <pubDate>Sat, 07 Jan 2017 15:00:00 +0200</pubDate>
       
-      <guid>http://blog.benchr.de/post/beginning/</guid>
+      <guid>https://benchr267.github.io/blog/post/beginning/</guid>
       <description>Year after year I thought about aspects that I could possibly change to create a more positive lifestyle. These were often things like &amp;lsquo;eat healthier&amp;rsquo;, &amp;lsquo;do more sports&amp;rsquo;, &amp;lsquo;quit smoking&amp;rsquo; and so on. None of those actually ever happened (beside the smoking, but that was not at New Year&amp;rsquo;s Eve). And that is the point about resolutions. They never happen if you choose another time for it than now. Do not let yourself restrict too much from events like New Year&amp;rsquo;s Eve.</description>
     </item>
     

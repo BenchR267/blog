@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Exams on benchr</title>
-    <link>http://blog.benchr.de/tags/exams/</link>
+    <link>https://benchr267.github.io/blog/tags/exams/</link>
     <description>Recent content in Exams on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
     <lastBuildDate>Wed, 22 Feb 2017 15:30:00 +0200</lastBuildDate>
     
-	<atom:link href="http://blog.benchr.de/tags/exams/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://benchr267.github.io/blog/tags/exams/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>I am done</title>
-      <link>http://blog.benchr.de/post/i-am-done/</link>
+      <link>https://benchr267.github.io/blog/post/i-am-done/</link>
       <pubDate>Wed, 22 Feb 2017 15:30:00 +0200</pubDate>
       
-      <guid>http://blog.benchr.de/post/i-am-done/</guid>
+      <guid>https://benchr267.github.io/blog/post/i-am-done/</guid>
       <description>Today I wrote my last exam for this semester; so I am finally done with this stressful time. It feels like it is getting harder every time to concentrate only on the topics that are necessary to pass every single exam. Especially in this time my head is full of motivation for a lot of different projects but I am forcing myself to not start any of them during the exam period.</description>
     </item>
     
     <item>
       <title>Exams..</title>
-      <link>http://blog.benchr.de/post/exams/</link>
+      <link>https://benchr267.github.io/blog/post/exams/</link>
       <pubDate>Sun, 22 Jan 2017 23:00:00 +0200</pubDate>
       
-      <guid>http://blog.benchr.de/post/exams/</guid>
+      <guid>https://benchr267.github.io/blog/post/exams/</guid>
       <description>Since I am currently right before examination period time at my studies, I&amp;rsquo;d like to take a moment to talk about something I learned during the development of a task for my university. While the task itself was not that exciting, I think the overall principle is very nice!
 The tool is a framework for developing new programming languages! Its name is Xtext. While I will propably never use it, I like the idea behind it.</description>
     </item>
