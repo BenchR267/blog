@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:image" content="/images/cover.jpg"/>
+
+
+
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content="iOS developer, master degree student in computer science"/>
+<meta name="twitter:site" content="@benchr"/>
+
+
+
+  	<meta property="og:title" content="Posts &middot; benchr" />
+  	<meta property="og:site_name" content="benchr" />
+  	<meta property="og:url" content="http://blog.benchr.de/post/" />
+
+    
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="iOS developer, master degree student in computer science" />
+    
+
+    <title>Posts &middot; benchr</title>
+
+    
+    <meta name="description" content="iOS developer, master degree student in computer science" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://blog.benchr.de/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://blog.benchr.de/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/nav.css" />
+
+    
+
+    
+
+    
+        <link href="http://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
+    
+    <meta name="generator" content="Hugo 0.32.4" />
+
+    <link rel="canonical" href="http://blog.benchr.de/post/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://blog.benchr.me,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": iOS developer, master degree student in computer science
+        
+    },
+    "url": http://blog.benchr.de/,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": http://blog.benchr.de/
+    },
+    "description": iOS developer, master degree student in computer science
+}
+  </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90259105-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://keybase.io/benchr/key.asc">PGP public key</a>
+            </li>
+        
+            <h2>Contact me</h2>
+            <li class="nav-opened" role="presentation">
+            	<a href="mailto:mail@benchr.de">Mail</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="cv.pdf">Curriculum Vitae</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/index.xml">RSS feed</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/imprint/">Imprint</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="http://blog.benchr.de/index.xml">Subscribe</a> </div>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+	 
+  <header class="main-header tag-head" style="background-image: url(/images/cover.jpg)">
+  
+
+    <nav class="main-nav overlay clearfix">
+      
+      
+          <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+      
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">Posts</h1>
+            <h2 class="page-description">
+                
+            </h2>
+        </div>
+    </div>
+</header>
+
+<main class="content" role="main">
+    
+
+	<div class="extra-pagination inner">
+    <nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 2</span>
+	
+	    <a class="older-posts" href="http://blog.benchr.de/post/page/2/">Older Posts &rarr;</a>
+	
+</nav>
+
+	</div>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/autoclosure/">Replacing @autoclosure in Swift</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>A short preamble before the actual topic: yes, I let the blog slide. I am pretty sure that not that many people are reading my posts and those few are not mad reading a bit less but I have to admit that I failed the challenge I started beginning this year. It is not about that it is hard writing blog posts every week (what it is), it is more about writing posts weekly just to have them written and published. <a class="read-more" href="http://blog.benchr.de/post/autoclosure/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/swift/">#swift</a>,
+            
+        
+        <time class="post-date" datetime="2017-06-27T19:00:00&#43;01:00">
+            27 Jun 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/typescript/">Typescript</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>In this blog post I am going to write about a programming language which I have not checked out before. Typescript is a super set of Javascript and is developed by Microsoft. The syntax is exactly the same as Javascript with one very important difference: in comparison to Javascript Typescript knows the concept of types and checks them with a built in type system.
+To make type failure messages more useful Typescript is also a compiled language while Javascript is an interpreted language. <a class="read-more" href="http://blog.benchr.de/post/typescript/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/typescript/">#typescript</a>,
+            
+        
+        <time class="post-date" datetime="2017-05-03T11:00:00&#43;01:00">
+            3 May 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/announcements/">Announcements</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Todays blog post is less technical than the previous ones. I would like to talk about some events that happened in the last time.
+I am a registered Apple developer since November 2013. Since then I collected a lot of experiences, built a lot of apps and gained a ton of knowledge. But every product I built was for someone else, no matter if it was a company or a person. <a class="read-more" href="http://blog.benchr.de/post/announcements/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/halloswift/">#halloswift</a>,
+            
+                <a href="http://blog.benchr.de/tags/schwifty/">#schwifty</a>,
+            
+        
+        <time class="post-date" datetime="2017-04-20T11:00:00&#43;01:00">
+            20 Apr 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/technical-details-gs/">Technical details</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>(The cover is copied from http://coub.com/view/7x8n3. If you do not know what the picture has in common with the topic, check out last weeks blog post)
+Last week I introduced &lsquo;Get Schwifty&rsquo; - an app to write, evaluate and run Swift scripts on an iPhone. Today I am going to describe some technical details of the project.
+The project consists of three major parts: user interface, compiler and JavaScript runtime environment. <a class="read-more" href="http://blog.benchr.de/post/technical-details-gs/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/schwifty/">#schwifty</a>,
+            
+        
+        <time class="post-date" datetime="2017-04-09T13:00:00&#43;02:00">
+            9 Apr 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/get-schwifty/">Introducing Get Schwifty!</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Each year Apple organizes a conference for their third party platform developers. The conference is called WWDC (world wide developers conference) and takes place in California, USA. Although the tickets are extremly expensive (1,599$ each) it is almost impossible to get the chance to buy one due to the mass of people who try their luck.
+The conference is all about the software; Apple uses the opening keynote to introduce the new major versions of their platform operating systems, iOS and macOS. <a class="read-more" href="http://blog.benchr.de/post/get-schwifty/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/schwifty/">#schwifty</a>,
+            
+        
+        <time class="post-date" datetime="2017-04-04T20:00:00&#43;02:00">
+            4 Apr 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/rn-example/">React Native Example</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>In this post I am going to describe what steps are necessary to create an app in React Native. The example I want to build is the same one I created during my Cocoaheads talk. If you would like to see this in action or get more information check out my last post here.
+Installing dependencies You may already know this: in Javascript it is all about dependencies. The language itself is pretty easy and does not have a lot functionality. <a class="read-more" href="http://blog.benchr.de/post/rn-example/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/react/">#react</a>,
+            
+        
+        <time class="post-date" datetime="2017-04-04T18:00:00&#43;02:00">
+            4 Apr 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/about-rn/">About React Native</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>In this blog post I would like to talk about React Native. Before starting: this evening I am going to talk about this topic at the Cococaheads Dresden meetup. If you are more the visual type and you are able to understand German check out the video of the talk here.
+ React Native - Learn one, write anywhere: Build mobile apps with React.
+ This is the official description of the framework and you will get what it means during this post. <a class="read-more" href="http://blog.benchr.de/post/about-rn/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/react/">#react</a>,
+            
+        
+        <time class="post-date" datetime="2017-03-21T11:00:00&#43;02:00">
+            21 Mar 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/first-repl/">Fast feedback using a REPL</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>In this blog post I would like to write about the REPL which I built to get a fast feedback cycle for my lexer. Before going into the topic, here is a short description of what REPL stands for and what its purpose is. REPL stands for Read-Evaluate-Print-Loop. So in the end it is an endless loop which is waiting for input from the user to evaluate it and print the outcome afterwards. <a class="read-more" href="http://blog.benchr.de/post/first-repl/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/compiler/">#compiler</a>,
+            
+        
+        <time class="post-date" datetime="2017-03-18T14:00:00&#43;02:00">
+            18 Mar 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/mvp-lexer/">Writing a lexer</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>If you have read last weeks blog post you might also have checked out the repository of my compiler on Github. After deciding which programming language to use and decided on the name for the project I started creating the first fundamental files. One of them is the lexer. Before diving too deep into the topic here is a definition of lexical analysis from Wikipedia:
+ In computer science, lexical analysis is the process of converting a sequence of characters […] into a sequence of tokens […]. <a class="read-more" href="http://blog.benchr.de/post/mvp-lexer/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/compiler/">#compiler</a>,
+            
+        
+        <time class="post-date" datetime="2017-03-03T20:00:00&#43;02:00">
+            3 Mar 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/starting-the-challenge/">Starting the challenge</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>As mentioned in the last blog post I am finally able to start my challenge for this year. In an earlier blog post I thought about some key points that need to be decided before I can finally start. Here is the list with their short answers, the long answer is written below:
+ In which main language will the tools be written?  Go  Will the language be compiled or interpreted? <a class="read-more" href="http://blog.benchr.de/post/starting-the-challenge/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/compiler/">#compiler</a>,
+            
+        
+        <time class="post-date" datetime="2017-02-24T20:00:00&#43;02:00">
+            24 Feb 2017
+        </time>
+    </footer>
+</article>
+
+	
+
+	<nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 2</span>
+	
+	    <a class="older-posts" href="http://blog.benchr.de/post/page/2/">Older Posts &rarr;</a>
+	
+</nav>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">benchr</a> All rights reserved - 2017</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/index.js"></script>
+    
+</body>
+</html>

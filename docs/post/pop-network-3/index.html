@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="/images/pop-network-1.jpg"/>
+    
+
+
+
+<meta name="twitter:title" content="Part 3/3 - It&#39;s all about the mapping"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@benchr"/>
+
+
+
+  	<meta property="og:title" content="Part 3/3 - It&#39;s all about the mapping &middot; benchr" />
+  	<meta property="og:site_name" content="benchr" />
+  	<meta property="og:url" content="http://blog.benchr.de/post/pop-network-3/" />
+
+    
+       <meta property="og:image" content="/images/pop-network-1.jpg"/>
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2017-02-12T18:00:00&#43;02:00" />
+
+    
+    <meta property="article:tag" content="swift" />
+    
+    <meta property="article:tag" content="pop" />
+    
+    <meta property="article:tag" content="code" />
+    
+    
+
+    <title>Part 3/3 - It&#39;s all about the mapping &middot; benchr</title>
+
+    
+    <meta name="description" content="All Parts: 1 - 2 - 3
+Last week I defined the interface of the Client and its Authenticator. Together with the definition of the endpoints (first part) it is now" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://blog.benchr.de/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://blog.benchr.de/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/nav.css" />
+
+    
+
+    
+
+    
+        <link href="http://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
+    
+    <meta name="generator" content="Hugo 0.32.4" />
+
+    <link rel="canonical" href="http://blog.benchr.de/post/pop-network-3/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://blog.benchr.me,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": iOS developer, master degree student in computer science
+        
+    },
+    "headline": Part 3/3 - It&#39;s all about the mapping,
+    "name": Part 3/3 - It&#39;s all about the mapping,
+    "wordCount": 1022,
+    "timeRequired": "PT5M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": http://blog.benchr.de/post/pop-network-3/,
+    "datePublished": 2017-02-12T18:00Z,
+    "dateModified": 2017-02-12T18:00Z,
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": http://blog.benchr.de/images/pop-network-1.jpg,
+        "width": 3000,
+        "height": 1445
+    },
+    
+    "keywords": swift, pop, code,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": http://blog.benchr.de/post/pop-network-3/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90259105-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://keybase.io/benchr/key.asc">PGP public key</a>
+            </li>
+        
+            <h2>Contact me</h2>
+            <li class="nav-opened" role="presentation">
+            	<a href="mailto:mail@benchr.de">Mail</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="cv.pdf">Curriculum Vitae</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/index.xml">RSS feed</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/imprint/">Imprint</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="http://blog.benchr.de/index.xml">Subscribe</a> </div>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(/images/pop-network-1.jpg)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Part 3/3 - It&#39;s all about the mapping</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2017-02-12T18:00:00&#43;02:00">
+            Feb 12, 2017
+          </time>
+        
+         
+          <span class="post-tag small"><a href="http://blog.benchr.de/tags/swift/">#swift</a></span>
+         
+          <span class="post-tag small"><a href="http://blog.benchr.de/tags/pop/">#pop</a></span>
+         
+          <span class="post-tag small"><a href="http://blog.benchr.de/tags/code/">#code</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>All Parts: <a href="http://blog.benchr.de/post/pop-network-1/">1</a> - <a href="http://blog.benchr.de/post/pop-network-2/">2</a> - <a href="http://blog.benchr.de/post/pop-network-3/">3</a></p>
+
+<p><a href="http://blog.benchr.de/post/pop-network-2/">Last week</a> I defined the interface of the Client and its Authenticator. Together with the definition of the endpoints (<a href="http://blog.benchr.de/post/pop-network-2/">first part</a>) it is now possible to take a deeper look into the actual network request. But before doing that I need to clarify one important part: the mapping of the response. Mapping JSON (or other transport formats) is a different topic, especially in Swift. Just a side note:</p>
+
+<p><center><blockquote class="twitter-tweet"><p lang="en" dir="ltr">How exactly did the iOS community went from &quot;how to make great apps that delight users&quot; to &quot;how to write a functional monadic JSON parser&quot; ?</p>&mdash; Cédric Luthi (@0xced) <a href="https://twitter.com/0xced/status/827486597650198529?ref_src=twsrc%5Etfw">February 3, 2017</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center></p>
+
+<p>I totally agree with <a href="https://twitter.com/0xced">Cédric</a> on this point even though I love to overthink technical tasks like parsing JSON! And since JSON parsing is (unfortunately) a <a href="https://github.com/search?utf8=✓&amp;q=swift+json">really big thing</a> in iOS/Swift, I do not want to create something fancy in this project.</p>
+
+<p>But I need some protocol for response types to make it possible to map them from a raw format like JSON to a real Swift object. This protocol is as simple as possible:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">protocol</span> <span style="color:#447fcf">JSONObject</span> {
+    <span style="color:#6ab825;font-weight:bold">init</span>?(json: <span style="color:#24909d">Any</span>)
+}</code></pre></div>
+<p>Using <code>Any</code> here totally leverages Swifts strong type system but it is necessary because JSON objects can be arrays or dictionaries in Swift. It would be possible to create an empty protocol just for forcing the range of types that are usable but that would not bring any more security to the code and would instead decrease readability.</p>
+
+<p>Speaking of Arrays, it would be great to have the possibility to write something like:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#6ab825;font-weight:bold">extension</span> <span style="color:#447fcf">Array</span>: JSONObject <span style="color:#6ab825;font-weight:bold">where</span> Element: JSONObject { ... }</code></pre></div>
+<p>Unfortunately this is currently not possible but it is great to see that it is <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md">already planned</a>. To bypass this I created a wrapper type that can be used instead:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">struct</span> <span style="color:#447fcf">JSONArray</span>&lt;Element: JSONObject&gt;: JSONObject {
+    <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">array</span>: [Element]
+    <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">init</span>?(json: <span style="color:#24909d">Any</span>) {
+        <span style="color:#6ab825;font-weight:bold">guard</span> <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">e</span> = json <span style="color:#6ab825;font-weight:bold">as</span>? [<span style="color:#24909d">Any</span>] <span style="color:#6ab825;font-weight:bold">else</span> {
+            <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#6ab825;font-weight:bold">nil</span>
+        }
+        <span style="color:#6ab825;font-weight:bold">self</span>.array = e.flatMap(Element.<span style="color:#6ab825;font-weight:bold">init</span>)
+    }
+}</code></pre></div>
+<p>When defining an endpoint that receives an array as response, you just specify <code>JSONArray</code> with the <code>Element</code> type as the <code>ResponseType</code>:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#6ab825;font-weight:bold">struct</span> <span style="color:#447fcf">MessagesEndpoint</span>: GET {
+    <span style="color:#6ab825;font-weight:bold">typealias</span> ResponseType = JSONArray&lt;Message&gt;
+    <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">path</span> = <span style="color:#ed9d13">&#34;messages&#34;</span>
+}</code></pre></div>
+<p>The specific type needs to implement <code>init?(json: Any)</code> on its own, so there is no way aroung casting the <code>Any</code> instance to a dictionary and extracting all the values for the needed types out of it. This is not that pretty but as I said in a real project you could use a third party library like <a href="https://github.com/Hearst-DD/ObjectMapper">ObjectMapper</a> for that task.</p>
+
+<p>So, how does the request itself look like? Of course I use <a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> for the network request. Every specific method from the <code>Client</code> interface forwards its call to a more generic one. This is for example the implementation of the get method:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">get</span>&lt;E: GET&gt;(<span style="color:#6ab825;font-weight:bold">_</span> endpoint: E, completion: @escaping Completion&lt;E.ResponseType&gt;) {
+    <span style="color:#6ab825;font-weight:bold">self</span>.start(endpoint: endpoint, method: .<span style="color:#6ab825;font-weight:bold">get</span>, completion: completion)
+}</code></pre></div>
+<p>In <code>start</code> the first thing to do is creating the url out of the saved base url and the given url parameters. I created two encoders for encoding url parameters and post body parameters. They have a common interface; so I created a protocol for that task:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">protocol</span> <span style="color:#447fcf">ParameterEncoder</span> {
+    associatedtype From
+    associatedtype To
+    <span style="color:#6ab825;font-weight:bold">static</span> <span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">encode</span>(from: From) -&gt; To
+}</code></pre></div>
+<p>The actual implementation of the encoders can be found <a href="https://github.com/BenchR267/Resty/blob/master/Sources/ParameterEncoder.swift">here</a>.</p>
+
+<p>Afterwards the headers are set on the request. This is just a loop over the given parameters and setting them on the request. The http body is more interesting:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#999;font-style:italic">// POST BODY</span>
+<span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">post</span> = endpoint <span style="color:#6ab825;font-weight:bold">as</span>? PostBodyType, 
+   <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">data</span> = PostParameterEncoder.encode(from: post.postBody) {
+    request.setValue(<span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">\(</span>data.count<span style="color:#ed9d13">)</span><span style="color:#ed9d13">&#34;</span>, forHTTPHeaderField: <span style="color:#ed9d13">&#34;Content-Length&#34;</span>)
+    request.httpBody = data
+}</code></pre></div>
+<p>First of all; I need to be sure the given endpoint has a post body. It is very convenient to have a protocol for that because now I only need to check whether or not the endpoint conforms to the protocol or not. If it does, I try to encode it and set the resulting data on the request.</p>
+
+<p>Now the request itself is completely configured. The only thing that is missing is the authentication data. As described in the <a href="http://blog.benchr.de/post/pop-network-2/">last post</a> this is done by a given <code>Authenticator</code>. That authenticator is saved as a property on initialization time of the client. The authenticator gets the configured request and manipulates it so that it is authenticated with the web service.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#999;font-style:italic">// Authentication</span>
+<span style="color:#6ab825;font-weight:bold">self</span>.authenticator.authenticate(request: &amp;request)</code></pre></div>
+<p>Notice the <code>&amp;</code> character that indicates that we are passing a <em>&lsquo;pointer&rsquo;</em> in there. <em>(For clarification: this is not a traditional pointer, it is a so called inout variable in Swift.)</em> The request is now ready to be send to the web service. The next interesting part is in the completion handler of <code>URLSession</code>:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#6ab825;font-weight:bold">do</span> {
+    <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">json</span> = <span style="color:#6ab825;font-weight:bold">try</span> JSONSerialization.jsonObject(with: data, options: [])
+    <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">obj</span> = E.ResponseType(json: json)
+    completion(Response(res: obj, error: <span style="color:#6ab825;font-weight:bold">nil</span>))
+} <span style="color:#6ab825;font-weight:bold">catch</span> {
+    completion(Response(res: <span style="color:#6ab825;font-weight:bold">nil</span>, error: error))
+}</code></pre></div>
+<p><code>JSONSerialization</code> is Apples <code>Foundation</code> framework for parsing JSON data. It will throw an error if the given data is not correctly formatted json and return an <code>Any</code> value if everything worked out. This resulting json value is then passed to the <code>ResultType</code> of the <code>Endpoint</code> to create a Swift type out of it.</p>
+
+<p>Finally; here is a working example to fetch all your repositories on Github:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">githubToken</span> = <span style="color:#ed9d13">&#34;xxx&#34;</span>
+
+<span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">githubAuthenticator</span> = SimpleAuthenticator {
+    <span style="color:#40ffff">$0</span>.setValue(<span style="color:#ed9d13">&#34;token </span><span style="color:#ed9d13">\(</span>githubToken<span style="color:#ed9d13">)</span><span style="color:#ed9d13">&#34;</span>, forHTTPHeaderField: <span style="color:#ed9d13">&#34;Authorization&#34;</span>)
+}
+
+<span style="color:#6ab825;font-weight:bold">struct</span> <span style="color:#447fcf">Repository</span>: JSONObject {
+    <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">desc</span>: <span style="color:#24909d">String</span>
+    <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">name</span>: <span style="color:#24909d">String</span>
+    <span style="color:#6ab825;font-weight:bold">init</span>?(json: <span style="color:#24909d">Any</span>) {
+        <span style="color:#6ab825;font-weight:bold">guard</span> <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">j</span> = json <span style="color:#6ab825;font-weight:bold">as</span>? [<span style="color:#24909d">String</span>: <span style="color:#24909d">Any</span>] <span style="color:#6ab825;font-weight:bold">else</span> {
+            <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#6ab825;font-weight:bold">nil</span>
+        }
+        <span style="color:#6ab825;font-weight:bold">guard</span>
+            <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">d</span> = j[<span style="color:#ed9d13">&#34;description&#34;</span>] <span style="color:#6ab825;font-weight:bold">as</span>? <span style="color:#24909d">String</span>,
+            <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">n</span> = j[<span style="color:#ed9d13">&#34;full_name&#34;</span>] <span style="color:#6ab825;font-weight:bold">as</span>? <span style="color:#24909d">String</span>
+        <span style="color:#6ab825;font-weight:bold">else</span> {
+            <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#6ab825;font-weight:bold">nil</span>
+        }
+        <span style="color:#6ab825;font-weight:bold">self</span>.desc = d
+        <span style="color:#6ab825;font-weight:bold">self</span>.name = n
+    }
+}
+
+<span style="color:#6ab825;font-weight:bold">struct</span> <span style="color:#447fcf">RepositoryEndpoint</span>: GET {
+    <span style="color:#6ab825;font-weight:bold">typealias</span> ResponseType = JSONArray&lt;Repository&gt;
+    <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">path</span> = <span style="color:#ed9d13">&#34;/user/repos&#34;</span>
+    <span style="color:#6ab825;font-weight:bold">var</span> <span style="color:#40ffff">urlParameter</span>: [<span style="color:#24909d">String</span> : <span style="color:#24909d">String</span>] {
+        <span style="color:#6ab825;font-weight:bold">return</span> [<span style="color:#ed9d13">&#34;visibility&#34;</span>: <span style="color:#ed9d13">&#34;public&#34;</span>]
+    }
+}
+
+
+<span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">client</span> = Client(baseUrl: <span style="color:#ed9d13">&#34;https://api.github.com&#34;</span>, authenticator: githubAuthenticator)
+
+client.<span style="color:#6ab825;font-weight:bold">get</span>(RepositoryEndpoint()) { response <span style="color:#6ab825;font-weight:bold">in</span>
+    response.res?.array <span style="color:#999;font-style:italic">// -&gt; is now an array of all requested repositories</span>
+}</code></pre></div>
+<p>Thanks for reading my first short blog series, it was really fun writing it! The whole project can be found on <a href="https://github.com/BenchR267/Resty">Github</a> and is free to use and enhance!</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://blog.benchr.de/">Benjamin Herzog</a></h4>
+  
+  <p>iOS developer, master degree student in computer science</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Dresden, Germany</span>
+    <span class="author-link icon-link"><a href="https://blog.benchr.me">https://blog.benchr.me</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Part%203%2f3%20-%20It%27s%20all%20about%20the%20mapping&nbsp;-&nbsp;benchr&amp;url=http%3a%2f%2fblog.benchr.de%2fpost%2fpop-network-3%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fblog.benchr.de%2fpost%2fpop-network-3%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fblog.benchr.de%2fpost%2fpop-network-3%2f&amp;description=Part%203%2f3%20-%20It%27s%20all%20about%20the%20mapping"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fblog.benchr.de%2fpost%2fpop-network-3%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'blog-benchr';
+  var disqus_url = 'http:\/\/blog.benchr.de\/post\/pop-network-3\/';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="background-image: url(/images/I_am_done.jpg)" href="http://blog.benchr.de/post/i-am-done/">
+          <section class="post">
+              <h2>I am done</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="background-image: url(/images/pop-network-1.jpg)" href="http://blog.benchr.de/post/pop-network-2/">
+          <section class="post">
+              <h2>Part 2/3 - Defining a readable and safe interface</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">benchr</a> All rights reserved - 2017</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/index.js"></script>
+    
+</body>
+</html>
+

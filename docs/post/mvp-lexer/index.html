@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="/images/mvp-lexer.jpg"/>
+    
+
+
+
+<meta name="twitter:title" content="Writing a lexer"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@benchr"/>
+
+
+
+  	<meta property="og:title" content="Writing a lexer &middot; benchr" />
+  	<meta property="og:site_name" content="benchr" />
+  	<meta property="og:url" content="http://blog.benchr.de/post/mvp-lexer/" />
+
+    
+       <meta property="og:image" content="/images/mvp-lexer.jpg"/>
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2017-03-03T20:00:00&#43;02:00" />
+
+    
+    <meta property="article:tag" content="compiler" />
+    
+    
+
+    <title>Writing a lexer &middot; benchr</title>
+
+    
+    <meta name="description" content="If you have read last weeks blog post you might also have checked out the repository of my compiler on Github. After deciding which programming language to use " />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://blog.benchr.de/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://blog.benchr.de/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/nav.css" />
+
+    
+
+    
+
+    
+        <link href="http://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
+    
+    <meta name="generator" content="Hugo 0.32.4" />
+
+    <link rel="canonical" href="http://blog.benchr.de/post/mvp-lexer/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://blog.benchr.me,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": iOS developer, master degree student in computer science
+        
+    },
+    "headline": Writing a lexer,
+    "name": Writing a lexer,
+    "wordCount": 903,
+    "timeRequired": "PT5M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": http://blog.benchr.de/post/mvp-lexer/,
+    "datePublished": 2017-03-03T20:00Z,
+    "dateModified": 2017-03-03T20:00Z,
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": http://blog.benchr.de/images/mvp-lexer.jpg,
+        "width": 3000,
+        "height": 1445
+    },
+    
+    "keywords": compiler,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": http://blog.benchr.de/post/mvp-lexer/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90259105-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://keybase.io/benchr/key.asc">PGP public key</a>
+            </li>
+        
+            <h2>Contact me</h2>
+            <li class="nav-opened" role="presentation">
+            	<a href="mailto:mail@benchr.de">Mail</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="cv.pdf">Curriculum Vitae</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/index.xml">RSS feed</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/imprint/">Imprint</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="http://blog.benchr.de/index.xml">Subscribe</a> </div>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(/images/mvp-lexer.jpg)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Writing a lexer</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2017-03-03T20:00:00&#43;02:00">
+            Mar 3, 2017
+          </time>
+        
+         
+          <span class="post-tag small"><a href="http://blog.benchr.de/tags/compiler/">#compiler</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>If you have read <a href="http://blog.benchr.de/post/starting-the-challenge/">last weeks blog post</a> you might also have checked out the <a href="https://github.com/BenchR267/lbd">repository of my compiler on Github</a>. After deciding which programming language to use and decided on the name for the project I started creating the first fundamental files. One of them is the lexer. Before diving too deep into the topic here is a definition of lexical analysis from <a href="https://en.wikipedia.org/wiki/Lexical_analysis">Wikipedia</a>:</p>
+
+<blockquote>
+<p>In computer science, lexical analysis is the process of converting a sequence of characters […] into a sequence of tokens […].</p>
+</blockquote>
+
+<p>For the compiler it is essential to understand the code that is written to be able to support the software engineer and to create executable files. Understanding is something we normally associate with human beings and not with computer programs. In this context understanding means to create an abstraction that the computer is able to process. I am going to describe this abstraction in a later blog post since it is not important for the lexer. But it is important to know that this abstraction is powered by the <a href="https://en.wikipedia.org/wiki/Parsing">parser</a>.</p>
+
+<blockquote>
+<p>Parsing […] is the process of analysing a string of symbols, either in natural language or in computer languages, conforming to the rules of a formal grammar.</p>
+</blockquote>
+
+<p>A parser is taking a bunch of tokens and transforms them to an abstraction, called <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a>, by a given set of rules, called grammer. The parser of <a href="https://github.com/BenchR267/lbd">lbd</a> is also going to be the topic of a later blog post. But since tokens are the input of the parser we now have the connection back to our lexer: the lexer is providing those tokens to be processed by the parser.</p>
+
+<p>The lexer is the first component that gets in touch with the raw input of the user. This input is passed to the lexer as raw bytes and gets outputted as tokens which describe what a given set of the input represents. Since the tokens length is often not the same length as a bytes length it is the task of the lexer to cluster the bytes together in lexical groups. One lexical group will later describe one word in the alphabet that is used in the grammer of the parser.</p>
+
+<p>Before showing you the possible tokens that the MVP can handle, this is a sample part of code written in lbd:</p>
+
+<pre><code>add = (a int, b int) -&gt; int {
+    return a + b
+}
+
+mul = (x int, y int) -&gt; int {
+    return x * y
+}
+
+a = 5
+b = 4
+c = add(a, b)
+d = mul(a, b)
+</code></pre>
+
+<p>As you can see, the feature set is intentionally small to see results as fast as possible. It is only possible to create variables which can be of type function or int.</p>
+
+<p>A <code>Token</code> is defined by its <code>Position</code> in the stream, its type and its raw representation in the source code:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">type</span> Token <span style="color:#6ab825;font-weight:bold">struct</span> {
+	Pos  Position
+	Type Type
+	Raw  <span style="color:#6ab825;font-weight:bold">string</span>
+}
+
+<span style="color:#6ab825;font-weight:bold">type</span> Position <span style="color:#6ab825;font-weight:bold">struct</span> {
+	Line   <span style="color:#6ab825;font-weight:bold">int</span>
+	Column <span style="color:#6ab825;font-weight:bold">int</span>
+	Len    <span style="color:#6ab825;font-weight:bold">int</span>
+}</code></pre></div>
+<p>Both types are defined in a sub-package of the <code>lexer</code> package called <code>token</code>. <code>token.Type</code> is defined as an enum which is described in Go as a set of constants of type <code>int</code> incremented by the keyword <code>iota</code>. The list of all possible values for <code>token.Type</code> can be viewed <a href="https://github.com/BenchR267/lbd/blob/master/lexer/token/token.go#L24">here</a>.</p>
+
+<p>Since the lexer transforms the raw input to values of type <code>token.Token</code> I defined the type like this:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">type</span> Lexer <span style="color:#6ab825;font-weight:bold">struct</span> {
+	NextToken <span style="color:#6ab825;font-weight:bold">chan</span> token.Token
+
+	input  &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>
+	curPos token.Position
+	buffer tokenizer
+}</code></pre></div>
+<p>If you are not familiar with Go, the capitalized fields in structs are exported. That means they can be accessed from outside of the package. Also important: <code>rune</code> is a built in <a href="https://blog.golang.org/strings">Go type</a> that describes an <a href="https://en.wikipedia.org/wiki/Unicode">unicode</a> character. So the interface of <code>lexer.Lexer</code> only offers a read only channel of <code>token.Token</code>. The lexer is initialized with a Go typical <code>NewLexer</code> function which takes a read only input channel of runes. A channel is a stream of values which is used for safe communication between go routines.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">func</span> NewLexer(inputStream &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>) *Lexer</code></pre></div>
+<p>After initializing the caller needs to <code>Start()</code> the instance which will spawn a new go routine which reads from the input channel. Receiving from a channel is a blocking operation until another go routine starts sending on that channel. To get started I created two functions to create the needed channels with ease: (the implementation can be found <a href="https://github.com/BenchR267/lbd/blob/master/lexer/helper.go">here</a>)</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">func</span> StreamFromString(input <span style="color:#6ab825;font-weight:bold">string</span>) &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>
+<span style="color:#6ab825;font-weight:bold">func</span> StreamFromFile(filename <span style="color:#6ab825;font-weight:bold">string</span>) (stream &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>, err <span style="color:#6ab825;font-weight:bold">error</span>)
+<span style="color:#6ab825;font-weight:bold">func</span> CombineStreams(streams ...&lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>) &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span></code></pre></div>
+<p>When all runes from the input channel are processed and transformed into tokens, the lexer stops the whole process by closing the <code>NextToken</code> channel.</p>
+
+<p>The real work of building tokens out of the runes is done by an internal type <code>lexer.tokenizer</code>. The tokenizer is some kind of buffer for the lexer. It holds a slice of runes inside until appending a new rune does not belong to the current buffered ones anymore. That is important for tokens that need more than one rune to be finalized (<code>==</code>, <code>!=</code>, <code>return</code>).</p>
+
+<p>Working with channels and go routines in Go is really great. It supports by a lot of power and brings also a lot of performance and security in communication between different parts of the app.</p>
+
+<p>So far, thanks for reading. Next week I am going to write about the <a href="https://en.wikipedia.org/wiki/Read–eval–print_loop">REPL</a> which is very handy to get instant feedback on written code.</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://blog.benchr.de/">Benjamin Herzog</a></h4>
+  
+  <p>iOS developer, master degree student in computer science</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Dresden, Germany</span>
+    <span class="author-link icon-link"><a href="https://blog.benchr.me">https://blog.benchr.me</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Writing%20a%20lexer&nbsp;-&nbsp;benchr&amp;url=http%3a%2f%2fblog.benchr.de%2fpost%2fmvp-lexer%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fblog.benchr.de%2fpost%2fmvp-lexer%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fblog.benchr.de%2fpost%2fmvp-lexer%2f&amp;description=Writing%20a%20lexer"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fblog.benchr.de%2fpost%2fmvp-lexer%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'blog-benchr';
+  var disqus_url = 'http:\/\/blog.benchr.de\/post\/mvp-lexer\/';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="background-image: url(/images/mvp-repl.jpg)" href="http://blog.benchr.de/post/first-repl/">
+          <section class="post">
+              <h2>Fast feedback using a REPL</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="background-image: url(/images/starting-the-challenge.jpg)" href="http://blog.benchr.de/post/starting-the-challenge/">
+          <section class="post">
+              <h2>Starting the challenge</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">benchr</a> All rights reserved - 2017</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/index.js"></script>
+    
+</body>
+</html>
+

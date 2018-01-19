@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="/images/pop-network-1.jpg"/>
+    
+
+
+
+<meta name="twitter:title" content="Part 1/3 - Writing a protocol oriented network abstraction in Swift"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@benchr"/>
+
+
+
+  	<meta property="og:title" content="Part 1/3 - Writing a protocol oriented network abstraction in Swift &middot; benchr" />
+  	<meta property="og:site_name" content="benchr" />
+  	<meta property="og:url" content="http://blog.benchr.de/post/pop-network-1/" />
+
+    
+       <meta property="og:image" content="/images/pop-network-1.jpg"/>
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2017-02-03T15:00:00&#43;02:00" />
+
+    
+    <meta property="article:tag" content="swift" />
+    
+    <meta property="article:tag" content="pop" />
+    
+    <meta property="article:tag" content="code" />
+    
+    
+
+    <title>Part 1/3 - Writing a protocol oriented network abstraction in Swift &middot; benchr</title>
+
+    
+    <meta name="description" content="All Parts: 1 - 2 - 3
+Todays topic is very technically. So if you are not interested in programming (or especially in Swift programming), this post might not be " />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://blog.benchr.de/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://blog.benchr.de/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/nav.css" />
+
+    
+
+    
+
+    
+        <link href="http://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
+    
+    <meta name="generator" content="Hugo 0.32.4" />
+
+    <link rel="canonical" href="http://blog.benchr.de/post/pop-network-1/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://blog.benchr.me,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": iOS developer, master degree student in computer science
+        
+    },
+    "headline": Part 1/3 - Writing a protocol oriented network abstraction in Swift,
+    "name": Part 1/3 - Writing a protocol oriented network abstraction in Swift,
+    "wordCount": 1034,
+    "timeRequired": "PT5M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": http://blog.benchr.de/post/pop-network-1/,
+    "datePublished": 2017-02-03T15:00Z,
+    "dateModified": 2017-02-03T15:00Z,
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": http://blog.benchr.de/images/pop-network-1.jpg,
+        "width": 3000,
+        "height": 1445
+    },
+    
+    "keywords": swift, pop, code,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": http://blog.benchr.de/post/pop-network-1/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90259105-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://keybase.io/benchr/key.asc">PGP public key</a>
+            </li>
+        
+            <h2>Contact me</h2>
+            <li class="nav-opened" role="presentation">
+            	<a href="mailto:mail@benchr.de">Mail</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="cv.pdf">Curriculum Vitae</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/index.xml">RSS feed</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/imprint/">Imprint</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="http://blog.benchr.de/index.xml">Subscribe</a> </div>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(/images/pop-network-1.jpg)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Part 1/3 - Writing a protocol oriented network abstraction in Swift</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2017-02-03T15:00:00&#43;02:00">
+            Feb 3, 2017
+          </time>
+        
+         
+          <span class="post-tag small"><a href="http://blog.benchr.de/tags/swift/">#swift</a></span>
+         
+          <span class="post-tag small"><a href="http://blog.benchr.de/tags/pop/">#pop</a></span>
+         
+          <span class="post-tag small"><a href="http://blog.benchr.de/tags/code/">#code</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>All Parts: <a href="http://blog.benchr.de/post/pop-network-1/">1</a> - <a href="http://blog.benchr.de/post/pop-network-2/">2</a> - <a href="http://blog.benchr.de/post/pop-network-3/">3</a></p>
+
+<p>Todays topic is very technically. So if you are not interested in programming (or especially in Swift programming), this post might not be for you.</p>
+
+<p>This is the first blog post of a short series. Before starting with the structure and the implementation details, I would like to explain how that topic came up.</p>
+
+<p>In summer 2014, right after the announcement of Swift, I created a <a href="https://www.youtube.com/swiftde">YouTube Channel</a>. It was a huge success here in Germany and a lot of viewers started watching the videos. Later I produced a <a href="https://www.udemy.com/ios-8-und-swift-der-einstieg-in-grosartige-app-entwicklung/?couponCode=BLOG_1">video course</a> about Swift. It was a huge success as well. Then, a year ago, I created a <a href="http://slack.swiftde.net">Slack-Team</a> for all the ambitious, motivated novice Swift engineers out there in Germany. It was and is a great success! There are over 630 registered people and they are not beginners anymore. We came up with a lot of great ideas. One of those was a competition in which every participant builds the same app with reduced functionality focused on code quality and software architecture. The outcome was presented in a <a href="https://www.youtube.com/watch?v=EXxYGszFOSY">live video stream</a> on YouTube and the <a href="https://github.com/swiftde/swift-client-challenge/tree/master/01%20Github-Client">code</a> was uploaded to Github.</p>
+
+<p>In my eyes one of the main parts about this challenge was the general over-engineering which is just not possible in daily business. It was a manageable feature set: Build a Github-Client which is able to search for Users, show their repositories and open the README-file of the selected one. There was one rule: do not use any third party dependencies! In my opinion this was a downer but it also forced me and the others to rethink very basic stuff. Since my implementation got very complex, I was not able to describe it completely in the live stream. But the topic is so interesting that I thought I could write about it. So here it is: writing a protocol oriented network abstraction in Swift!</p>
+
+<p>The code I’m showing here is not complete but will be available on Github when the last post of this series is online.  The implementation of the challenge solution was made up of three parts: the network abstraction, the mapping logic and the UI wrapper for UITableView. I rewrote the network abstraction to be as protocol oriented as possible in order to make sense. Protocol oriented programming feels very naturally to Swift since the <a href="https://github.com/apple/swift/tree/master/stdlib">standard library</a> is built that way. It is also not a complex paradigm and quite easy to understand. The aim is to make parts of the code as reusable as possible <em>(if it makes sense to reuse this code)</em>. Since Swift classes can only inherit from one superclass it also brings a lot of freedom and new patterns to use protocols because all Swift types can <em>&lsquo;inherit&rsquo;</em> from multiple protocols. And protocols can bring their one implementation via extensions which is extremly powerful!</p>
+
+<p>Don’t worry: this post isn’t only the introduction, now we are going to start with the code and the following part is coming in the next couple of days.</p>
+
+<p>The framework should be used for one <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a> service, so the interface should be a rest client. The client itself is just a plain class because adding a protocol here wouldn’t make any sense, the user should use this class directly. Using a struct or enum would also make no sense since the client will be used from the whole app and should only be referenced instead of copied.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">class</span> <span style="color:#447fcf">Client</span> { 
+	<span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">var</span> <span style="color:#40ffff">baseUrl</span>: URL
+	<span style="color:#6ab825;font-weight:bold">init</span>(baseUrl: <span style="color:#24909d">String</span>) {
+		<span style="color:#6ab825;font-weight:bold">self</span>.baseUrl = URL(string: baseUrl)!
+	}
+}</code></pre></div>
+<p>A client is initialized with a base url which is also changeable for later requests. <em>The force unwrapping in the initializer is definitely a bad code smell but urls for webservices often do not change and are hard coded, so a crash is actually intended. In production environment we might have a better describing error message.</em></p>
+
+<p>Each call to the webservice is defined as an endpoint. An endpoint defines the path to the method that is invoked and provides all the necessary information. The aim is that the user of that endpoint can not configure anything wrong. The requests are good old <a href="https://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP 1.1</a> requests so the most important possible configurations are: http method, url parameters, post parameters, header values. But not every http method accepts post parameters, so that should be enforced be Swifts type system. And this is possible by using protocols:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">protocol</span> <span style="color:#447fcf">URLParameterType</span> {
+    <span style="color:#6ab825;font-weight:bold">var</span> <span style="color:#40ffff">urlParameter</span>: [<span style="color:#24909d">String</span>: <span style="color:#24909d">String</span>] { <span style="color:#6ab825;font-weight:bold">get</span> }
+}
+<span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">enum</span> <span style="color:#447fcf">PostBody</span> {
+    <span style="color:#6ab825;font-weight:bold">case</span> None, <span style="color:#24909d">String</span>(<span style="color:#24909d">String</span>), Data(Data), JSON(<span style="color:#24909d">Any</span>), URL([<span style="color:#24909d">String</span>: <span style="color:#24909d">String</span>])
+}
+<span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">protocol</span> <span style="color:#447fcf">PostBodyType</span> {
+    <span style="color:#6ab825;font-weight:bold">var</span> <span style="color:#40ffff">postBody</span>: PostBody { <span style="color:#6ab825;font-weight:bold">get</span> }
+}
+<span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">protocol</span> <span style="color:#447fcf">Endpoint</span>: URLParameterType {
+    associatedtype ResponseType: JSONObject
+    <span style="color:#6ab825;font-weight:bold">var</span> <span style="color:#40ffff">path</span>: <span style="color:#24909d">String</span> { <span style="color:#6ab825;font-weight:bold">get</span> }
+    <span style="color:#6ab825;font-weight:bold">var</span> <span style="color:#40ffff">header</span>: [<span style="color:#24909d">String</span>: <span style="color:#24909d">String</span>] { <span style="color:#6ab825;font-weight:bold">get</span> }
+}
+<span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">protocol</span> <span style="color:#447fcf">GET</span>: Endpoint {}
+<span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">protocol</span> <span style="color:#447fcf">POST</span>: Endpoint, PostBodyType {}
+<span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">protocol</span> <span style="color:#447fcf">PUT</span>: Endpoint, PostBodyType {}
+<span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">protocol</span> <span style="color:#447fcf">DELETE</span>: Endpoint, PostBodyType {}</code></pre></div>
+<p>I will only implement the http methods get, post, put, delete for now but you get the idea. Something that can have any url parameters is described by the protocol <code>URLParameterType</code>. Something that can has a post body is defined by the <code>PostBodyType</code> protocol. Endpoint is the general protocol for an endpoint which should not be used directly. <code>GET</code>, <code>POST</code>, <code>PUT</code> and <code>DELETE</code> are specific protocols that define which parameters they accept. With that implementation it is easy for the client to enforce http methods for defined endpoints.</p>
+
+<p>At the end, I would like to test the whole implementation with the <a href="https://developer.github.com/v3">Github-API</a>, so here is a sample implementation of the endpoint which describes the get-requests for fetching information about all repositories of the logged in user.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">struct</span> <span style="color:#447fcf">Repositories</span>: GET {
+    <span style="color:#6ab825;font-weight:bold">typealias</span> ResponseType = JSONArray&lt;Repository&gt;
+    <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">path</span> = <span style="color:#ed9d13">&#34;user/repos&#34;</span>
+    <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">urlParameter</span> = [<span style="color:#ed9d13">&#34;visibility&#34;</span>: <span style="color:#ed9d13">&#34;public&#34;</span>]
+}</code></pre></div>
+<p>Ignore <code>ResponseType</code> and <code>JSONArray</code> for now, this is just necessary to get strongly typed responses from the client after a successful request.</p>
+
+<p>In the next blog post I will build the client and response structures on top of those declarations. Important is the implementation of the <code>Client</code> itself and the handling of the authentication which is necessary to use the Github-Api. Thanks for reading so far, see you in a few days!</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://blog.benchr.de/">Benjamin Herzog</a></h4>
+  
+  <p>iOS developer, master degree student in computer science</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Dresden, Germany</span>
+    <span class="author-link icon-link"><a href="https://blog.benchr.me">https://blog.benchr.me</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Part%201%2f3%20-%20Writing%20a%20protocol%20oriented%20network%20abstraction%20in%20Swift&nbsp;-&nbsp;benchr&amp;url=http%3a%2f%2fblog.benchr.de%2fpost%2fpop-network-1%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fblog.benchr.de%2fpost%2fpop-network-1%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fblog.benchr.de%2fpost%2fpop-network-1%2f&amp;description=Part%201%2f3%20-%20Writing%20a%20protocol%20oriented%20network%20abstraction%20in%20Swift"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fblog.benchr.de%2fpost%2fpop-network-1%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'blog-benchr';
+  var disqus_url = 'http:\/\/blog.benchr.de\/post\/pop-network-1\/';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="background-image: url(/images/pop-network-1.jpg)" href="http://blog.benchr.de/post/pop-network-2/">
+          <section class="post">
+              <h2>Part 2/3 - Defining a readable and safe interface</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="background-image: url(/images/Exams.jpg)" href="http://blog.benchr.de/post/exams/">
+          <section class="post">
+              <h2>Exams..</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">benchr</a> All rights reserved - 2017</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/index.js"></script>
+    
+</body>
+</html>
+

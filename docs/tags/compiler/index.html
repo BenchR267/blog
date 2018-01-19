@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:image" content="/images/cover.jpg"/>
+
+
+
+<meta name="twitter:title" content="Compiler"/>
+<meta name="twitter:description" content="iOS developer, master degree student in computer science"/>
+<meta name="twitter:site" content="@benchr"/>
+
+
+
+  	<meta property="og:title" content="Compiler &middot; benchr" />
+  	<meta property="og:site_name" content="benchr" />
+  	<meta property="og:url" content="http://blog.benchr.de/tags/compiler/" />
+
+    
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="iOS developer, master degree student in computer science" />
+    
+
+    <title>Compiler &middot; benchr</title>
+
+    
+    <meta name="description" content="iOS developer, master degree student in computer science" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://blog.benchr.de/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://blog.benchr.de/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/nav.css" />
+
+    
+
+    
+
+    
+        <link href="http://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
+    
+    <meta name="generator" content="Hugo 0.32.4" />
+
+    <link rel="canonical" href="http://blog.benchr.de/tags/compiler/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://blog.benchr.me,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": iOS developer, master degree student in computer science
+        
+    },
+    "url": http://blog.benchr.de/,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": http://blog.benchr.de/
+    },
+    "description": iOS developer, master degree student in computer science
+}
+  </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90259105-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://keybase.io/benchr/key.asc">PGP public key</a>
+            </li>
+        
+            <h2>Contact me</h2>
+            <li class="nav-opened" role="presentation">
+            	<a href="mailto:mail@benchr.de">Mail</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="cv.pdf">Curriculum Vitae</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/index.xml">RSS feed</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/imprint/">Imprint</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="http://blog.benchr.de/index.xml">Subscribe</a> </div>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+	 
+  <header class="main-header tag-head" style="background-image: url(/images/cover.jpg)">
+  
+
+    <nav class="main-nav overlay clearfix">
+      
+      
+          <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+      
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">Compiler</h1>
+            <h2 class="page-description">
+                
+            </h2>
+        </div>
+    </div>
+</header>
+
+<main class="content" role="main">
+    
+
+	<div class="extra-pagination inner">
+    <nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 1</span>
+	
+</nav>
+
+	</div>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/first-repl/">Fast feedback using a REPL</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>In this blog post I would like to write about the REPL which I built to get a fast feedback cycle for my lexer. Before going into the topic, here is a short description of what REPL stands for and what its purpose is. REPL stands for Read-Evaluate-Print-Loop. So in the end it is an endless loop which is waiting for input from the user to evaluate it and print the outcome afterwards. <a class="read-more" href="http://blog.benchr.de/post/first-repl/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/compiler/">#compiler</a>,
+            
+        
+        <time class="post-date" datetime="2017-03-18T14:00:00&#43;02:00">
+            18 Mar 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/mvp-lexer/">Writing a lexer</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>If you have read last weeks blog post you might also have checked out the repository of my compiler on Github. After deciding which programming language to use and decided on the name for the project I started creating the first fundamental files. One of them is the lexer. Before diving too deep into the topic here is a definition of lexical analysis from Wikipedia:
+ In computer science, lexical analysis is the process of converting a sequence of characters […] into a sequence of tokens […]. <a class="read-more" href="http://blog.benchr.de/post/mvp-lexer/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/compiler/">#compiler</a>,
+            
+        
+        <time class="post-date" datetime="2017-03-03T20:00:00&#43;02:00">
+            3 Mar 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/starting-the-challenge/">Starting the challenge</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>As mentioned in the last blog post I am finally able to start my challenge for this year. In an earlier blog post I thought about some key points that need to be decided before I can finally start. Here is the list with their short answers, the long answer is written below:
+ In which main language will the tools be written?  Go  Will the language be compiled or interpreted? <a class="read-more" href="http://blog.benchr.de/post/starting-the-challenge/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/compiler/">#compiler</a>,
+            
+        
+        <time class="post-date" datetime="2017-02-24T20:00:00&#43;02:00">
+            24 Feb 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/exams/">Exams..</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Since I am currently right before examination period time at my studies, I&rsquo;d like to take a moment to talk about something I learned during the development of a task for my university. While the task itself was not that exciting, I think the overall principle is very nice!
+The tool is a framework for developing new programming languages! Its name is Xtext. While I will propably never use it, I like the idea behind it. <a class="read-more" href="http://blog.benchr.de/post/exams/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/exams/">#exams</a>,
+            
+                <a href="http://blog.benchr.de/tags/university/">#university</a>,
+            
+                <a href="http://blog.benchr.de/tags/master/">#master</a>,
+            
+                <a href="http://blog.benchr.de/tags/compiler/">#compiler</a>,
+            
+        
+        <time class="post-date" datetime="2017-01-22T23:00:00&#43;02:00">
+            22 Jan 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/thoughts/">Some Thoughts</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>This week I want to share some of my thoughts about my new programming language. Or to be a bit more specific: about some technical details for building the toolchain. There are a lot of things that need to be decided which are also very important for the planning process. Here is an overview over some of them:
+ Will the language be compiled or interpreted? What exact features will the language support? <a class="read-more" href="http://blog.benchr.de/post/thoughts/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/blog/">#blog</a>,
+            
+                <a href="http://blog.benchr.de/tags/decisions/">#decisions</a>,
+            
+                <a href="http://blog.benchr.de/tags/compiler/">#compiler</a>,
+            
+        
+        <time class="post-date" datetime="2017-01-15T10:00:00&#43;02:00">
+            15 Jan 2017
+        </time>
+    </footer>
+</article>
+
+	
+	   
+<article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="http://blog.benchr.de/post/beginning/">A New Beginning</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Year after year I thought about aspects that I could possibly change to create a more positive lifestyle. These were often things like &lsquo;eat healthier&rsquo;, &lsquo;do more sports&rsquo;, &lsquo;quit smoking&rsquo; and so on. None of those actually ever happened (beside the smoking, but that was not at New Year&rsquo;s Eve). And that is the point about resolutions. They never happen if you choose another time for it than now. Do not let yourself restrict too much from events like New Year&rsquo;s Eve. <a class="read-more" href="http://blog.benchr.de/post/beginning/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+        
+            
+            
+                Benjamin Herzog
+            
+        
+
+        on
+            
+                <a href="http://blog.benchr.de/tags/blog/">#blog</a>,
+            
+                <a href="http://blog.benchr.de/tags/compiler/">#compiler</a>,
+            
+        
+        <time class="post-date" datetime="2017-01-07T15:00:00&#43;02:00">
+            7 Jan 2017
+        </time>
+    </footer>
+</article>
+
+	
+
+	<nav class="pagination" role="navigation">
+	
+	<span class="page-number">Page 1 of 1</span>
+	
+</nav>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">benchr</a> All rights reserved - 2017</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/index.js"></script>
+    
+</body>
+</html>

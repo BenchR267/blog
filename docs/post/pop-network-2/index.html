@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="/images/pop-network-1.jpg"/>
+    
+
+
+
+<meta name="twitter:title" content="Part 2/3 - Defining a readable and safe interface"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@benchr"/>
+
+
+
+  	<meta property="og:title" content="Part 2/3 - Defining a readable and safe interface &middot; benchr" />
+  	<meta property="og:site_name" content="benchr" />
+  	<meta property="og:url" content="http://blog.benchr.de/post/pop-network-2/" />
+
+    
+       <meta property="og:image" content="/images/pop-network-1.jpg"/>
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2017-02-05T08:00:00&#43;02:00" />
+
+    
+    <meta property="article:tag" content="swift" />
+    
+    <meta property="article:tag" content="pop" />
+    
+    <meta property="article:tag" content="code" />
+    
+    
+
+    <title>Part 2/3 - Defining a readable and safe interface &middot; benchr</title>
+
+    
+    <meta name="description" content="All Parts: 1 - 2 - 3
+In the first part I built the foundation for a protocol oriented network abstraction written in Swift. The main focus for the component lie" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://blog.benchr.de/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://blog.benchr.de/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/nav.css" />
+
+    
+
+    
+
+    
+        <link href="http://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
+    
+    <meta name="generator" content="Hugo 0.32.4" />
+
+    <link rel="canonical" href="http://blog.benchr.de/post/pop-network-2/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://blog.benchr.me,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": iOS developer, master degree student in computer science
+        
+    },
+    "headline": Part 2/3 - Defining a readable and safe interface,
+    "name": Part 2/3 - Defining a readable and safe interface,
+    "wordCount": 776,
+    "timeRequired": "PT4M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": http://blog.benchr.de/post/pop-network-2/,
+    "datePublished": 2017-02-05T08:00Z,
+    "dateModified": 2017-02-05T08:00Z,
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": http://blog.benchr.de/images/pop-network-1.jpg,
+        "width": 3000,
+        "height": 1445
+    },
+    
+    "keywords": swift, pop, code,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": http://blog.benchr.de/post/pop-network-2/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90259105-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://keybase.io/benchr/key.asc">PGP public key</a>
+            </li>
+        
+            <h2>Contact me</h2>
+            <li class="nav-opened" role="presentation">
+            	<a href="mailto:mail@benchr.de">Mail</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="cv.pdf">Curriculum Vitae</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/index.xml">RSS feed</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/imprint/">Imprint</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="http://blog.benchr.de/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="http://blog.benchr.de/index.xml">Subscribe</a> </div>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(/images/pop-network-1.jpg)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Part 2/3 - Defining a readable and safe interface</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2017-02-05T08:00:00&#43;02:00">
+            Feb 5, 2017
+          </time>
+        
+         
+          <span class="post-tag small"><a href="http://blog.benchr.de/tags/swift/">#swift</a></span>
+         
+          <span class="post-tag small"><a href="http://blog.benchr.de/tags/pop/">#pop</a></span>
+         
+          <span class="post-tag small"><a href="http://blog.benchr.de/tags/code/">#code</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>All Parts: <a href="http://blog.benchr.de/post/pop-network-1/">1</a> - <a href="http://blog.benchr.de/post/pop-network-2/">2</a> - <a href="http://blog.benchr.de/post/pop-network-3/">3</a></p>
+
+<p>In the <a href="http://blog.benchr.de/post/pop-network-1/">first part</a> I built the foundation for a protocol oriented network abstraction written in Swift. The main focus for the component lies on safety, code quality and a very clean <a href="https://en.wikipedia.org/wiki/Application_programming_interface">API</a>.</p>
+
+<p>Safety is mostly about the rules you define on how the component can be used. In the best scenario the user can not even compile the program if the component is configured wrongly. Of course, this is the perfect case which is just not reachable. But by defining different protocols for different http methods, it is possible to distinguish between them on the level of Swift&rsquo;s type system instead of comparing Strings.</p>
+
+<p>Code quality is a very generic term and I bet that everyone will think differently about this. In my eyes code quality is defined by readability and the structure of the code. A rule of thumb is that the code is written in 10% of the productive time but it is read in 90% of it. That means you are fighting with yourself when writing &lsquo;<em>spaghetti code</em>&rsquo;. Related to the rest component building code quality means to structure the code that a user could easily fix a bug by himself.</p>
+
+<p>API design is a subset of code quality since it defines how the interface of the component is built. Even while there should be documentation it should not be necessary to read it to be able to use the code. It is also bound to safety in this case because the API should be strongly typed though generics since the concrete types are not even defined in this module.</p>
+
+<p>So, what does the API of the client look like?</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">class</span> <span style="color:#447fcf">Client</span> {
+    <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">enum</span> <span style="color:#447fcf">Errors</span> : Error {
+        <span style="color:#6ab825;font-weight:bold">case</span> invalidUrl(<span style="color:#24909d">String</span>)
+        <span style="color:#6ab825;font-weight:bold">case</span> invalidResponse(Data?, Error?)
+        <span style="color:#6ab825;font-weight:bold">case</span> requestFailed(<span style="color:#24909d">Int</span>, Error?)
+    }
+
+    <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">init</span>(baseUrl: <span style="color:#24909d">String</span>, authenticator: Authenticator, timeout: TimeInterval = <span style="color:#6ab825;font-weight:bold">default</span>)
+
+    <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">typealias</span> Completion&lt;R : JSONObject&gt; = (Response&lt;R&gt;) -&gt; <span style="color:#24909d">Void</span>
+    <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">get</span>&lt;E : GET&gt;(<span style="color:#6ab825;font-weight:bold">_</span> endpoint: E, completion: @escaping Completion&lt;E.ResponseType&gt;)
+
+    <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">post</span>&lt;E : POST&gt;(<span style="color:#6ab825;font-weight:bold">_</span> endpoint: E, completion: @escaping Completion&lt;E.ResponseType&gt;)
+
+    <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">put</span>&lt;E : PUT&gt;(<span style="color:#6ab825;font-weight:bold">_</span> endpoint: E, completion: @escaping Completion&lt;E.ResponseType&gt;)
+
+    <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">delete</span>&lt;E : DELETE&gt;(<span style="color:#6ab825;font-weight:bold">_</span> endpoint: E, completion: @escaping Completion&lt;E.ResponseType&gt;)
+}</code></pre></div>
+<p>First of all, there are some Errors defined via a nested enum. That is very convenient since they are bound to the namespace <code>Client</code>. There is one initializer which takes a baseUrl, an authenticator which I will describe in a moment and a timeout in seconds. Those three values are also stored in properties which might also be part of the interface but I removed them from this view for clarity.</p>
+
+<p>The rest of the API are methods for each possible http method. Since every method that starts a request takes a generic endpoint it forces via the type system that only endpoints can be used that support the given http method.</p>
+
+<p>To make this more clearly, think about this arbitrary endpoint:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">struct</span> <span style="color:#447fcf">MessageEndpoint</span>: POST, DELETE {
+    <span style="color:#6ab825;font-weight:bold">typealias</span> ResponseType = Message
+    <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">path</span> = <span style="color:#ed9d13">&#34;message&#34;</span>
+}</code></pre></div>
+<p>This endpoint describes the message service of our random backend. It is possible to POST (add) a new message or to DELETE an existing one. This is realized with the multiple inheritance via protocols. And since <code>MessageEndpoint</code> does not conform to <code>GET</code>, it is not possible to use it with the <code>get</code> method of <code>Client</code>. That is safety enforced by the compiler.</p>
+
+<p>In the next blog post I will tell more about the associated type in the <code>Endpoint</code> definition. But before that I would like to quickly describe the very basic authentication implementation:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">protocol</span> <span style="color:#447fcf">Authenticator</span> {
+    <span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">authenticate</span>(request: <span style="color:#6ab825;font-weight:bold">inout</span> URLRequest)
+}</code></pre></div>
+<p>An <code>Authenticator</code> is a type that is able to authenticate a given request. It does not matter for the client how this is done, it is just important that the correct header values are set. So before sending the actual request, the client gives its authenticator the chance to authenticate the request. Here is a very basic implementation of an authenticator:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">struct</span> <span style="color:#447fcf">SimpleAuthenticator</span>: Authenticator {
+    <span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">authenticationBlock</span>: (<span style="color:#6ab825;font-weight:bold">inout</span> URLRequest) -&gt; <span style="color:#24909d">Void</span>
+    
+    <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">authenticate</span>(request: <span style="color:#6ab825;font-weight:bold">inout</span> URLRequest) {
+        <span style="color:#6ab825;font-weight:bold">self</span>.authenticationBlock(&amp;request)
+    }
+}</code></pre></div>
+<p>This simple struct wraps a closure which is called to authenticate a given request. For the Github API this is enough since we use app tokens to authenticate us with the server. So when using the <code>SimpleAuthenticator</code> the code looks like this:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">let</span> <span style="color:#40ffff">authenticator</span> = SimpleAuthenticator { req <span style="color:#6ab825;font-weight:bold">in</span>
+	req.setValue(<span style="color:#ed9d13">&#34;token </span><span style="color:#ed9d13">\(</span>githubToken<span style="color:#ed9d13">)</span><span style="color:#ed9d13">&#34;</span>, forHTTPHeaderField: <span style="color:#ed9d13">&#34;Authorization&#34;</span>)
+}</code></pre></div>
+<p>But since the <code>Authenticator</code> is declared as a protocol it is also possible to implement very complex authentication algorithms. The authenticator gets the complete request with all information which he could use to calculate and manipulate.</p>
+
+<p>Thanks for reading and see you next week!</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://blog.benchr.de/">Benjamin Herzog</a></h4>
+  
+  <p>iOS developer, master degree student in computer science</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Dresden, Germany</span>
+    <span class="author-link icon-link"><a href="https://blog.benchr.me">https://blog.benchr.me</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Part%202%2f3%20-%20Defining%20a%20readable%20and%20safe%20interface&nbsp;-&nbsp;benchr&amp;url=http%3a%2f%2fblog.benchr.de%2fpost%2fpop-network-2%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fblog.benchr.de%2fpost%2fpop-network-2%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fblog.benchr.de%2fpost%2fpop-network-2%2f&amp;description=Part%202%2f3%20-%20Defining%20a%20readable%20and%20safe%20interface"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fblog.benchr.de%2fpost%2fpop-network-2%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'blog-benchr';
+  var disqus_url = 'http:\/\/blog.benchr.de\/post\/pop-network-2\/';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="background-image: url(/images/pop-network-1.jpg)" href="http://blog.benchr.de/post/pop-network-3/">
+          <section class="post">
+              <h2>Part 3/3 - It&#39;s all about the mapping</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="background-image: url(/images/pop-network-1.jpg)" href="http://blog.benchr.de/post/pop-network-1/">
+          <section class="post">
+              <h2>Part 1/3 - Writing a protocol oriented network abstraction in Swift</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">benchr</a> All rights reserved - 2017</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/index.js"></script>
+    
+</body>
+</html>
+

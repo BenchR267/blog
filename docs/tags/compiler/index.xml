@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Compiler on benchr</title>
+    <link>http://blog.benchr.de/tags/compiler/</link>
+    <description>Recent content in Compiler on benchr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2017</copyright>
+    <lastBuildDate>Sat, 18 Mar 2017 14:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="http://blog.benchr.de/tags/compiler/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fast feedback using a REPL</title>
+      <link>http://blog.benchr.de/post/first-repl/</link>
+      <pubDate>Sat, 18 Mar 2017 14:00:00 +0200</pubDate>
+      
+      <guid>http://blog.benchr.de/post/first-repl/</guid>
+      <description>In this blog post I would like to write about the REPL which I built to get a fast feedback cycle for my lexer. Before going into the topic, here is a short description of what REPL stands for and what its purpose is. REPL stands for Read-Evaluate-Print-Loop. So in the end it is an endless loop which is waiting for input from the user to evaluate it and print the outcome afterwards.</description>
+    </item>
+    
+    <item>
+      <title>Writing a lexer</title>
+      <link>http://blog.benchr.de/post/mvp-lexer/</link>
+      <pubDate>Fri, 03 Mar 2017 20:00:00 +0200</pubDate>
+      
+      <guid>http://blog.benchr.de/post/mvp-lexer/</guid>
+      <description>If you have read last weeks blog post you might also have checked out the repository of my compiler on Github. After deciding which programming language to use and decided on the name for the project I started creating the first fundamental files. One of them is the lexer. Before diving too deep into the topic here is a definition of lexical analysis from Wikipedia:
+ In computer science, lexical analysis is the process of converting a sequence of characters […] into a sequence of tokens […].</description>
+    </item>
+    
+    <item>
+      <title>Starting the challenge</title>
+      <link>http://blog.benchr.de/post/starting-the-challenge/</link>
+      <pubDate>Fri, 24 Feb 2017 20:00:00 +0200</pubDate>
+      
+      <guid>http://blog.benchr.de/post/starting-the-challenge/</guid>
+      <description>As mentioned in the last blog post I am finally able to start my challenge for this year. In an earlier blog post I thought about some key points that need to be decided before I can finally start. Here is the list with their short answers, the long answer is written below:
+ In which main language will the tools be written?  Go  Will the language be compiled or interpreted?</description>
+    </item>
+    
+    <item>
+      <title>Exams..</title>
+      <link>http://blog.benchr.de/post/exams/</link>
+      <pubDate>Sun, 22 Jan 2017 23:00:00 +0200</pubDate>
+      
+      <guid>http://blog.benchr.de/post/exams/</guid>
+      <description>Since I am currently right before examination period time at my studies, I&amp;rsquo;d like to take a moment to talk about something I learned during the development of a task for my university. While the task itself was not that exciting, I think the overall principle is very nice!
+The tool is a framework for developing new programming languages! Its name is Xtext. While I will propably never use it, I like the idea behind it.</description>
+    </item>
+    
+    <item>
+      <title>Some Thoughts</title>
+      <link>http://blog.benchr.de/post/thoughts/</link>
+      <pubDate>Sun, 15 Jan 2017 10:00:00 +0200</pubDate>
+      
+      <guid>http://blog.benchr.de/post/thoughts/</guid>
+      <description>This week I want to share some of my thoughts about my new programming language. Or to be a bit more specific: about some technical details for building the toolchain. There are a lot of things that need to be decided which are also very important for the planning process. Here is an overview over some of them:
+ Will the language be compiled or interpreted? What exact features will the language support?</description>
+    </item>
+    
+    <item>
+      <title>A New Beginning</title>
+      <link>http://blog.benchr.de/post/beginning/</link>
+      <pubDate>Sat, 07 Jan 2017 15:00:00 +0200</pubDate>
+      
+      <guid>http://blog.benchr.de/post/beginning/</guid>
+      <description>Year after year I thought about aspects that I could possibly change to create a more positive lifestyle. These were often things like &amp;lsquo;eat healthier&amp;rsquo;, &amp;lsquo;do more sports&amp;rsquo;, &amp;lsquo;quit smoking&amp;rsquo; and so on. None of those actually ever happened (beside the smoking, but that was not at New Year&amp;rsquo;s Eve). And that is the point about resolutions. They never happen if you choose another time for it than now. Do not let yourself restrict too much from events like New Year&amp;rsquo;s Eve.</description>
+    </item>
+    
+  </channel>
+</rss>

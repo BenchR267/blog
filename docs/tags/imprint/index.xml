@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Imprint on benchr</title>
+    <link>http://blog.benchr.de/tags/imprint/</link>
+    <description>Recent content in Imprint on benchr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2017</copyright>
+    <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="http://blog.benchr.de/tags/imprint/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Imprint</title>
+      <link>http://blog.benchr.de/imprint/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://blog.benchr.de/imprint/</guid>
+      <description>Legal Disclosure
+Information in accordance with section 5 TMG
+Benjamin Herzog
+Lugaer Straße 24f
+01259 Dresden
+E-Mail: mail@benchr.de
+Internet: https://blog.benchr.me
+
+Disclaimer
+Accountability for content The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents&amp;rsquo; accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this context, please note that we are accordingly not obliged to monitor merely the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity.</description>
+    </item>
+    
+  </channel>
+</rss>
