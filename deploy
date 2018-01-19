@@ -16,7 +16,7 @@ separator
 echo "Build the site and upload to Github"
 git add docs
 git commit -m "Built site $now"
-git push origin master
+git push
 separator
 
 echo "Creating and pushing tag"
