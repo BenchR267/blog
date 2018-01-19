@@ -1,7 +1,9 @@
-BaseUrl= "https://blog.benchr.de/"
+BaseUrl= "http://blog.benchr.de/"
 LanguageCode= "en-us"
 Title= "benchr"
 theme= "casper"
+publishDir= "docs"
+
 paginate = 10
 DisqusShortname = "blog-benchr"
 Copyright = "All rights reserved - 2017"

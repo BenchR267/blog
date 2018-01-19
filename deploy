@@ -12,14 +12,12 @@ echo "Building the site: $now"
 separator
 hugo
 separator
-echo "Removing old version"
-separator
-ssh benchr@bootes.uberspace.de 'rm -rf subdomains/blog.benchr.de/*'
 
-echo "Uploading generated files"
+echo "Build the site and upload to Github"
+git add docs
+git commit -m "Built site $now"
+git push origin master
 separator
-scp -qr public/* benchr@bootes.uberspace.de:subdomains/blog.benchr.de/
-scp -qr .well-known benchr@bootes.uberspace.de:subdomains/blog.benchr.de/
 
 echo "Creating and pushing tag"
 separator
