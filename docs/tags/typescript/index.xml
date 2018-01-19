@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Typescript on benchr</title>
-    <link>https://benchr267.github.io/blog/tags/typescript/</link>
+    <link>http://blog.benchr.de/tags/typescript/</link>
     <description>Recent content in Typescript on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
     <lastBuildDate>Wed, 03 May 2017 11:00:00 +0100</lastBuildDate>
     
-	<atom:link href="https://benchr267.github.io/blog/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://blog.benchr.de/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Typescript</title>
-      <link>https://benchr267.github.io/blog/post/typescript/</link>
+      <link>http://blog.benchr.de/post/typescript/</link>
       <pubDate>Wed, 03 May 2017 11:00:00 +0100</pubDate>
       
-      <guid>https://benchr267.github.io/blog/post/typescript/</guid>
+      <guid>http://blog.benchr.de/post/typescript/</guid>
       <description>In this blog post I am going to write about a programming language which I have not checked out before. Typescript is a super set of Javascript and is developed by Microsoft. The syntax is exactly the same as Javascript with one very important difference: in comparison to Javascript Typescript knows the concept of types and checks them with a built in type system.
 To make type failure messages more useful Typescript is also a compiled language while Javascript is an interpreted language.</description>
     </item>

@@ -22,7 +22,7 @@
 
   	<meta property="og:title" content="Fast feedback using a REPL &middot; benchr" />
   	<meta property="og:site_name" content="benchr" />
-  	<meta property="og:url" content="https://benchr267.github.io/blog/post/first-repl/" />
+  	<meta property="og:url" content="http://blog.benchr.de/post/first-repl/" />
 
     
        <meta property="og:image" content="/images/mvp-repl.jpg"/>
@@ -47,22 +47,22 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="https://benchr267.github.io/blog/images/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://benchr267.github.io/blog/images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="http://blog.benchr.de/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://blog.benchr.de/images/apple-touch-icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="https://benchr267.github.io/blog/css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="https://benchr267.github.io/blog/css/nav.css" />
-
-    
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://blog.benchr.de/css/nav.css" />
 
     
 
     
-        <link href="https://benchr267.github.io/blog/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
+
+    
+        <link href="http://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
     
     <meta name="generator" content="Hugo 0.32.4" />
 
-    <link rel="canonical" href="https://benchr267.github.io/blog/post/first-repl/" />
+    <link rel="canonical" href="http://blog.benchr.de/post/first-repl/" />
 
     
       
@@ -101,13 +101,13 @@
       "@type": "Language",
       "alternateName": en
     },
-    "url": https://benchr267.github.io/blog/post/first-repl/,
+    "url": http://blog.benchr.de/post/first-repl/,
     "datePublished": 2017-03-18T14:00Z,
     "dateModified": 2017-03-18T14:00Z,
     
     "image": {
         "@type": "ImageObject",
-        "url": https://benchr267.github.io/blog/images/mvp-repl.jpg,
+        "url": http://blog.benchr.deimages/mvp-repl.jpg,
         "width": 3000,
         "height": 1445
     },
@@ -116,7 +116,7 @@
     "description": ,
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://benchr267.github.io/blog/post/first-repl/
+        "@id": http://blog.benchr.de/post/first-repl/
     }
 }
     </script>
@@ -168,24 +168,24 @@
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://benchr267.github.io/blog/index.xml">RSS feed</a>
+            	<a href="http://blog.benchr.de/index.xml">RSS feed</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://benchr267.github.io/blog/imprint/">Imprint</a>
+            	<a href="http://blog.benchr.de/imprint/">Imprint</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://benchr267.github.io/blog/">Blog</a>
+            	<a href="http://blog.benchr.de/">Blog</a>
             </li>
         
         
     </ul>
 
     
-    <a class="subscribe-button icon-feed" href="https://benchr267.github.io/blog/index.xml">Subscribe</a> </div>
+    <a class="subscribe-button icon-feed" href="http://blog.benchr.de/index.xml">Subscribe</a> </div>
     
 </div>
 <span class="nav-cover"></span>
@@ -229,19 +229,19 @@
           </time>
         
          
-          <span class="post-tag small"><a href="https://benchr267.github.io/blog/tags/compiler/">#compiler</a></span>
+          <span class="post-tag small"><a href="http://blog.benchr.detags/compiler/">#compiler</a></span>
          
         </section>
     </header>
 
     <section class="post-content">
-      <p>In this blog post I would like to write about the REPL which I built to get a <em>fast</em> feedback cycle for my <a href="https://benchr267.github.io/blog/post/mvp-lexer/">lexer</a>. Before going into the topic, here is a short description of what REPL stands for and what its purpose is. REPL stands for Read-Evaluate-Print-Loop. So in the end it is an endless loop which is waiting for input from the user to evaluate it and print the outcome afterwards.</p>
+      <p>In this blog post I would like to write about the REPL which I built to get a <em>fast</em> feedback cycle for my <a href="http://blog.benchr.de/post/mvp-lexer/">lexer</a>. Before going into the topic, here is a short description of what REPL stands for and what its purpose is. REPL stands for Read-Evaluate-Print-Loop. So in the end it is an endless loop which is waiting for input from the user to evaluate it and print the outcome afterwards.</p>
 
 <p>Mostly every programming language is shipped with a REPL to try out language specific features. <a href="https://www.github.com/BenchR267/lbd">lbd</a> will also have a REPL to try out its features.</p>
 
 <p>The word &lsquo;evaluate&rsquo; is broadly defined in this context. When the language is usable it will mean that you are able to define variables and functions and execute them to get results back. At the moment this evaluation process is a lot less complex since the parser and all the following stuff is not written yet.</p>
 
-<p>In this implementation the REPL only accepts lines of lbd-code and prints out the tokenized version of this line produced by the <a href="https://benchr267.github.io/blog/post/mvp-lexer/">lexer</a>. This is of course nothing useful when the compiler has all needed functionality but it is quite helpful when testing the lexer, especially when new features are added. So I think about adding a flag which starts the REPL in different modes, one of them would be the lexer only mode to test tokenizing. If tokens are not produced correctly it could cause some serious bugs in the compiler that are quite hard to catch.</p>
+<p>In this implementation the REPL only accepts lines of lbd-code and prints out the tokenized version of this line produced by the <a href="http://blog.benchr.de/post/mvp-lexer/">lexer</a>. This is of course nothing useful when the compiler has all needed functionality but it is quite helpful when testing the lexer, especially when new features are added. So I think about adding a flag which starts the REPL in different modes, one of them would be the lexer only mode to test tokenizing. If tokens are not produced correctly it could cause some serious bugs in the compiler that are quite hard to catch.</p>
 
 <p>So, lets get into the code! <code>repl</code> is a new package inside the <code>lbd</code> package (like <code>lexer</code>). It has only one function which starts the loop, <code>repl.Start()</code>. First, I wanted to create a new lexer each time a line is produced and that would technically be totally fine since the lexer does not need to know any context like previously defined variables. But later, when the parser is added, I need that context, so I wanted to create some workflow that allows it to reuse my only instance of <code>lexer.Lexer</code>.</p>
 
@@ -260,7 +260,7 @@ scanner := bufio.NewScanner(reader)</code></pre></div>
 
 <p>When the text is scanned from the reader, the REPL sends the given runes to the lexer and waits for its evaluation. The sending of each individual rune is done by the already introduced helper function <code>StreamFromString</code> from the lexer package.</p>
 
-<p>If you <a href="https://benchr267.github.io/blog/post/mvp-lexer/">remember</a> the <a href="https://github.com/BenchR267/lbd/blob/c2923d5b3c47f0bfab7a7af25ce5576b71182f99/lexer/lexer.go#L45">implementation</a> of lexers <code>Start()</code> method, you know that it is creating its own go routine, so the call itself is not blocking.</p>
+<p>If you <a href="http://blog.benchr.de/post/mvp-lexer/">remember</a> the <a href="https://github.com/BenchR267/lbd/blob/c2923d5b3c47f0bfab7a7af25ce5576b71182f99/lexer/lexer.go#L45">implementation</a> of lexers <code>Start()</code> method, you know that it is creating its own go routine, so the call itself is not blocking.</p>
 
 <p>The lexer is closing its channel after evaluating all runes from the input stream. So to print every evaluated token I am just using a for-range-loop on the channel:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">for</span> t := <span style="color:#6ab825;font-weight:bold">range</span> lex.NextToken {
@@ -297,7 +297,7 @@ lbd $ <span style="color:#40ffff">b</span> = <span style="color:#40ffff">a</span
 
 
 <section class="author">
-  <h4><a href="https://benchr267.github.io/blog/">Benjamin Herzog</a></h4>
+  <h4><a href="http://blog.benchr.de">Benjamin Herzog</a></h4>
   
   <p>iOS developer, master degree student in computer science</p>
   
@@ -312,19 +312,19 @@ lbd $ <span style="color:#40ffff">b</span> = <span style="color:#40ffff">a</span
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Fast%20feedback%20using%20a%20REPL&nbsp;-&nbsp;benchr&amp;url=https%3a%2f%2fbenchr267.github.io%2fblog%2fpost%2ffirst-repl%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Fast%20feedback%20using%20a%20REPL&nbsp;-&nbsp;benchr&amp;url=http%3a%2f%2fblog.benchr.de%2fpost%2ffirst-repl%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbenchr267.github.io%2fblog%2fpost%2ffirst-repl%2f"
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fblog.benchr.de%2fpost%2ffirst-repl%2f"
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fbenchr267.github.io%2fblog%2fpost%2ffirst-repl%2f&amp;description=Fast%20feedback%20using%20a%20REPL"
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fblog.benchr.de%2fpost%2ffirst-repl%2f&amp;description=Fast%20feedback%20using%20a%20REPL"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fbenchr267.github.io%2fblog%2fpost%2ffirst-repl%2f"
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fblog.benchr.de%2fpost%2ffirst-repl%2f"
      onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
       <span class="hidden">Google+</span>
   </a>
@@ -337,7 +337,7 @@ lbd $ <span style="color:#40ffff">b</span> = <span style="color:#40ffff">a</span
 <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'blog-benchr';
-  var disqus_url = 'https:\/\/benchr267.github.io\/blog\/post\/first-repl\/';
+  var disqus_url = 'http:\/\/blog.benchr.de\/post\/first-repl\/';
   (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -357,7 +357,7 @@ lbd $ <span style="color:#40ffff">b</span> = <span style="color:#40ffff">a</span
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="background-image: url(/images/react-native.jpg)" href="https://benchr267.github.io/blog/post/about-rn/">
+      <a class="read-next-story" style="background-image: url(/images/react-native.jpg)" href="http://blog.benchr.de/post/about-rn/">
           <section class="post">
               <h2>About React Native</h2>
               
@@ -365,7 +365,7 @@ lbd $ <span style="color:#40ffff">b</span> = <span style="color:#40ffff">a</span
       </a>
   
   
-      <a class="read-next-story prev" style="background-image: url(/images/mvp-lexer.jpg)" href="https://benchr267.github.io/blog/post/mvp-lexer/">
+      <a class="read-next-story prev" style="background-image: url(/images/mvp-lexer.jpg)" href="http://blog.benchr.de/post/mvp-lexer/">
           <section class="post">
               <h2>Writing a lexer</h2>
           </section>
@@ -382,9 +382,9 @@ lbd $ <span style="color:#40ffff">b</span> = <span style="color:#40ffff">a</span
         
     </footer>
     </div>
-    <script type="text/javascript" src="https://benchr267.github.io/blog/js/jquery.js"></script>
-    <script type="text/javascript" src="https://benchr267.github.io/blog/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://benchr267.github.io/blog/js/index.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://blog.benchr.de/js/index.js"></script>
     
 </body>
 </html>

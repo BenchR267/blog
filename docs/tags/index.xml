@@ -2,148 +2,148 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on benchr</title>
-    <link>https://benchr267.github.io/blog/tags/</link>
+    <link>http://blog.benchr.de/tags/</link>
     <description>Recent content in Tags on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
     <lastBuildDate>Wed, 22 Feb 2017 15:30:00 +0200</lastBuildDate>
     
-	<atom:link href="https://benchr267.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://blog.benchr.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog</title>
-      <link>https://benchr267.github.io/blog/tags/blog/</link>
+      <link>http://blog.benchr.de/tags/blog/</link>
       <pubDate>Wed, 22 Feb 2017 15:30:00 +0200</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/blog/</guid>
+      <guid>http://blog.benchr.de/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Code</title>
-      <link>https://benchr267.github.io/blog/tags/code/</link>
+      <link>http://blog.benchr.de/tags/code/</link>
       <pubDate>Sun, 12 Feb 2017 18:00:00 +0200</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/code/</guid>
+      <guid>http://blog.benchr.de/tags/code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Compiler</title>
-      <link>https://benchr267.github.io/blog/tags/compiler/</link>
+      <link>http://blog.benchr.de/tags/compiler/</link>
       <pubDate>Sat, 18 Mar 2017 14:00:00 +0200</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/compiler/</guid>
+      <guid>http://blog.benchr.de/tags/compiler/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Decisions</title>
-      <link>https://benchr267.github.io/blog/tags/decisions/</link>
+      <link>http://blog.benchr.de/tags/decisions/</link>
       <pubDate>Sun, 15 Jan 2017 10:00:00 +0200</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/decisions/</guid>
+      <guid>http://blog.benchr.de/tags/decisions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Exams</title>
-      <link>https://benchr267.github.io/blog/tags/exams/</link>
+      <link>http://blog.benchr.de/tags/exams/</link>
       <pubDate>Wed, 22 Feb 2017 15:30:00 +0200</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/exams/</guid>
+      <guid>http://blog.benchr.de/tags/exams/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Halloswift</title>
-      <link>https://benchr267.github.io/blog/tags/halloswift/</link>
+      <link>http://blog.benchr.de/tags/halloswift/</link>
       <pubDate>Thu, 20 Apr 2017 11:00:00 +0100</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/halloswift/</guid>
+      <guid>http://blog.benchr.de/tags/halloswift/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Impressum</title>
-      <link>https://benchr267.github.io/blog/tags/impressum/</link>
+      <link>http://blog.benchr.de/tags/impressum/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/impressum/</guid>
+      <guid>http://blog.benchr.de/tags/impressum/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Imprint</title>
-      <link>https://benchr267.github.io/blog/tags/imprint/</link>
+      <link>http://blog.benchr.de/tags/imprint/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/imprint/</guid>
+      <guid>http://blog.benchr.de/tags/imprint/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Master</title>
-      <link>https://benchr267.github.io/blog/tags/master/</link>
+      <link>http://blog.benchr.de/tags/master/</link>
       <pubDate>Sun, 22 Jan 2017 23:00:00 +0200</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/master/</guid>
+      <guid>http://blog.benchr.de/tags/master/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pop</title>
-      <link>https://benchr267.github.io/blog/tags/pop/</link>
+      <link>http://blog.benchr.de/tags/pop/</link>
       <pubDate>Sun, 12 Feb 2017 18:00:00 +0200</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/pop/</guid>
+      <guid>http://blog.benchr.de/tags/pop/</guid>
       <description></description>
     </item>
     
     <item>
       <title>React</title>
-      <link>https://benchr267.github.io/blog/tags/react/</link>
+      <link>http://blog.benchr.de/tags/react/</link>
       <pubDate>Tue, 04 Apr 2017 18:00:00 +0200</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/react/</guid>
+      <guid>http://blog.benchr.de/tags/react/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Schwifty</title>
-      <link>https://benchr267.github.io/blog/tags/schwifty/</link>
+      <link>http://blog.benchr.de/tags/schwifty/</link>
       <pubDate>Thu, 20 Apr 2017 11:00:00 +0100</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/schwifty/</guid>
+      <guid>http://blog.benchr.de/tags/schwifty/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Swift</title>
-      <link>https://benchr267.github.io/blog/tags/swift/</link>
+      <link>http://blog.benchr.de/tags/swift/</link>
       <pubDate>Tue, 27 Jun 2017 19:00:00 +0100</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/swift/</guid>
+      <guid>http://blog.benchr.de/tags/swift/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Typescript</title>
-      <link>https://benchr267.github.io/blog/tags/typescript/</link>
+      <link>http://blog.benchr.de/tags/typescript/</link>
       <pubDate>Wed, 03 May 2017 11:00:00 +0100</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/typescript/</guid>
+      <guid>http://blog.benchr.de/tags/typescript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>University</title>
-      <link>https://benchr267.github.io/blog/tags/university/</link>
+      <link>http://blog.benchr.de/tags/university/</link>
       <pubDate>Wed, 22 Feb 2017 15:30:00 +0200</pubDate>
       
-      <guid>https://benchr267.github.io/blog/tags/university/</guid>
+      <guid>http://blog.benchr.de/tags/university/</guid>
       <description></description>
     </item>
     

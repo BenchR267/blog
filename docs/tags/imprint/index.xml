@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Imprint on benchr</title>
-    <link>https://benchr267.github.io/blog/tags/imprint/</link>
+    <link>http://blog.benchr.de/tags/imprint/</link>
     <description>Recent content in Imprint on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
     <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://benchr267.github.io/blog/tags/imprint/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://blog.benchr.de/tags/imprint/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Imprint</title>
-      <link>https://benchr267.github.io/blog/imprint/</link>
+      <link>http://blog.benchr.de/imprint/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://benchr267.github.io/blog/imprint/</guid>
+      <guid>http://blog.benchr.de/imprint/</guid>
       <description>Legal Disclosure
 Information in accordance with section 5 TMG
 Benjamin Herzog
