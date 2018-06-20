@@ -1,11 +1,10 @@
-BaseUrl= "http://blog.benchr.de/"
+BaseUrl= "https://blog.benchr.de/"
 LanguageCode= "en-us"
 Title= "benchr"
 theme= "casper"
 publishDir= "docs"
 
 paginate = 10
-DisqusShortname = "blog-benchr"
 Copyright = "All rights reserved - 2017"
 canonifyurls = true
 PygmentsCodeFences=true
@@ -46,7 +45,6 @@ pygmentsStyle="native"
 	authorlocation = "Dresden, Germany"
 	authorwebsite = "https://blog.benchr.me"
 	bio= "iOS developer, master degree student in computer science"
-	googleAnalyticsUserID = "UA-90259105-1"
 	# Optional RSS-Link, if not provided it defaults to the standard index.xml
 	RSSLink = "/index.xml"
 	githubName = "BenchR267"

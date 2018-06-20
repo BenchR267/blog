@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Swift on benchr</title>
-    <link>http://blog.benchr.de/tags/swift/</link>
+    <link>https://blog.benchr.de/tags/swift/</link>
     <description>Recent content in Swift on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
     <lastBuildDate>Tue, 27 Jun 2017 19:00:00 +0100</lastBuildDate>
     
-	<atom:link href="http://blog.benchr.de/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.benchr.de/tags/swift/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Replacing @autoclosure in Swift</title>
-      <link>http://blog.benchr.de/post/autoclosure/</link>
+      <link>https://blog.benchr.de/post/autoclosure/</link>
       <pubDate>Tue, 27 Jun 2017 19:00:00 +0100</pubDate>
       
-      <guid>http://blog.benchr.de/post/autoclosure/</guid>
+      <guid>https://blog.benchr.de/post/autoclosure/</guid>
       <description>A short preamble before the actual topic: yes, I let the blog slide. I am pretty sure that not that many people are reading my posts and those few are not mad reading a bit less but I have to admit that I failed the challenge I started beginning this year. It is not about that it is hard writing blog posts every week (what it is), it is more about writing posts weekly just to have them written and published.</description>
     </item>
     
     <item>
       <title>Part 3/3 - It&#39;s all about the mapping</title>
-      <link>http://blog.benchr.de/post/pop-network-3/</link>
+      <link>https://blog.benchr.de/post/pop-network-3/</link>
       <pubDate>Sun, 12 Feb 2017 18:00:00 +0200</pubDate>
       
-      <guid>http://blog.benchr.de/post/pop-network-3/</guid>
+      <guid>https://blog.benchr.de/post/pop-network-3/</guid>
       <description>All Parts: 1 - 2 - 3
 Last week I defined the interface of the Client and its Authenticator. Together with the definition of the endpoints (first part) it is now possible to take a deeper look into the actual network request. But before doing that I need to clarify one important part: the mapping of the response. Mapping JSON (or other transport formats) is a different topic, especially in Swift.</description>
     </item>
     
     <item>
       <title>Part 2/3 - Defining a readable and safe interface</title>
-      <link>http://blog.benchr.de/post/pop-network-2/</link>
+      <link>https://blog.benchr.de/post/pop-network-2/</link>
       <pubDate>Sun, 05 Feb 2017 08:00:00 +0200</pubDate>
       
-      <guid>http://blog.benchr.de/post/pop-network-2/</guid>
+      <guid>https://blog.benchr.de/post/pop-network-2/</guid>
       <description>All Parts: 1 - 2 - 3
 In the first part I built the foundation for a protocol oriented network abstraction written in Swift. The main focus for the component lies on safety, code quality and a very clean API.
 Safety is mostly about the rules you define on how the component can be used. In the best scenario the user can not even compile the program if the component is configured wrongly.</description>
@@ -44,10 +44,10 @@ Safety is mostly about the rules you define on how the component can be used. In
     
     <item>
       <title>Part 1/3 - Writing a protocol oriented network abstraction in Swift</title>
-      <link>http://blog.benchr.de/post/pop-network-1/</link>
+      <link>https://blog.benchr.de/post/pop-network-1/</link>
       <pubDate>Fri, 03 Feb 2017 15:00:00 +0200</pubDate>
       
-      <guid>http://blog.benchr.de/post/pop-network-1/</guid>
+      <guid>https://blog.benchr.de/post/pop-network-1/</guid>
       <description>All Parts: 1 - 2 - 3
 Todays topic is very technically. So if you are not interested in programming (or especially in Swift programming), this post might not be for you.
 This is the first blog post of a short series. Before starting with the structure and the implementation details, I would like to explain how that topic came up.

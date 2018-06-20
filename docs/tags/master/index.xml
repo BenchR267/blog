@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Master on benchr</title>
-    <link>http://blog.benchr.de/tags/master/</link>
+    <link>https://blog.benchr.de/tags/master/</link>
     <description>Recent content in Master on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
     <lastBuildDate>Sun, 22 Jan 2017 23:00:00 +0200</lastBuildDate>
     
-	<atom:link href="http://blog.benchr.de/tags/master/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.benchr.de/tags/master/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Exams..</title>
-      <link>http://blog.benchr.de/post/exams/</link>
+      <link>https://blog.benchr.de/post/exams/</link>
       <pubDate>Sun, 22 Jan 2017 23:00:00 +0200</pubDate>
       
-      <guid>http://blog.benchr.de/post/exams/</guid>
+      <guid>https://blog.benchr.de/post/exams/</guid>
       <description>Since I am currently right before examination period time at my studies, I&amp;rsquo;d like to take a moment to talk about something I learned during the development of a task for my university. While the task itself was not that exciting, I think the overall principle is very nice!
 The tool is a framework for developing new programming languages! Its name is Xtext. While I will propably never use it, I like the idea behind it.</description>
     </item>
