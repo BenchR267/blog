@@ -60,7 +60,7 @@
     
         <link href="https://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
     
-    <meta name="generator" content="Hugo 0.32.4" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <link rel="canonical" href="https://blog.benchr.de/post/about-rn/" />
 
@@ -73,13 +73,13 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": 
+        "name":  null 
     },
     "author": {
         "@type": "Person",
-        "name": ,
+        "name":  null ,
         
-        "url": https://blog.benchr.me,
+        "url": "https://blog.benchr.me",
         "sameAs": [
             
             
@@ -90,33 +90,33 @@
              
             
         ],
-        "description": iOS developer, master degree student in computer science
+        "description": "iOS developer, master degree student in computer science"
         
     },
-    "headline": About React Native,
-    "name": About React Native,
-    "wordCount": 1255,
+    "headline": "About React Native",
+    "name": "About React Native",
+    "wordCount":  1254 ,
     "timeRequired": "PT6M",
     "inLanguage": {
       "@type": "Language",
-      "alternateName": en
+      "alternateName": "en"
     },
-    "url": https://blog.benchr.de/post/about-rn/,
-    "datePublished": 2017-03-21T11:00Z,
-    "dateModified": 2017-03-21T11:00Z,
+    "url": "https://blog.benchr.de/post/about-rn/",
+    "datePublished": "2017-03-21T11:00Z",
+    "dateModified": "2017-03-21T11:00Z",
     
     "image": {
         "@type": "ImageObject",
-        "url": https://blog.benchr.de/images/react-native.jpg,
+        "url": "https://blog.benchr.de/images/react-native.jpg",
         "width": 3000,
         "height": 1445
     },
     
-    "keywords": react,
-    "description": ,
+    "keywords": "react",
+    "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://blog.benchr.de/post/about-rn/
+        "@id": "https://blog.benchr.de/post/about-rn/"
     }
 }
     </script>
@@ -224,61 +224,38 @@
     </header>
 
     <section class="post-content">
-      
-
-<p>In this blog post I would like to talk about <a href="https://facebook.github.io/react-native/">React Native</a>. Before starting: this evening I am going to talk about this topic at the <a href="http://meetu.ps/36GS6z">Cococaheads Dresden</a> meetup. If you are more the visual type and you are able to understand German check out the video of the talk <a href="https://www.youtube.com/watch?v=L4SEep6Immk">here</a>.</p>
-
+      <p>In this blog post I would like to talk about <a href="https://facebook.github.io/react-native/">React Native</a>. Before starting: this evening I am going to talk about this topic at the <a href="http://meetu.ps/36GS6z">Cococaheads Dresden</a> meetup. If you are more the visual type and you are able to understand German check out the video of the talk <a href="https://www.youtube.com/watch?v=L4SEep6Immk">here</a>.</p>
 <blockquote>
 <p>React Native - Learn one, write anywhere: Build mobile apps with React.</p>
 </blockquote>
-
 <p>This is the official description of the framework and you will get what it means during this post. I would like to cover some questions to get everything important covered.</p>
-
 <h2 id="what-is-it">What is it?</h2>
-
 <p>React Native is Reactjs for native apps. Reactjs is a framework for writing high performant web frontend applications. It has a really clean UI architecture built on top of the components concept. A component in this context is a view with a defined interface. Those components display a given state and depending on changes in the state the UI is changing as well, so the UI is completely state driven.</p>
-
 <p>React Native now lets you use this web framework to write native apps in Javascript. I am not talking about a rendered web view but real native apps. That gives the developer the possiblity to write fast apps with a shared codebase for a hand full of operating systems.</p>
-
 <h2 id="what-does-it-do">What does it do?</h2>
-
 <p>First of all: it gives you a very fast iteration cycle during the development. Since the code is compiled down to a bundle and then evaluated at runtime, you literally save your changes and see the UI changing immediately. If you are used to recompile a big iOS project written in Objective-C/Swift only to see a color or number change, you know what a big advantage this is.</p>
-
 <p>The next thing is the already mentioned shared code base. Do not get me wrong on this: you can not reuse the whole project <em>(at least if it is already a bit complex)</em>. But you can reuse your models, business- and network logic between your mobile apps, your website, your desktop apps and even your backend!</p>
-
 <h2 id="why-should-i-use-it">Why should I use it?</h2>
-
 <blockquote>
-<p>Any application that <em>can</em> be written in JavaScript, <em>will</em> eventually be written in JavaScript.
-- <a href="https://blog.codinghorror.com/the-principle-of-least-power/">Atwood&rsquo;s Law</a></p>
+<p>Any application that <em>can</em> be written in JavaScript, <em>will</em> eventually be written in JavaScript.</p>
 </blockquote>
-
+<ul>
+<li><a href="https://blog.codinghorror.com/the-principle-of-least-power/">Atwood&rsquo;s Law</a></li>
+</ul>
 <p>React Native is available for <a href="https://github.com/facebook/react-native">iOS</a>, <a href="https://github.com/facebook/react-native">Android</a>, <a href="https://github.com/facebook/react">Web</a>, <a href="https://github.com/ptmt/react-native-macos">macOS</a>, <a href="https://github.com/CanonicalLtd/react-native/blob/ubuntu/README-ubuntu.md">Ubuntu</a> and even for <a href="https://github.com/Microsoft/react-native-windows">Windows</a>! Since it is an abstraction layer over all the mentioned platforms you do not need to struggle with platform specific APIs. But if your app should do more than the standard stuff <em>( like displaying a list and some detail informations)</em> you might need build a native bridge for the needed platform.</p>
-
 <h2 id="how-to-set-it-up">How to set it up?</h2>
-
 <p>The fastest way to get started is using the <a href="https://expo.io">Expo</a>-App on your phone and the <a href="https://sketch.expo.io">Sketch-Expo-Service</a> on your computer. After scanning the QR code with your phone you can edit the Javascript file on your computer and without the need to save the file any changes in the code results in changes on your phone.</p>
-
 <p>While this is great for fast prototyping or mob programming I would recommend to set up a project on your computer. You have two options to choose from. Either you continue to use your phone as executing device or you boot up a simulator (or emulator). For both you first need to initialize a project with the <a href="http://facebook.github.io/react-native/blog/2017/03/13/introducing-create-react-native-app.html">create-react-native-app</a>. I recommend using yarn as a package manager, but npm is also fine. After that initialize the project with an awesome name, change into the created directory and start the server:</p>
-
 <pre><code>$ yarn add global create-react-native-app
 $ create-react-native-app AwesomeProject
 $ cd AwesomeProject
 $ yarn [start|ios|android]
-</code></pre>
-
-<p><code>npm start</code> starts the dev server, <code>npm ios</code> and <code>npm android</code> start a simulator or emulator instance of the given operating system and a development server in the background. But I do not want to dive deeper into an example project in this blog post; I would rather like to answer the last three questions:</p>
-
+</code></pre><p><code>npm start</code> starts the dev server, <code>npm ios</code> and <code>npm android</code> start a simulator or emulator instance of the given operating system and a development server in the background. But I do not want to dive deeper into an example project in this blog post; I would rather like to answer the last three questions:</p>
 <h2 id="what-technologies-are-being-used">What technologies are being used?</h2>
-
 <p>React Native is build in Typescript which is transpiled down to Javascript. That brings the big advantage of defined typed interfaces so you do not need to struggle with untyped Javascript interfaces <em>(which is especially hard when coming from a static typed language like Swift)</em>. When programming your apps you can use any language that transpiles down to Javascript. Recommended is using ES6 through Babel or Typescript.</p>
-
 <p>The development server that serves your bundled app code is powered by Nodejs. Another tool that is running with your server is watchmen which is responsible for watching changes on your files to rebuild the bundle when needed. The app is also able diff changes in the bundle to reload your app without invalidating the state. That is extremely powerful if you are working with data that is loaded from the internet.</p>
-
 <p>As a layout engine React (Native) uses Stylesheets powered by <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flexbox</a> which is very powerful and can be compared to <code>UIStackView</code>. If you would like to integrate React Native in your existing project it is recommended to use Cocoapods to integrate the React framework <em>(and its subspecs)</em>. The Pod is part of the node module dependency and I am going to write another blog post about this topic but there is also a great tutorial <a href="http://facebook.github.io/react-native/docs/integration-with-existing-apps.html">here</a>.</p>
-
-<h2 id="what-are-the-major-advantages-drawbacks-when-using-react-native">What are the major advantages / drawbacks when using React Native?</h2>
-
+<h2 id="what-are-the-major-advantages--drawbacks-when-using-react-native">What are the major advantages / drawbacks when using React Native?</h2>
 <table>
 <thead>
 <tr>
@@ -286,51 +263,40 @@ $ yarn [start|ios|android]
 <th>drawbacks</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>development on speed</td>
 <td>big dependency (&gt; 550 node modules)</td>
 </tr>
-
 <tr>
 <td>faster editor</td>
 <td>no &lsquo;IDE&rsquo;</td>
 </tr>
-
 <tr>
 <td>lightning fast apps</td>
 <td>for complex stuff native bridging needed</td>
 </tr>
-
 <tr>
 <td>Javascript</td>
 <td>Swift &gt; Javascript</td>
 </tr>
-
 <tr>
 <td>flexbox / css</td>
 <td></td>
 </tr>
-
 <tr>
 <td>components</td>
 <td></td>
 </tr>
-
 <tr>
 <td>state driven design</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-
 <p>I think all points are self-explaining. There is another drawback thats mentioned in some <a href="http://react-etc.net/entry/your-license-to-use-react-js-can-be-revoked-if-you-compete-with-facebook">blog posts</a> about the license of using React. This is a really important topic and <a href="https://ashfurrow.com">Ash Furrow</a> started a really interesting discussion on <a href="https://github.com/facebook/react/issues/7293">Github</a> about this. The original problem is that Facebook could theoretically reject the license in using React (Native) if you compete with their product. <a href="https://code.facebook.com/pages/850928938376556">Here is a great FAQ</a> Facebook created for this topic. tl;dr: this is not a problem you should ever face.</p>
-
 <h2 id="what-means-state-driven-design">What means &lsquo;state driven design&rsquo;?</h2>
-
 <p>In this blog I did not wrote any actual code yet, so it might be a bit hard to follow. Imagine you have an app that fetches some user information and displays the users name in a label. This is what an app doing that might look like:</p>
-
 <pre><code>class User extends Component {
 	render() {
 		return (&lt;Text&gt;{this.props.user.name}\&lt;/Text&gt;);
@@ -358,12 +324,8 @@ export default class App extends Component {
 		}
 	}
 }
-</code></pre>
-
-<p>This app uses an <code>User</code> component to display the only information available for a user: the name. For fetching the information from a server it is using promises which are &lsquo;built in&rsquo; in ES6 Javascript. The exciting thing is that the render method is automatically called when the state changes <em>(via setState())</em>. For lists this is particularly great because the framework will generate a diff and only update the rows that need to be updated after the state change.</p>
-
+</code></pre><p>This app uses an <code>User</code> component to display the only information available for a user: the name. For fetching the information from a server it is using promises which are &lsquo;built in&rsquo; in ES6 Javascript. The exciting thing is that the render method is automatically called when the state changes <em>(via setState())</em>. For lists this is particularly great because the framework will generate a diff and only update the rows that need to be updated after the state change.</p>
 <p>When updating the state you don&rsquo;t need to set a whole object. The system will just override the given properties and keeps the rest untouched.</p>
-
 <p>In the next blog post I am going to build a simple example project using React Native and describe this operation more explicitly. Thanks for reading this weeks blog post and I hope to see some of you this evening at Cocoaheads!</p>
 
     </section>

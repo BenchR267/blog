@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Compiler on benchr</title>
+    <title>compiler on benchr</title>
     <link>https://blog.benchr.de/tags/compiler/</link>
-    <description>Recent content in Compiler on benchr</description>
+    <description>Recent content in compiler on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
@@ -38,7 +38,7 @@
       
       <guid>https://blog.benchr.de/post/starting-the-challenge/</guid>
       <description>As mentioned in the last blog post I am finally able to start my challenge for this year. In an earlier blog post I thought about some key points that need to be decided before I can finally start. Here is the list with their short answers, the long answer is written below:
- In which main language will the tools be written?  Go  Will the language be compiled or interpreted?</description>
+ In which main language will the tools be written?  Go   Will the language be compiled or interpreted?</description>
     </item>
     
     <item>
@@ -67,7 +67,7 @@ The tool is a framework for developing new programming languages! Its name is Xt
       <pubDate>Sat, 07 Jan 2017 15:00:00 +0200</pubDate>
       
       <guid>https://blog.benchr.de/post/beginning/</guid>
-      <description>Year after year I thought about aspects that I could possibly change to create a more positive lifestyle. These were often things like &amp;lsquo;eat healthier&amp;rsquo;, &amp;lsquo;do more sports&amp;rsquo;, &amp;lsquo;quit smoking&amp;rsquo; and so on. None of those actually ever happened (beside the smoking, but that was not at New Year&amp;rsquo;s Eve). And that is the point about resolutions. They never happen if you choose another time for it than now. Do not let yourself restrict too much from events like New Year&amp;rsquo;s Eve.</description>
+      <description>Year after year I thought about aspects that I could possibly change to create a more positive lifestyle. These were often things like &amp;lsquo;eat healthier&#39;, &amp;lsquo;do more sports&#39;, &amp;lsquo;quit smoking&amp;rsquo; and so on. None of those actually ever happened (beside the smoking, but that was not at New Year&amp;rsquo;s Eve). And that is the point about resolutions. They never happen if you choose another time for it than now. Do not let yourself restrict too much from events like New Year&amp;rsquo;s Eve.</description>
     </item>
     
   </channel>

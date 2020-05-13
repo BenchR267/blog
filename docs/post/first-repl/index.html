@@ -60,7 +60,7 @@
     
         <link href="https://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
     
-    <meta name="generator" content="Hugo 0.32.4" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <link rel="canonical" href="https://blog.benchr.de/post/first-repl/" />
 
@@ -73,13 +73,13 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": 
+        "name":  null 
     },
     "author": {
         "@type": "Person",
-        "name": ,
+        "name":  null ,
         
-        "url": https://blog.benchr.me,
+        "url": "https://blog.benchr.me",
         "sameAs": [
             
             
@@ -90,33 +90,33 @@
              
             
         ],
-        "description": iOS developer, master degree student in computer science
+        "description": "iOS developer, master degree student in computer science"
         
     },
-    "headline": Fast feedback using a REPL,
-    "name": Fast feedback using a REPL,
-    "wordCount": 923,
+    "headline": "Fast feedback using a REPL",
+    "name": "Fast feedback using a REPL",
+    "wordCount":  924 ,
     "timeRequired": "PT5M",
     "inLanguage": {
       "@type": "Language",
-      "alternateName": en
+      "alternateName": "en"
     },
-    "url": https://blog.benchr.de/post/first-repl/,
-    "datePublished": 2017-03-18T14:00Z,
-    "dateModified": 2017-03-18T14:00Z,
+    "url": "https://blog.benchr.de/post/first-repl/",
+    "datePublished": "2017-03-18T14:00Z",
+    "dateModified": "2017-03-18T14:00Z",
     
     "image": {
         "@type": "ImageObject",
-        "url": https://blog.benchr.de/images/mvp-repl.jpg,
+        "url": "https://blog.benchr.de/images/mvp-repl.jpg",
         "width": 3000,
         "height": 1445
     },
     
-    "keywords": compiler,
-    "description": ,
+    "keywords": "compiler",
+    "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://blog.benchr.de/post/first-repl/
+        "@id": "https://blog.benchr.de/post/first-repl/"
     }
 }
     </script>
@@ -225,50 +225,39 @@
 
     <section class="post-content">
       <p>In this blog post I would like to write about the REPL which I built to get a <em>fast</em> feedback cycle for my <a href="https://blog.benchr.de/post/mvp-lexer/">lexer</a>. Before going into the topic, here is a short description of what REPL stands for and what its purpose is. REPL stands for Read-Evaluate-Print-Loop. So in the end it is an endless loop which is waiting for input from the user to evaluate it and print the outcome afterwards.</p>
-
 <p>Mostly every programming language is shipped with a REPL to try out language specific features. <a href="https://www.github.com/BenchR267/lbd">lbd</a> will also have a REPL to try out its features.</p>
-
 <p>The word &lsquo;evaluate&rsquo; is broadly defined in this context. When the language is usable it will mean that you are able to define variables and functions and execute them to get results back. At the moment this evaluation process is a lot less complex since the parser and all the following stuff is not written yet.</p>
-
 <p>In this implementation the REPL only accepts lines of lbd-code and prints out the tokenized version of this line produced by the <a href="https://blog.benchr.de/post/mvp-lexer/">lexer</a>. This is of course nothing useful when the compiler has all needed functionality but it is quite helpful when testing the lexer, especially when new features are added. So I think about adding a flag which starts the REPL in different modes, one of them would be the lexer only mode to test tokenizing. If tokens are not produced correctly it could cause some serious bugs in the compiler that are quite hard to catch.</p>
-
 <p>So, lets get into the code! <code>repl</code> is a new package inside the <code>lbd</code> package (like <code>lexer</code>). It has only one function which starts the loop, <code>repl.Start()</code>. First, I wanted to create a new lexer each time a line is produced and that would technically be totally fine since the lexer does not need to know any context like previously defined variables. But later, when the parser is added, I need that context, so I wanted to create some workflow that allows it to reuse my only instance of <code>lexer.Lexer</code>.</p>
-
 <p>Since the lexer is working with a rune channel, I needed to create this one first. But the lexer is initialized with this channel and that makes it really hard to reuse the instance. To fix this, I <a href="https://github.com/BenchR267/lbd/commit/0c061cd3d7926b194c34f826b540d862f56fcdd0">changed the interface</a> of the lexer to take the input channel as an argument of the <code>Start</code> function instead of <code>New</code>. This makes it possible to create one <code>Lexer</code>, one <code>bufio.Scanner</code> and create just the channels inside the loop.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go">lex := lexer.New()
-scanner := bufio.NewScanner(reader)</code></pre></div>
-<p>An endless loop in Go is created with the only loop that exists: <code>for {}</code>. Without any condition or iteration this does the same as a <code>while</code> loop in other languages. Inside the loop the REPL prints its prefix (<code>lbd $</code>), waits for input and evaluates this.</p>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go">lex := lexer.<span style="color:#447fcf">New</span>()
+scanner := bufio.<span style="color:#447fcf">NewScanner</span>(reader)
+</code></pre></div><p>An endless loop in Go is created with the only loop that exists: <code>for {}</code>. Without any condition or iteration this does the same as a <code>while</code> loop in other languages. Inside the loop the REPL prints its prefix (<code>lbd $ </code>), waits for input and evaluates this.</p>
 <p>To read the input from the user I use a <code>bufio.Scanner</code> instance. It is initialized with a global defined <code>io.Reader</code> instance which is by default set to <code>os.Stdin</code>. This is a great work around to mock input when unit testing this method. If I would just use <code>os.Stdin</code> without setting it to this variable, I would hardly be able to write unit tests. The other very important part that needs to be mocked is the <code>io.Writer</code> where the output is written to. This is by default also set to the obvious one, <code>os.Stdout</code>.</p>
-
 <p>If you are not familiar with those two interfaces in Go: they are the most powerful ones. Go is a truly interface oriented language since interfaces are used for everything to make code more generic usable <em>(especially due to the lack of <a href="https://github.com/golang/proposal/blob/master/design/15292-generics.md">generics itself</a>)</em>. Interfaces are especially powerful when they define only one or two methods. <code>io.Reader</code> for example only defines one method:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">type</span> Reader <span style="color:#6ab825;font-weight:bold">interface</span> {
-	Read(p []<span style="color:#6ab825;font-weight:bold">byte</span>) (n <span style="color:#6ab825;font-weight:bold">int</span>, err <span style="color:#6ab825;font-weight:bold">error</span>)
-}</code></pre></div>
-<p>Since interface conformance is implicit every type that implements this method is automatically an <code>io.Reader</code> and can therefor be used as a parameter to every method that accepts an <code>io.Reader</code>. In the test case I am just using <code>strings.NewReader()</code> to create input for the REPL and <code>bytes.Buffer</code> to create a buffer for the output.</p>
-
+	<span style="color:#447fcf">Read</span>(p []<span style="color:#6ab825;font-weight:bold">byte</span>) (n <span style="color:#6ab825;font-weight:bold">int</span>, err <span style="color:#6ab825;font-weight:bold">error</span>)
+}
+</code></pre></div><p>Since interface conformance is implicit every type that implements this method is automatically an <code>io.Reader</code> and can therefor be used as a parameter to every method that accepts an <code>io.Reader</code>. In the test case I am just using <code>strings.NewReader()</code> to create input for the REPL and <code>bytes.Buffer</code> to create a buffer for the output.</p>
 <p>When the text is scanned from the reader, the REPL sends the given runes to the lexer and waits for its evaluation. The sending of each individual rune is done by the already introduced helper function <code>StreamFromString</code> from the lexer package.</p>
-
 <p>If you <a href="https://blog.benchr.de/post/mvp-lexer/">remember</a> the <a href="https://github.com/BenchR267/lbd/blob/c2923d5b3c47f0bfab7a7af25ce5576b71182f99/lexer/lexer.go#L45">implementation</a> of lexers <code>Start()</code> method, you know that it is creating its own go routine, so the call itself is not blocking.</p>
-
 <p>The lexer is closing its channel after evaluating all runes from the input stream. So to print every evaluated token I am just using a for-range-loop on the channel:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">for</span> t := <span style="color:#6ab825;font-weight:bold">range</span> lex.NextToken {
-	fmt.Fprintln(writer, t)
-}</code></pre></div>
-<p>Using the REPL looks like this currently:</p>
+	fmt.<span style="color:#447fcf">Fprintln</span>(writer, t)
+}
+</code></pre></div><p>Using the REPL looks like this currently:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">lbd $ <span style="color:#40ffff">a</span> = <span style="color:#3677a9">5</span>
-{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">0</span> <span style="color:#3677a9">1</span>} Identifier a}
-{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">2</span> <span style="color:#3677a9">1</span>} <span style="color:#40ffff">Assign</span> =}
-{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">4</span> <span style="color:#3677a9">1</span>} Integer <span style="color:#3677a9">5</span>}
+{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">0</span> 1} Identifier a}
+{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">2</span> 1} <span style="color:#40ffff">Assign</span> =}
+{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">4</span> 1} Integer 5}
 
 lbd $ <span style="color:#40ffff">b</span> = <span style="color:#40ffff">a</span> == <span style="color:#3677a9">3</span>
-{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">5</span> <span style="color:#3677a9">1</span>} Identifier b}
-{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">7</span> <span style="color:#3677a9">1</span>} <span style="color:#40ffff">Assign</span> =}
-{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">9</span> <span style="color:#3677a9">1</span>} Identifier a}
-{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">11</span> <span style="color:#3677a9">2</span>} <span style="color:#40ffff">Equal</span> ==}
-{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">14</span> <span style="color:#3677a9">1</span>} Integer <span style="color:#3677a9">3</span>}</code></pre></div>
-<p>The session is ended by pressing <code>ctrl</code> + <code>D</code> <em>(^D)</em> which produces an <code>io.EOF</code> (end of file) error which then results in a false return value of the <code>scanner.Scan()</code> call.</p>
-
+{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">5</span> 1} Identifier b}
+{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">7</span> 1} <span style="color:#40ffff">Assign</span> =}
+{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">9</span> 1} Identifier a}
+{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">11</span> 2} <span style="color:#40ffff">Equal</span> ==}
+{{<span style="color:#3677a9">0</span> <span style="color:#3677a9">14</span> 1} Integer 3}
+</code></pre></div><p>The session is ended by pressing <code>ctrl</code> + <code>D</code> <em>(^D)</em> which produces an <code>io.EOF</code> (end of file) error which then results in a false return value of the <code>scanner.Scan()</code> call.</p>
 <p>To see the whole implementation check out the source file <a href="https://github.com/BenchR267/lbd/blob/d5ba30b34ca9b03ad6f6b152cf5fe3cdb2a0e249/repl/repl.go">here</a>. Thanks for reading this post, the next one is going to be published in the next days since this one is <em>a bit</em> delayed.</p>
 
     </section>

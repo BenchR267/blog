@@ -60,7 +60,7 @@
     
         <link href="https://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
     
-    <meta name="generator" content="Hugo 0.32.4" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <link rel="canonical" href="https://blog.benchr.de/post/rn-example/" />
 
@@ -73,13 +73,13 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": 
+        "name":  null 
     },
     "author": {
         "@type": "Person",
-        "name": ,
+        "name":  null ,
         
-        "url": https://blog.benchr.me,
+        "url": "https://blog.benchr.me",
         "sameAs": [
             
             
@@ -90,33 +90,33 @@
              
             
         ],
-        "description": iOS developer, master degree student in computer science
+        "description": "iOS developer, master degree student in computer science"
         
     },
-    "headline": React Native Example,
-    "name": React Native Example,
-    "wordCount": 1049,
+    "headline": "React Native Example",
+    "name": "React Native Example",
+    "wordCount":  1049 ,
     "timeRequired": "PT5M",
     "inLanguage": {
       "@type": "Language",
-      "alternateName": en
+      "alternateName": "en"
     },
-    "url": https://blog.benchr.de/post/rn-example/,
-    "datePublished": 2017-04-04T18:00Z,
-    "dateModified": 2017-04-04T18:00Z,
+    "url": "https://blog.benchr.de/post/rn-example/",
+    "datePublished": "2017-04-04T18:00Z",
+    "dateModified": "2017-04-04T18:00Z",
     
     "image": {
         "@type": "ImageObject",
-        "url": https://blog.benchr.de/images/react-native.jpg,
+        "url": "https://blog.benchr.de/images/react-native.jpg",
         "width": 3000,
         "height": 1445
     },
     
-    "keywords": react,
-    "description": ,
+    "keywords": "react",
+    "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://blog.benchr.de/post/rn-example/
+        "@id": "https://blog.benchr.de/post/rn-example/"
     }
 }
     </script>
@@ -224,27 +224,20 @@
     </header>
 
     <section class="post-content">
-      
-
-<p>In this post I am going to describe what steps are necessary to create an app in React Native. The example I want to build is the same one I created during my Cocoaheads talk. If you would like to see this in action or get more information check out my last post <a href="https://blog.benchr.de/post/about-rn/">here</a>.</p>
-
+      <p>In this post I am going to describe what steps are necessary to create an app in React Native. The example I want to build is the same one I created during my Cocoaheads talk. If you would like to see this in action or get more information check out my last post <a href="https://blog.benchr.de/post/about-rn/">here</a>.</p>
 <h3 id="installing-dependencies">Installing dependencies</h3>
-
 <p>You may already know this: in Javascript it is all about dependencies. The language itself is pretty easy and does not have a lot functionality. In other environments you have rich SDKs <em>(like iOS/Android SDK, .Net, …)</em> in Javascript this is mostly not the case. Since you do not want to reinvent the wheel with every project it is common to use different libraries for different tasks.</p>
-
 <p>I am not sure if this is a good or a bad thing. In general using dependencies makes you depending on those, that is where the name is coming from. But it is still good to see that the community created solutions for everything and it is very easy to build on top of that.</p>
-
 <p>To install the dependencies you need to create this example app I recommend using the package managers <a href="https://brew.sh">brew</a> and <a href="https://yarnpkg.com/en/">yarn</a>. yarn is a replacement for the node package manager (<a href="https://www.npmjs.com">npm</a>) built by Facebook. It is not needed, you can also use npm. Just translate my given yarn commands to npm commands (mostly replace <code>add</code> by <code>install</code>).</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash"><span style="color:#999;font-style:italic"># install node, watchman and yarn via brew
-</span><span style="color:#999;font-style:italic"></span>$ brew install node watchman yarn
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash"><span style="color:#999;font-style:italic"># install node, watchman and yarn via brew</span>
+$ brew install node watchman yarn
 
-<span style="color:#999;font-style:italic"># install the command line tool to create a pre-configured React Native app
-</span><span style="color:#999;font-style:italic"></span>$ yarn global add create-react-native-app</code></pre></div>
-<p>It is not needed to create a React Native app via the command line interface; you could instead also configure all the files by your own. To create an app execute the following command:</p>
+<span style="color:#999;font-style:italic"># install the command line tool to create a pre-configured React Native app</span>
+$ yarn global add create-react-native-app
+</code></pre></div><p>It is not needed to create a React Native app via the command line interface; you could instead also configure all the files by your own. To create an app execute the following command:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">$ create-react-native-app AwesomeProject
-$ <span style="color:#24909d">cd</span> AwesomeProject # change directory to the created one</code></pre></div>
-<p>The creacted file structure should look similiar to this:</p>
-
+$ <span style="color:#24909d">cd</span> AwesomeProject <span style="color:#999;font-style:italic"># change directory to the created one</span>
+</code></pre></div><p>The creacted file structure should look similiar to this:</p>
 <pre><code>.
 |-- App.js
 |-- App.test.js
@@ -254,16 +247,11 @@ $ <span style="color:#24909d">cd</span> AwesomeProject # change directory to the
 |   `-- …
 |-- package.json
 `-- yarn.lock
-</code></pre>
-
-<p>Inside the <code>package.json</code> there are a few defined commands you can use via <code>yarn</code>. <code>start</code> starts the development server <em>(useful when the app is already compiled and installed in the simulator)</em>. <code>android</code> and <code>ios</code> compiles the respective platform native app and opens an iOS simulator or Android emulator. As it is native code, it takes some time to finish but it is not necessary to do this often or even twice. <code>test</code> starts jest to execute tests written for the app code.</p>
-
+</code></pre><p>Inside the <code>package.json</code> there are a few defined commands you can use via <code>yarn</code>. <code>start</code> starts the development server <em>(useful when the app is already compiled and installed in the simulator)</em>. <code>android</code> and <code>ios</code> compiles the respective platform native app and opens an iOS simulator or Android emulator. As it is native code, it takes some time to finish but it is not necessary to do this often or even twice. <code>test</code> starts jest to execute tests written for the app code.</p>
 <p>Another one is <code>eject</code> which changes the structure of the whole directory. Currently the setup is built on top of <a href="https://expo.io">Expo</a> which makes it possible to create React Native apps written on your computer and run them immediately in your devices via the Expo native app. This is very cool since you don&rsquo;t even need to have the SDKs <em>(Xcode/Android Studio)</em> installed. The drawback is that you do not even have a dedicated native project so it is not possible to upload the app to the App/Play Store for example. It is also not possible to create native extensions for your app.</p>
-
 <p><code>eject</code> fixes this by re-structuring your app. After running</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">$ yarn eject</code></pre></div>
-<p>your file structure should look like this:</p>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">$ yarn eject
+</code></pre></div><p>your file structure should look like this:</p>
 <pre><code>.
 |-- App.js
 |-- App.test.js
@@ -284,23 +272,15 @@ $ <span style="color:#24909d">cd</span> AwesomeProject # change directory to the
 |   `-- …
 |-- package.json
 `-- yarn.lock
-</code></pre>
-
-<p>It is recommended to delete the <code>node_modules</code> folder and run <code>yarn install</code> to refresh the installation of the dependencies. Be aware that this operation is permanent and can not be revoked!</p>
-
+</code></pre><p>It is recommended to delete the <code>node_modules</code> folder and run <code>yarn install</code> to refresh the installation of the dependencies. Be aware that this operation is permanent and can not be revoked!</p>
 <h3 id="building-the-app">Building the app</h3>
-
 <p>Since this blog post is only about getting started I would like to create a very simple project showing recipes for a hard coded ingredients list. The data is coming from <a href="http://www.recipepuppy.com">Receipt Puppy</a> and will be requested via <code>http://www.recipepuppy.com/api/?i=eggs,bread</code>, so our ingredients are eggs and bread.</p>
-
 <p>Since we would like to use <code>FlatList</code> we need to use some unstable versions of react and react-native. Replace the dependencies in the package.json file with this:</p>
-
 <pre><code>&quot;dependencies&quot;: {
 	&quot;react&quot;: &quot;16.0.0-alpha.6&quot;,
 	&quot;react-native&quot;: &quot;0.44.0-rc.0&quot;
 }
-</code></pre>
-
-<p>After <code>yarn install</code> we are ready to start. In the app we open the App.js and replace the <code>class App</code> with the following code:</p>
+</code></pre><p>After <code>yarn install</code> we are ready to start. In the app we open the App.js and replace the <code>class App</code> with the following code:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#6ab825;font-weight:bold">export</span> <span style="color:#6ab825;font-weight:bold">default</span> <span style="color:#6ab825;font-weight:bold">class</span> App <span style="color:#6ab825;font-weight:bold">extends</span> React.Component {
 
   constructor(props) {
@@ -326,13 +306,13 @@ $ <span style="color:#24909d">cd</span> AwesomeProject # change directory to the
       &lt;View style={{flex: <span style="color:#3677a9">1</span>}}&gt;
         &lt;FlatList style={{height: <span style="color:#ed9d13">&#39;100%&#39;</span>, width: <span style="color:#ed9d13">&#39;100%&#39;</span>}}
         data={<span style="color:#6ab825;font-weight:bold">this</span>.state.data}
-        renderItem={item =&gt; &lt;Cell title={item.item.title} <span style="color:#a61717;background-color:#e3d2d2">/&gt;}</span>
-        <span style="color:#a61717;background-color:#e3d2d2">/&gt;</span>
+        renderItem={item =&gt; &lt;Cell title={item.item.title} /&gt;}
+        /&gt;
       &lt;<span style="color:#a61717;background-color:#e3d2d2">/View&gt;</span>
     );
   }
-}</code></pre></div>
-<p>As you see, wee set the state to an initial value in the constructor of the class. In the <code>componentWillMount</code> lifecycle method we execute the http request and reload the state with the manipulated data <em>(we only want to see the title)</em>. For rendering the items we pass in a function which returns a <code>Cell</code>. <code>Cell</code> is another component we define in this file:</p>
+}
+</code></pre></div><p>As you see, wee set the state to an initial value in the constructor of the class. In the <code>componentWillMount</code> lifecycle method we execute the http request and reload the state with the manipulated data <em>(we only want to see the title)</em>. For rendering the items we pass in a function which returns a <code>Cell</code>. <code>Cell</code> is another component we define in this file:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#6ab825;font-weight:bold">class</span> Cell <span style="color:#6ab825;font-weight:bold">extends</span> React.Component {
   render() {
     <span style="color:#6ab825;font-weight:bold">return</span> (
@@ -341,15 +321,11 @@ $ <span style="color:#24909d">cd</span> AwesomeProject # change directory to the
       &lt;<span style="color:#a61717;background-color:#e3d2d2">/View&gt;</span>
     );
   }
-}</code></pre></div>
-<p>To keep things simple we only display the title of the meal with any more user interface.</p>
-
+}
+</code></pre></div><p>To keep things simple we only display the title of the meal with any more user interface.</p>
 <p>You can now build the app and run it by executing <code>yarn ios</code> in the Terminal. You will realize that it is not working. After all React-Native is a wrapper over UIKit; so every http request is implemented using <code>URLRequest</code>. Apple introduced earlier that iOS apps only allow https calls by default. The webservice we are using is <em>(unfortunately)</em> not available via https, so we need to define an exception in the <code>Info.plist</code>. Open the <code>Info.plist</code> file by typing <code>open ios/AwesomeProject/Info.plist</code> in the Terminal. You should add an entry &lsquo;Allow Arbitrary Loads&rsquo; to the &lsquo;App Transport Security Settings&rsquo; entry with a value of &lsquo;YES&rsquo;.</p>
-
 <p>After that change the app needs to be re-compiled by executing <code>yarn ios</code>. Then you should see a screen similiar to this:</p>
-
-<p><img src="https://blog.benchr.de/images/posts/react-native-example.png" alt="" /></p>
-
+<p><img src="https://blog.benchr.de/images/posts/react-native-example.png" alt=""></p>
 <p>Yes, it is not pretty but already functional! Using other components like <code>Image</code> or <code>TextInput</code> could improve this also. Feel free to add additionally functionality and improvements in the design!</p>
 
     </section>

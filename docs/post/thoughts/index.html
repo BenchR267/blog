@@ -64,7 +64,7 @@
     
         <link href="https://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
     
-    <meta name="generator" content="Hugo 0.32.4" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <link rel="canonical" href="https://blog.benchr.de/post/thoughts/" />
 
@@ -77,13 +77,13 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": 
+        "name":  null 
     },
     "author": {
         "@type": "Person",
-        "name": ,
+        "name":  null ,
         
-        "url": https://blog.benchr.me,
+        "url": "https://blog.benchr.me",
         "sameAs": [
             
             
@@ -94,33 +94,33 @@
              
             
         ],
-        "description": iOS developer, master degree student in computer science
+        "description": "iOS developer, master degree student in computer science"
         
     },
-    "headline": Some Thoughts,
-    "name": Some Thoughts,
-    "wordCount": 561,
+    "headline": "Some Thoughts",
+    "name": "Some Thoughts",
+    "wordCount":  561 ,
     "timeRequired": "PT3M",
     "inLanguage": {
       "@type": "Language",
-      "alternateName": en
+      "alternateName": "en"
     },
-    "url": https://blog.benchr.de/post/thoughts/,
-    "datePublished": 2017-01-15T10:00Z,
-    "dateModified": 2017-01-15T10:00Z,
+    "url": "https://blog.benchr.de/post/thoughts/",
+    "datePublished": "2017-01-15T10:00Z",
+    "dateModified": "2017-01-15T10:00Z",
     
     "image": {
         "@type": "ImageObject",
-        "url": https://blog.benchr.de/images/Some_Thoughts.jpg,
+        "url": "https://blog.benchr.de/images/Some_Thoughts.jpg",
         "width": 3000,
         "height": 1445
     },
     
-    "keywords": blog, decisions, compiler,
-    "description": ,
+    "keywords": "blog, decisions, compiler",
+    "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://blog.benchr.de/post/thoughts/
+        "@id": "https://blog.benchr.de/post/thoughts/"
     }
 }
     </script>
@@ -234,7 +234,6 @@
     <section class="post-content">
       <p>This week I want to share some of my thoughts about my <a href="https://blog.benchr.de/post/beginning/">new programming language</a>. Or to be a bit more specific: about some technical details for building the toolchain.
 There are a lot of things that need to be decided which are also very important for the planning process. Here is an overview over some of them:</p>
-
 <ul>
 <li>Will the language be compiled or interpreted?</li>
 <li>What exact features will the language support?</li>
@@ -242,19 +241,12 @@ There are a lot of things that need to be decided which are also very important 
 <li>What is the name of the language?</li>
 <li>Will it be open source?</li>
 </ul>
-
 <p>Beforehand: yes, it will of course be open source! I will not only host the code on <a href="https://www.github.com">Github</a>, but also develop the whole project there. I will create a repository for it as soon as I come up with a name.</p>
-
 <p>That takes me to the next question: what will be the name of the language? I think this is a really hard one and I honestly don&rsquo;t want to decide this yet. If you have any idea, please <a href="https://twitter.com/benchr">let me know</a>! I&rsquo;m a bit uncreative about those kind of things… Looking at other languages it could be just an uppercased character (<a href="http://groups.engin.umd.umich.edu/CIS/course.des/cis400/c/c.html">C</a>, <a href="http://fsharp.org">F</a>, <a href="https://www.r-project.org">R</a>), some shiny, fast words (<a href="https://swift.org">Swift</a>, <a href="https://golang.org">Go</a>, <a href="https://www.ruby-lang.org/en/">Ruby</a>), a shortcut for some technical description (<a href="http://php.net">PHP</a>, <a href="https://en.wikipedia.org/wiki/SQL">SQL</a>) or just a random name (<a href="https://www.java.com/en/">Java</a>, <a href="https://www.python.org">Python</a>).</p>
-
 <p>Will the language be compiled or interpreted? I&rsquo;m glad I don&rsquo;t have to decide this by now. There are a lot of other things that need to get worked out. But in the end in my point of view there are two possible answers for this: either the compiler will generate code that can be run in <a href="http://llvm.org">llvm</a> or I will write an interpreter for running the code directly. I will decide this when the lexer and parser are both ready.</p>
-
 <p>The features of the language will also be decided later. This is actually something I will decide depending on the progress I&rsquo;m making over time. I&rsquo;d like to get started with a <a href="https://en.wikipedia.org/wiki/Minimum_viable_product">MVP</a> which supports only the necessary parts of a language (variables, literals, control structures, functions) and add the rest later.</p>
-
 <p>Which language will I use for the toolchain? I also have two answers for that and just need to make a decision. It would be very obvious to use Swift since I&rsquo;m very familiar with the language and know how to structure things for working properly. So this is the first option I&rsquo;m considering. The second one is another language I&rsquo;m very interested in which brings also some advantages for a toolchain with it: Go. Go is very fast, can create binaries for different architectures very easily and has a great concurrency model.</p>
-
 <p>I definitely have a lot more experience in Swift than in Go, so using Go would force me to learn more about the usage of the language. I&rsquo;m not sure if this is good or if it costs more time and risked the chance of achieving my goal in general. Apart from that learning something new is exactly what I want to achieve. I will decide that later as well.</p>
-
 <p>Thanks for reading this week&rsquo;s blog post! Since the exams are getting closer every week I&rsquo;ll use next week&rsquo;s post to write about something I learned in university which could be a very interesting addition for the parser. So far, write you in a week!</p>
 
     </section>

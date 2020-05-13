@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>benchr</title>
@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
-    <lastBuildDate>Tue, 27 Jun 2017 19:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://blog.benchr.de/index.xml" rel="self" type="application/rss+xml" />
     
@@ -109,7 +109,7 @@ Installing dependencies You may already know this: in Javascript it is all about
       
       <guid>https://blog.benchr.de/post/starting-the-challenge/</guid>
       <description>As mentioned in the last blog post I am finally able to start my challenge for this year. In an earlier blog post I thought about some key points that need to be decided before I can finally start. Here is the list with their short answers, the long answer is written below:
- In which main language will the tools be written?  Go  Will the language be compiled or interpreted?</description>
+ In which main language will the tools be written?  Go   Will the language be compiled or interpreted?</description>
     </item>
     
     <item>
@@ -180,7 +180,7 @@ The tool is a framework for developing new programming languages! Its name is Xt
       <pubDate>Sat, 07 Jan 2017 15:00:00 +0200</pubDate>
       
       <guid>https://blog.benchr.de/post/beginning/</guid>
-      <description>Year after year I thought about aspects that I could possibly change to create a more positive lifestyle. These were often things like &amp;lsquo;eat healthier&amp;rsquo;, &amp;lsquo;do more sports&amp;rsquo;, &amp;lsquo;quit smoking&amp;rsquo; and so on. None of those actually ever happened (beside the smoking, but that was not at New Year&amp;rsquo;s Eve). And that is the point about resolutions. They never happen if you choose another time for it than now. Do not let yourself restrict too much from events like New Year&amp;rsquo;s Eve.</description>
+      <description>Year after year I thought about aspects that I could possibly change to create a more positive lifestyle. These were often things like &amp;lsquo;eat healthier&#39;, &amp;lsquo;do more sports&#39;, &amp;lsquo;quit smoking&amp;rsquo; and so on. None of those actually ever happened (beside the smoking, but that was not at New Year&amp;rsquo;s Eve). And that is the point about resolutions. They never happen if you choose another time for it than now. Do not let yourself restrict too much from events like New Year&amp;rsquo;s Eve.</description>
     </item>
     
     <item>
@@ -191,14 +191,7 @@ The tool is a framework for developing new programming languages! Its name is Xt
       <guid>https://blog.benchr.de/imprint/</guid>
       <description>Legal Disclosure
 Information in accordance with section 5 TMG
-Benjamin Herzog
-Lugaer Straße 24f
-01259 Dresden
-E-Mail: mail@benchr.de
-Internet: https://blog.benchr.me
-
-Disclaimer
-Accountability for content The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents&amp;rsquo; accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this context, please note that we are accordingly not obliged to monitor merely the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity.</description>
+Benjamin HerzogBerliner Str. 12413187 BerlinE-Mail: mail@benchr.deInternet: https://benchr.deAccountability for content The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents&amp;rsquo; accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this context, please note that we are accordingly not obliged to monitor merely the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity.</description>
     </item>
     
   </channel>

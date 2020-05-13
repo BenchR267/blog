@@ -66,7 +66,7 @@
     
         <link href="https://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
     
-    <meta name="generator" content="Hugo 0.32.4" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <link rel="canonical" href="https://blog.benchr.de/post/exams/" />
 
@@ -79,13 +79,13 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": 
+        "name":  null 
     },
     "author": {
         "@type": "Person",
-        "name": ,
+        "name":  null ,
         
-        "url": https://blog.benchr.me,
+        "url": "https://blog.benchr.me",
         "sameAs": [
             
             
@@ -96,33 +96,33 @@
              
             
         ],
-        "description": iOS developer, master degree student in computer science
+        "description": "iOS developer, master degree student in computer science"
         
     },
-    "headline": Exams..,
-    "name": Exams..,
-    "wordCount": 496,
+    "headline": "Exams..",
+    "name": "Exams..",
+    "wordCount":  496 ,
     "timeRequired": "PT3M",
     "inLanguage": {
       "@type": "Language",
-      "alternateName": en
+      "alternateName": "en"
     },
-    "url": https://blog.benchr.de/post/exams/,
-    "datePublished": 2017-01-22T23:00Z,
-    "dateModified": 2017-01-22T23:00Z,
+    "url": "https://blog.benchr.de/post/exams/",
+    "datePublished": "2017-01-22T23:00Z",
+    "dateModified": "2017-01-22T23:00Z",
     
     "image": {
         "@type": "ImageObject",
-        "url": https://blog.benchr.de/images/Exams.jpg,
+        "url": "https://blog.benchr.de/images/Exams.jpg",
         "width": 3000,
         "height": 1445
     },
     
-    "keywords": exams, university, master, compiler,
-    "description": ,
+    "keywords": "exams, university, master, compiler",
+    "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://blog.benchr.de/post/exams/
+        "@id": "https://blog.benchr.de/post/exams/"
     }
 }
     </script>
@@ -237,32 +237,22 @@
 
     <section class="post-content">
       <p>Since I am currently right before examination period time at my studies, I&rsquo;d like to take a moment to talk about something I learned during the development of a task for my university. While the task itself was not that exciting, I think the overall principle is very nice!</p>
-
 <p>The tool is a framework for developing new programming languages! Its name is <a href="http://www.eclipse.org/Xtext/">Xtext</a>. While I will propably never use it, I like the idea behind it.</p>
-
 <p>When developing a compiler or an interpreter you need to develop a lexer and a parser to understand the code you want to compile or run. The lexer is for lexically understanding the code, so its outputs are only tokens of the code. It understands that <em>abc</em> is an identifier and <em>for</em> is a keyword. It also understands that <em>==</em> means equal and <em>5</em> is a number literal. But it neither understands what the code means nor will it check if it is correct.</p>
-
 <p>The checking of the syntax of the code is done by the parser. It takes the tokens the lexer produces and checks if those make sense in that order. It checks that function calls have the correct number of arguments and that there is a condition that produces a <em>bool</em> value after the <em>if</em> keyword.</p>
-
 <p>The parser is often hardcoded and changes in the language mean diving deep into the code of that parser (which is in general very complex).</p>
-
 <p>For now I want to describe what Xtext does to take the complexity out of the parser to make changes in the language not that complex anymore. Xtext itself is an own programming language which makes it possible to describe how a language is structured. It lets you describe that the condition needs to follow an <em>if</em> statement and that a function needs to start with the <em>fn</em> keyword.</p>
-
 <p>The framework generates code for parsing and creates an <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a> out of the given code. The abstract syntax tree groups the content of the source code in logical groups for better abstraction which is then necessary for machine code generation or the runtime. So a function name, its parameters and their name are logically grouped together.</p>
-
 <p>Here is an example content of a very basic xtext file:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Equal:
 	Variable &#39;==&#39; Variable
 ;
 Variable:
 	identifier = ID | number = INT
-;</code></pre></div>
-<p>ID and INT are terminal symbols, so they are predefined. ID in that case is the same as <code>/([A-Za-z_0-9]+)/g</code>, so any letter, the underline symbol or number, INT is just <code>/([0-9]+)/g</code>, so only numbers.</p>
-
+;
+</code></pre></div><p>ID and INT are terminal symbols, so they are predefined. ID in that case is the same as <code>/([A-Za-z_0-9]+)/g</code>, so any letter, the underline symbol or number, INT is just <code>/([0-9]+)/g</code>, so only numbers.</p>
 <p>The <a href="https://github.com/BenchR267/prolog-xtext">task</a> was to describe the <a href="http://www.swi-prolog.org">Prolog</a> syntax in a Xtext file and to build an AST and another abstraction out of it. The Xtext file can be viewed <a href="https://github.com/BenchR267/prolog-xtext/blob/master/de.htwdd.sf.beleg.s76511.s76575/src/de/htwdd/sf/beleg/Dsl.xtext">here</a>.</p>
-
 <p>This was just a short introduction to the tooling and I really consider to write something similiar so that the language will be much more extensible in the future.</p>
-
 <p>That is all for now, thanks for reading and have a nice week!</p>
 
     </section>

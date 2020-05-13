@@ -60,7 +60,7 @@
     
         <link href="https://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
     
-    <meta name="generator" content="Hugo 0.32.4" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <link rel="canonical" href="https://blog.benchr.de/post/mvp-lexer/" />
 
@@ -73,13 +73,13 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": 
+        "name":  null 
     },
     "author": {
         "@type": "Person",
-        "name": ,
+        "name":  null ,
         
-        "url": https://blog.benchr.me,
+        "url": "https://blog.benchr.me",
         "sameAs": [
             
             
@@ -90,33 +90,33 @@
              
             
         ],
-        "description": iOS developer, master degree student in computer science
+        "description": "iOS developer, master degree student in computer science"
         
     },
-    "headline": Writing a lexer,
-    "name": Writing a lexer,
-    "wordCount": 903,
+    "headline": "Writing a lexer",
+    "name": "Writing a lexer",
+    "wordCount":  903 ,
     "timeRequired": "PT5M",
     "inLanguage": {
       "@type": "Language",
-      "alternateName": en
+      "alternateName": "en"
     },
-    "url": https://blog.benchr.de/post/mvp-lexer/,
-    "datePublished": 2017-03-03T20:00Z,
-    "dateModified": 2017-03-03T20:00Z,
+    "url": "https://blog.benchr.de/post/mvp-lexer/",
+    "datePublished": "2017-03-03T20:00Z",
+    "dateModified": "2017-03-03T20:00Z",
     
     "image": {
         "@type": "ImageObject",
-        "url": https://blog.benchr.de/images/mvp-lexer.jpg,
+        "url": "https://blog.benchr.de/images/mvp-lexer.jpg",
         "width": 3000,
         "height": 1445
     },
     
-    "keywords": compiler,
-    "description": ,
+    "keywords": "compiler",
+    "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://blog.benchr.de/post/mvp-lexer/
+        "@id": "https://blog.benchr.de/post/mvp-lexer/"
     }
 }
     </script>
@@ -225,23 +225,16 @@
 
     <section class="post-content">
       <p>If you have read <a href="https://blog.benchr.de/post/starting-the-challenge/">last weeks blog post</a> you might also have checked out the <a href="https://github.com/BenchR267/lbd">repository of my compiler on Github</a>. After deciding which programming language to use and decided on the name for the project I started creating the first fundamental files. One of them is the lexer. Before diving too deep into the topic here is a definition of lexical analysis from <a href="https://en.wikipedia.org/wiki/Lexical_analysis">Wikipedia</a>:</p>
-
 <blockquote>
 <p>In computer science, lexical analysis is the process of converting a sequence of characters […] into a sequence of tokens […].</p>
 </blockquote>
-
 <p>For the compiler it is essential to understand the code that is written to be able to support the software engineer and to create executable files. Understanding is something we normally associate with human beings and not with computer programs. In this context understanding means to create an abstraction that the computer is able to process. I am going to describe this abstraction in a later blog post since it is not important for the lexer. But it is important to know that this abstraction is powered by the <a href="https://en.wikipedia.org/wiki/Parsing">parser</a>.</p>
-
 <blockquote>
 <p>Parsing […] is the process of analysing a string of symbols, either in natural language or in computer languages, conforming to the rules of a formal grammar.</p>
 </blockquote>
-
 <p>A parser is taking a bunch of tokens and transforms them to an abstraction, called <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a>, by a given set of rules, called grammer. The parser of <a href="https://github.com/BenchR267/lbd">lbd</a> is also going to be the topic of a later blog post. But since tokens are the input of the parser we now have the connection back to our lexer: the lexer is providing those tokens to be processed by the parser.</p>
-
 <p>The lexer is the first component that gets in touch with the raw input of the user. This input is passed to the lexer as raw bytes and gets outputted as tokens which describe what a given set of the input represents. Since the tokens length is often not the same length as a bytes length it is the task of the lexer to cluster the bytes together in lexical groups. One lexical group will later describe one word in the alphabet that is used in the grammer of the parser.</p>
-
 <p>Before showing you the possible tokens that the MVP can handle, this is a sample part of code written in lbd:</p>
-
 <pre><code>add = (a int, b int) -&gt; int {
     return a + b
 }
@@ -254,10 +247,7 @@ a = 5
 b = 4
 c = add(a, b)
 d = mul(a, b)
-</code></pre>
-
-<p>As you can see, the feature set is intentionally small to see results as fast as possible. It is only possible to create variables which can be of type function or int.</p>
-
+</code></pre><p>As you can see, the feature set is intentionally small to see results as fast as possible. It is only possible to create variables which can be of type function or int.</p>
 <p>A <code>Token</code> is defined by its <code>Position</code> in the stream, its type and its raw representation in the source code:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">type</span> Token <span style="color:#6ab825;font-weight:bold">struct</span> {
 	Pos  Position
@@ -269,9 +259,8 @@ d = mul(a, b)
 	Line   <span style="color:#6ab825;font-weight:bold">int</span>
 	Column <span style="color:#6ab825;font-weight:bold">int</span>
 	Len    <span style="color:#6ab825;font-weight:bold">int</span>
-}</code></pre></div>
-<p>Both types are defined in a sub-package of the <code>lexer</code> package called <code>token</code>. <code>token.Type</code> is defined as an enum which is described in Go as a set of constants of type <code>int</code> incremented by the keyword <code>iota</code>. The list of all possible values for <code>token.Type</code> can be viewed <a href="https://github.com/BenchR267/lbd/blob/master/lexer/token/token.go#L24">here</a>.</p>
-
+}
+</code></pre></div><p>Both types are defined in a sub-package of the <code>lexer</code> package called <code>token</code>. <code>token.Type</code> is defined as an enum which is described in Go as a set of constants of type <code>int</code> incremented by the keyword <code>iota</code>. The list of all possible values for <code>token.Type</code> can be viewed <a href="https://github.com/BenchR267/lbd/blob/master/lexer/token/token.go#L24">here</a>.</p>
 <p>Since the lexer transforms the raw input to values of type <code>token.Token</code> I defined the type like this:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">type</span> Lexer <span style="color:#6ab825;font-weight:bold">struct</span> {
 	NextToken <span style="color:#6ab825;font-weight:bold">chan</span> token.Token
@@ -279,20 +268,17 @@ d = mul(a, b)
 	input  &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>
 	curPos token.Position
 	buffer tokenizer
-}</code></pre></div>
-<p>If you are not familiar with Go, the capitalized fields in structs are exported. That means they can be accessed from outside of the package. Also important: <code>rune</code> is a built in <a href="https://blog.golang.org/strings">Go type</a> that describes an <a href="https://en.wikipedia.org/wiki/Unicode">unicode</a> character. So the interface of <code>lexer.Lexer</code> only offers a read only channel of <code>token.Token</code>. The lexer is initialized with a Go typical <code>NewLexer</code> function which takes a read only input channel of runes. A channel is a stream of values which is used for safe communication between go routines.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">func</span> NewLexer(inputStream &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>) *Lexer</code></pre></div>
-<p>After initializing the caller needs to <code>Start()</code> the instance which will spawn a new go routine which reads from the input channel. Receiving from a channel is a blocking operation until another go routine starts sending on that channel. To get started I created two functions to create the needed channels with ease: (the implementation can be found <a href="https://github.com/BenchR267/lbd/blob/master/lexer/helper.go">here</a>)</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">func</span> StreamFromString(input <span style="color:#6ab825;font-weight:bold">string</span>) &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>
-<span style="color:#6ab825;font-weight:bold">func</span> StreamFromFile(filename <span style="color:#6ab825;font-weight:bold">string</span>) (stream &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>, err <span style="color:#6ab825;font-weight:bold">error</span>)
-<span style="color:#6ab825;font-weight:bold">func</span> CombineStreams(streams ...&lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>) &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span></code></pre></div>
-<p>When all runes from the input channel are processed and transformed into tokens, the lexer stops the whole process by closing the <code>NextToken</code> channel.</p>
-
+}
+</code></pre></div><p>If you are not familiar with Go, the capitalized fields in structs are exported. That means they can be accessed from outside of the package. Also important: <code>rune</code> is a built in <a href="https://blog.golang.org/strings">Go type</a> that describes an <a href="https://en.wikipedia.org/wiki/Unicode">unicode</a> character. So the interface of <code>lexer.Lexer</code> only offers a read only channel of <code>token.Token</code>. The lexer is initialized with a Go typical <code>NewLexer</code> function which takes a read only input channel of runes. A channel is a stream of values which is used for safe communication between go routines.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">NewLexer</span>(inputStream &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>) *Lexer
+</code></pre></div><p>After initializing the caller needs to <code>Start()</code> the instance which will spawn a new go routine which reads from the input channel. Receiving from a channel is a blocking operation until another go routine starts sending on that channel. To get started I created two functions to create the needed channels with ease: (the implementation can be found <a href="https://github.com/BenchR267/lbd/blob/master/lexer/helper.go">here</a>)</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">StreamFromString</span>(input <span style="color:#6ab825;font-weight:bold">string</span>) &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>
+<span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">StreamFromFile</span>(filename <span style="color:#6ab825;font-weight:bold">string</span>) (stream &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>, err <span style="color:#6ab825;font-weight:bold">error</span>)
+<span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">CombineStreams</span>(streams ...&lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>) &lt;-<span style="color:#6ab825;font-weight:bold">chan</span> <span style="color:#6ab825;font-weight:bold">rune</span>
+</code></pre></div><p>When all runes from the input channel are processed and transformed into tokens, the lexer stops the whole process by closing the <code>NextToken</code> channel.</p>
 <p>The real work of building tokens out of the runes is done by an internal type <code>lexer.tokenizer</code>. The tokenizer is some kind of buffer for the lexer. It holds a slice of runes inside until appending a new rune does not belong to the current buffered ones anymore. That is important for tokens that need more than one rune to be finalized (<code>==</code>, <code>!=</code>, <code>return</code>).</p>
-
 <p>Working with channels and go routines in Go is really great. It supports by a lot of power and brings also a lot of performance and security in communication between different parts of the app.</p>
-
-<p>So far, thanks for reading. Next week I am going to write about the <a href="https://en.wikipedia.org/wiki/Read–eval–print_loop">REPL</a> which is very handy to get instant feedback on written code.</p>
+<p>So far, thanks for reading. Next week I am going to write about the <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a> which is very handy to get instant feedback on written code.</p>
 
     </section>
 

@@ -60,7 +60,7 @@
     
         <link href="https://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
     
-    <meta name="generator" content="Hugo 0.32.4" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <link rel="canonical" href="https://blog.benchr.de/post/starting-the-challenge/" />
 
@@ -73,13 +73,13 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": 
+        "name":  null 
     },
     "author": {
         "@type": "Person",
-        "name": ,
+        "name":  null ,
         
-        "url": https://blog.benchr.me,
+        "url": "https://blog.benchr.me",
         "sameAs": [
             
             
@@ -90,33 +90,33 @@
              
             
         ],
-        "description": iOS developer, master degree student in computer science
+        "description": "iOS developer, master degree student in computer science"
         
     },
-    "headline": Starting the challenge,
-    "name": Starting the challenge,
-    "wordCount": 631,
+    "headline": "Starting the challenge",
+    "name": "Starting the challenge",
+    "wordCount":  621 ,
     "timeRequired": "PT3M",
     "inLanguage": {
       "@type": "Language",
-      "alternateName": en
+      "alternateName": "en"
     },
-    "url": https://blog.benchr.de/post/starting-the-challenge/,
-    "datePublished": 2017-02-24T20:00Z,
-    "dateModified": 2017-02-24T20:00Z,
+    "url": "https://blog.benchr.de/post/starting-the-challenge/",
+    "datePublished": "2017-02-24T20:00Z",
+    "dateModified": "2017-02-24T20:00Z",
     
     "image": {
         "@type": "ImageObject",
-        "url": https://blog.benchr.de/images/starting-the-challenge.jpg,
+        "url": "https://blog.benchr.de/images/starting-the-challenge.jpg",
         "width": 3000,
         "height": 1445
     },
     
-    "keywords": compiler,
-    "description": ,
+    "keywords": "compiler",
+    "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://blog.benchr.de/post/starting-the-challenge/
+        "@id": "https://blog.benchr.de/post/starting-the-challenge/"
     }
 }
     </script>
@@ -225,60 +225,46 @@
 
     <section class="post-content">
       <p>As mentioned in the <a href="https://blog.benchr.de/post/i-am-done/">last blog post</a> I am finally able to start my <a href="https://blog.benchr.de/post/beginning/">challenge</a> for this year. In an <a href="https://blog.benchr.de/post/thoughts/">earlier blog post</a> I thought about some key points that need to be decided before I can finally start. Here is the list with their short answers, the long answer is written below:</p>
-
 <ul>
 <li>In which main language will the tools be written?
-
 <ul>
 <li>Go</li>
-</ul></li>
+</ul>
+</li>
 <li>Will the language be compiled or interpreted?
-
 <ul>
 <li>compiled and transpiled, starting with a transpiler</li>
-</ul></li>
+</ul>
+</li>
 <li>What is the name of the language?
-
 <ul>
 <li>Currently it is lbd (learning by doing), but I am still open for proposals</li>
-</ul></li>
+</ul>
+</li>
 <li>What exact features will the language support?
-
 <ul>
 <li>that depends on the evolution over time</li>
-</ul></li>
+</ul>
+</li>
 <li>Will it be open source?
-
 <ul>
 <li>Yes, it is! (<a href="https://github.com/BenchR267/lbd">Github</a>)</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>Why did I choose Go over Swift? This decision is based on multiple thoughts:</p>
-
 <p>First of all, I know Swift quite well and I work with it all day. I totally love this language and I am very happy to use it that often. I also think that it would fit quite well for a compiler toolchain. But by choosing Go I get a very powerful standard library and extremly powerful tools (which had more time to evolve than Swifts). I also get the ability to learn more about the Go programming language. I am familiar with the syntax and with some patterns but it is always best to create something to learn a new language.</p>
-
 <p>In Go it is also very easy to produce binaries for different operating systems. That is not something that disqualifies Swift but it is much easier to do in Go and is very useful. Beside that Go does not expect any source breaking changes in contrast to Swift. So I do not have to worry about migrating to a new version of the language.</p>
-
-<p><img src="https://blog.benchr.de/images/gopherme.png" alt="me" />
-<center>
-<em>This is me as a Gopher. Create yours at <a href="https://gopherize.me">gopherize.me</a>.</em>
-</center></p>
-
+<p><img src="https://blog.benchr.de/images/gopherme.png" alt="me"></p>
+<!-- raw HTML omitted -->
 <p>Why did I choose to compile/transpile the code?</p>
-
 <p>Before answering this question here is a <em>short</em> definition of transpiling taken from <a href="https://en.wikipedia.org/wiki/Source-to-source_compiler">Wikipedia</a>:</p>
-
 <blockquote>
 <p>A […] transpiler is a type of compiler that takes the source code of a program written in one programming language as its input and produces the equivalent source code in another programming language.</p>
 </blockquote>
-
 <p>This is especially useful if you want to test your lexer and parser by generating code in a forgiving and simple language like <a href="https://www.javascript.com">Javascript</a>. That is the reason why I want to start with that: to get results as fast as possible. In comparison to that the compiler generates low level code like assembler or machine code. I am going to use <a href="http://llvm.org">LLVM</a> as the backend for the compiler. LLVM defines an interface to run low level machine instructions on multiple processors.</p>
-
 <p>To be honest there is not that much to say about the name. I had some great ideas, mostly <a href="https://en.wikipedia.org/wiki/Lists_of_colors">colors</a>, <a href="https://en.wikipedia.org/wiki/User:Miwasatoshi/List_of_gemstones_and_ornamental_stones">gemstones</a>, <a href="http://www.godchecker.com">gods</a> or places on earth like <a href="https://en.wikipedia.org/wiki/List_of_beaches">beaches</a> or <a href="https://en.wikipedia.org/wiki/List_of_highest_mountains_on_Earth">mountains</a>. All of them are already taken. But since this language should not compete with others it does not matter whether the name is taken already. <em>Apple hijacked another languages name with <a href="http://swift-lang.org/main/">Swift</a>.</em> But I actually like the shortcut lbd for learning by doing. It says exactly why this project even exists and what I want to achieve with it. The only thing that bothers be is the similarity to <a href="https://lldb.llvm.org">lldb</a>.</p>
-
 <p>The features will depend on the language evolving over time. I am going to start with a very simple <a href="https://en.wikipedia.org/wiki/Minimum_viable_product">MVP</a> and add more features later. Of course, as I already mentioned <a href="https://blog.benchr.de/post/thoughts/">before</a>, you can follow my progress on <a href="https://github.com/BenchR267/lbd">Github</a>. I am open to feedback as well. You are also free to fork the project and build on it on your own.</p>
-
 <p>That is all I wanted to say for now. Next week I am going to describe the lexer I already <a href="https://github.com/BenchR267/lbd/tree/master/lexer">built</a>.</p>
 
     </section>

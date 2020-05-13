@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Typescript on benchr</title>
+    <title>typescript on benchr</title>
     <link>https://blog.benchr.de/tags/typescript/</link>
-    <description>Recent content in Typescript on benchr</description>
+    <description>Recent content in typescript on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
