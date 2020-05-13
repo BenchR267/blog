@@ -18,11 +18,11 @@ Legal Disclosure
 Information in accordance with section 5 TMG
 
 Benjamin Herzog<br>
-Lugaer Straße 24f<br>
-01259 Dresden<br>
+Berliner Str. 124<br>
+13187 Berlin<br>
 
 E-Mail: mail@benchr.de<br>
-Internet: [https://blog.benchr.me](https://blog.benchr.me)<br>
+Internet: [https://benchr.de](https://benchr.de)<br>
 
 <br>
 Disclaimer
