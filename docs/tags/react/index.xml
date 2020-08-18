@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>react on benchr</title>
-    <link>https://blog.benchr.de/tags/react/</link>
+    <link>https://blog.bens.life/tags/react/</link>
     <description>Recent content in react on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
     <lastBuildDate>Tue, 04 Apr 2017 18:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://blog.benchr.de/tags/react/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.bens.life/tags/react/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>React Native Example</title>
-      <link>https://blog.benchr.de/post/rn-example/</link>
+      <link>https://blog.bens.life/post/rn-example/</link>
       <pubDate>Tue, 04 Apr 2017 18:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/rn-example/</guid>
+      <guid>https://blog.bens.life/post/rn-example/</guid>
       <description>In this post I am going to describe what steps are necessary to create an app in React Native. The example I want to build is the same one I created during my Cocoaheads talk. If you would like to see this in action or get more information check out my last post here.
 Installing dependencies You may already know this: in Javascript it is all about dependencies. The language itself is pretty easy and does not have a lot functionality.</description>
     </item>
     
     <item>
       <title>About React Native</title>
-      <link>https://blog.benchr.de/post/about-rn/</link>
+      <link>https://blog.bens.life/post/about-rn/</link>
       <pubDate>Tue, 21 Mar 2017 11:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/about-rn/</guid>
+      <guid>https://blog.bens.life/post/about-rn/</guid>
       <description>In this blog post I would like to talk about React Native. Before starting: this evening I am going to talk about this topic at the Cococaheads Dresden meetup. If you are more the visual type and you are able to understand German check out the video of the talk here.
  React Native - Learn one, write anywhere: Build mobile apps with React.
  This is the official description of the framework and you will get what it means during this post.</description>

@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>benchr</title>
-    <link>https://blog.benchr.de/</link>
+    <link>https://blog.bens.life/</link>
     <description>Recent content on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
     <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://blog.benchr.de/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.bens.life/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Replacing @autoclosure in Swift</title>
-      <link>https://blog.benchr.de/post/autoclosure/</link>
+      <link>https://blog.bens.life/post/autoclosure/</link>
       <pubDate>Tue, 27 Jun 2017 19:00:00 +0100</pubDate>
       
-      <guid>https://blog.benchr.de/post/autoclosure/</guid>
+      <guid>https://blog.bens.life/post/autoclosure/</guid>
       <description>A short preamble before the actual topic: yes, I let the blog slide. I am pretty sure that not that many people are reading my posts and those few are not mad reading a bit less but I have to admit that I failed the challenge I started beginning this year. It is not about that it is hard writing blog posts every week (what it is), it is more about writing posts weekly just to have them written and published.</description>
     </item>
     
     <item>
       <title>Typescript</title>
-      <link>https://blog.benchr.de/post/typescript/</link>
+      <link>https://blog.bens.life/post/typescript/</link>
       <pubDate>Wed, 03 May 2017 11:00:00 +0100</pubDate>
       
-      <guid>https://blog.benchr.de/post/typescript/</guid>
+      <guid>https://blog.bens.life/post/typescript/</guid>
       <description>In this blog post I am going to write about a programming language which I have not checked out before. Typescript is a super set of Javascript and is developed by Microsoft. The syntax is exactly the same as Javascript with one very important difference: in comparison to Javascript Typescript knows the concept of types and checks them with a built in type system.
 To make type failure messages more useful Typescript is also a compiled language while Javascript is an interpreted language.</description>
     </item>
     
     <item>
       <title>Announcements</title>
-      <link>https://blog.benchr.de/post/announcements/</link>
+      <link>https://blog.bens.life/post/announcements/</link>
       <pubDate>Thu, 20 Apr 2017 11:00:00 +0100</pubDate>
       
-      <guid>https://blog.benchr.de/post/announcements/</guid>
+      <guid>https://blog.bens.life/post/announcements/</guid>
       <description>Todays blog post is less technical than the previous ones. I would like to talk about some events that happened in the last time.
 I am a registered Apple developer since November 2013. Since then I collected a lot of experiences, built a lot of apps and gained a ton of knowledge. But every product I built was for someone else, no matter if it was a company or a person.</description>
     </item>
     
     <item>
       <title>Technical details</title>
-      <link>https://blog.benchr.de/post/technical-details-gs/</link>
+      <link>https://blog.bens.life/post/technical-details-gs/</link>
       <pubDate>Sun, 09 Apr 2017 13:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/technical-details-gs/</guid>
+      <guid>https://blog.bens.life/post/technical-details-gs/</guid>
       <description>(The cover is copied from http://coub.com/view/7x8n3. If you do not know what the picture has in common with the topic, check out last weeks blog post)
 Last week I introduced &amp;lsquo;Get Schwifty&amp;rsquo; - an app to write, evaluate and run Swift scripts on an iPhone. Today I am going to describe some technical details of the project.
 The project consists of three major parts: user interface, compiler and JavaScript runtime environment.</description>
@@ -54,30 +54,30 @@ The project consists of three major parts: user interface, compiler and JavaScri
     
     <item>
       <title>Introducing Get Schwifty!</title>
-      <link>https://blog.benchr.de/post/get-schwifty/</link>
+      <link>https://blog.bens.life/post/get-schwifty/</link>
       <pubDate>Tue, 04 Apr 2017 20:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/get-schwifty/</guid>
+      <guid>https://blog.bens.life/post/get-schwifty/</guid>
       <description>Each year Apple organizes a conference for their third party platform developers. The conference is called WWDC (world wide developers conference) and takes place in California, USA. Although the tickets are extremly expensive (1,599$ each) it is almost impossible to get the chance to buy one due to the mass of people who try their luck.
 The conference is all about the software; Apple uses the opening keynote to introduce the new major versions of their platform operating systems, iOS and macOS.</description>
     </item>
     
     <item>
       <title>React Native Example</title>
-      <link>https://blog.benchr.de/post/rn-example/</link>
+      <link>https://blog.bens.life/post/rn-example/</link>
       <pubDate>Tue, 04 Apr 2017 18:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/rn-example/</guid>
+      <guid>https://blog.bens.life/post/rn-example/</guid>
       <description>In this post I am going to describe what steps are necessary to create an app in React Native. The example I want to build is the same one I created during my Cocoaheads talk. If you would like to see this in action or get more information check out my last post here.
 Installing dependencies You may already know this: in Javascript it is all about dependencies. The language itself is pretty easy and does not have a lot functionality.</description>
     </item>
     
     <item>
       <title>About React Native</title>
-      <link>https://blog.benchr.de/post/about-rn/</link>
+      <link>https://blog.bens.life/post/about-rn/</link>
       <pubDate>Tue, 21 Mar 2017 11:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/about-rn/</guid>
+      <guid>https://blog.bens.life/post/about-rn/</guid>
       <description>In this blog post I would like to talk about React Native. Before starting: this evening I am going to talk about this topic at the Cococaheads Dresden meetup. If you are more the visual type and you are able to understand German check out the video of the talk here.
  React Native - Learn one, write anywhere: Build mobile apps with React.
  This is the official description of the framework and you will get what it means during this post.</description>
@@ -85,58 +85,58 @@ Installing dependencies You may already know this: in Javascript it is all about
     
     <item>
       <title>Fast feedback using a REPL</title>
-      <link>https://blog.benchr.de/post/first-repl/</link>
+      <link>https://blog.bens.life/post/first-repl/</link>
       <pubDate>Sat, 18 Mar 2017 14:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/first-repl/</guid>
+      <guid>https://blog.bens.life/post/first-repl/</guid>
       <description>In this blog post I would like to write about the REPL which I built to get a fast feedback cycle for my lexer. Before going into the topic, here is a short description of what REPL stands for and what its purpose is. REPL stands for Read-Evaluate-Print-Loop. So in the end it is an endless loop which is waiting for input from the user to evaluate it and print the outcome afterwards.</description>
     </item>
     
     <item>
       <title>Writing a lexer</title>
-      <link>https://blog.benchr.de/post/mvp-lexer/</link>
+      <link>https://blog.bens.life/post/mvp-lexer/</link>
       <pubDate>Fri, 03 Mar 2017 20:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/mvp-lexer/</guid>
+      <guid>https://blog.bens.life/post/mvp-lexer/</guid>
       <description>If you have read last weeks blog post you might also have checked out the repository of my compiler on Github. After deciding which programming language to use and decided on the name for the project I started creating the first fundamental files. One of them is the lexer. Before diving too deep into the topic here is a definition of lexical analysis from Wikipedia:
  In computer science, lexical analysis is the process of converting a sequence of characters […] into a sequence of tokens […].</description>
     </item>
     
     <item>
       <title>Starting the challenge</title>
-      <link>https://blog.benchr.de/post/starting-the-challenge/</link>
+      <link>https://blog.bens.life/post/starting-the-challenge/</link>
       <pubDate>Fri, 24 Feb 2017 20:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/starting-the-challenge/</guid>
+      <guid>https://blog.bens.life/post/starting-the-challenge/</guid>
       <description>As mentioned in the last blog post I am finally able to start my challenge for this year. In an earlier blog post I thought about some key points that need to be decided before I can finally start. Here is the list with their short answers, the long answer is written below:
  In which main language will the tools be written?  Go   Will the language be compiled or interpreted?</description>
     </item>
     
     <item>
       <title>I am done</title>
-      <link>https://blog.benchr.de/post/i-am-done/</link>
+      <link>https://blog.bens.life/post/i-am-done/</link>
       <pubDate>Wed, 22 Feb 2017 15:30:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/i-am-done/</guid>
+      <guid>https://blog.bens.life/post/i-am-done/</guid>
       <description>Today I wrote my last exam for this semester; so I am finally done with this stressful time. It feels like it is getting harder every time to concentrate only on the topics that are necessary to pass every single exam. Especially in this time my head is full of motivation for a lot of different projects but I am forcing myself to not start any of them during the exam period.</description>
     </item>
     
     <item>
       <title>Part 3/3 - It&#39;s all about the mapping</title>
-      <link>https://blog.benchr.de/post/pop-network-3/</link>
+      <link>https://blog.bens.life/post/pop-network-3/</link>
       <pubDate>Sun, 12 Feb 2017 18:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/pop-network-3/</guid>
+      <guid>https://blog.bens.life/post/pop-network-3/</guid>
       <description>All Parts: 1 - 2 - 3
 Last week I defined the interface of the Client and its Authenticator. Together with the definition of the endpoints (first part) it is now possible to take a deeper look into the actual network request. But before doing that I need to clarify one important part: the mapping of the response. Mapping JSON (or other transport formats) is a different topic, especially in Swift.</description>
     </item>
     
     <item>
       <title>Part 2/3 - Defining a readable and safe interface</title>
-      <link>https://blog.benchr.de/post/pop-network-2/</link>
+      <link>https://blog.bens.life/post/pop-network-2/</link>
       <pubDate>Sun, 05 Feb 2017 08:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/pop-network-2/</guid>
+      <guid>https://blog.bens.life/post/pop-network-2/</guid>
       <description>All Parts: 1 - 2 - 3
 In the first part I built the foundation for a protocol oriented network abstraction written in Swift. The main focus for the component lies on safety, code quality and a very clean API.
 Safety is mostly about the rules you define on how the component can be used. In the best scenario the user can not even compile the program if the component is configured wrongly.</description>
@@ -144,10 +144,10 @@ Safety is mostly about the rules you define on how the component can be used. In
     
     <item>
       <title>Part 1/3 - Writing a protocol oriented network abstraction in Swift</title>
-      <link>https://blog.benchr.de/post/pop-network-1/</link>
+      <link>https://blog.bens.life/post/pop-network-1/</link>
       <pubDate>Fri, 03 Feb 2017 15:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/pop-network-1/</guid>
+      <guid>https://blog.bens.life/post/pop-network-1/</guid>
       <description>All Parts: 1 - 2 - 3
 Todays topic is very technically. So if you are not interested in programming (or especially in Swift programming), this post might not be for you.
 This is the first blog post of a short series. Before starting with the structure and the implementation details, I would like to explain how that topic came up.
@@ -156,39 +156,39 @@ In summer 2014, right after the announcement of Swift, I created a YouTube Chann
     
     <item>
       <title>Exams..</title>
-      <link>https://blog.benchr.de/post/exams/</link>
+      <link>https://blog.bens.life/post/exams/</link>
       <pubDate>Sun, 22 Jan 2017 23:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/exams/</guid>
+      <guid>https://blog.bens.life/post/exams/</guid>
       <description>Since I am currently right before examination period time at my studies, I&amp;rsquo;d like to take a moment to talk about something I learned during the development of a task for my university. While the task itself was not that exciting, I think the overall principle is very nice!
 The tool is a framework for developing new programming languages! Its name is Xtext. While I will propably never use it, I like the idea behind it.</description>
     </item>
     
     <item>
       <title>Some Thoughts</title>
-      <link>https://blog.benchr.de/post/thoughts/</link>
+      <link>https://blog.bens.life/post/thoughts/</link>
       <pubDate>Sun, 15 Jan 2017 10:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/thoughts/</guid>
+      <guid>https://blog.bens.life/post/thoughts/</guid>
       <description>This week I want to share some of my thoughts about my new programming language. Or to be a bit more specific: about some technical details for building the toolchain. There are a lot of things that need to be decided which are also very important for the planning process. Here is an overview over some of them:
  Will the language be compiled or interpreted? What exact features will the language support?</description>
     </item>
     
     <item>
       <title>A New Beginning</title>
-      <link>https://blog.benchr.de/post/beginning/</link>
+      <link>https://blog.bens.life/post/beginning/</link>
       <pubDate>Sat, 07 Jan 2017 15:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/beginning/</guid>
+      <guid>https://blog.bens.life/post/beginning/</guid>
       <description>Year after year I thought about aspects that I could possibly change to create a more positive lifestyle. These were often things like &amp;lsquo;eat healthier&#39;, &amp;lsquo;do more sports&#39;, &amp;lsquo;quit smoking&amp;rsquo; and so on. None of those actually ever happened (beside the smoking, but that was not at New Year&amp;rsquo;s Eve). And that is the point about resolutions. They never happen if you choose another time for it than now. Do not let yourself restrict too much from events like New Year&amp;rsquo;s Eve.</description>
     </item>
     
     <item>
       <title>Imprint</title>
-      <link>https://blog.benchr.de/imprint/</link>
+      <link>https://blog.bens.life/imprint/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/imprint/</guid>
+      <guid>https://blog.bens.life/imprint/</guid>
       <description>Legal Disclosure
 Information in accordance with section 5 TMG
 Benjamin HerzogBerliner Str. 12413187 BerlinE-Mail: mail@benchr.deInternet: https://benchr.deAccountability for content The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents&amp;rsquo; accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this context, please note that we are accordingly not obliged to monitor merely the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity.</description>

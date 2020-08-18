@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>schwifty on benchr</title>
-    <link>https://blog.benchr.de/tags/schwifty/</link>
+    <link>https://blog.bens.life/tags/schwifty/</link>
     <description>Recent content in schwifty on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
     <lastBuildDate>Thu, 20 Apr 2017 11:00:00 +0100</lastBuildDate>
     
-	<atom:link href="https://blog.benchr.de/tags/schwifty/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.bens.life/tags/schwifty/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Announcements</title>
-      <link>https://blog.benchr.de/post/announcements/</link>
+      <link>https://blog.bens.life/post/announcements/</link>
       <pubDate>Thu, 20 Apr 2017 11:00:00 +0100</pubDate>
       
-      <guid>https://blog.benchr.de/post/announcements/</guid>
+      <guid>https://blog.bens.life/post/announcements/</guid>
       <description>Todays blog post is less technical than the previous ones. I would like to talk about some events that happened in the last time.
 I am a registered Apple developer since November 2013. Since then I collected a lot of experiences, built a lot of apps and gained a ton of knowledge. But every product I built was for someone else, no matter if it was a company or a person.</description>
     </item>
     
     <item>
       <title>Technical details</title>
-      <link>https://blog.benchr.de/post/technical-details-gs/</link>
+      <link>https://blog.bens.life/post/technical-details-gs/</link>
       <pubDate>Sun, 09 Apr 2017 13:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/technical-details-gs/</guid>
+      <guid>https://blog.bens.life/post/technical-details-gs/</guid>
       <description>(The cover is copied from http://coub.com/view/7x8n3. If you do not know what the picture has in common with the topic, check out last weeks blog post)
 Last week I introduced &amp;lsquo;Get Schwifty&amp;rsquo; - an app to write, evaluate and run Swift scripts on an iPhone. Today I am going to describe some technical details of the project.
 The project consists of three major parts: user interface, compiler and JavaScript runtime environment.</description>
@@ -35,10 +35,10 @@ The project consists of three major parts: user interface, compiler and JavaScri
     
     <item>
       <title>Introducing Get Schwifty!</title>
-      <link>https://blog.benchr.de/post/get-schwifty/</link>
+      <link>https://blog.bens.life/post/get-schwifty/</link>
       <pubDate>Tue, 04 Apr 2017 20:00:00 +0200</pubDate>
       
-      <guid>https://blog.benchr.de/post/get-schwifty/</guid>
+      <guid>https://blog.bens.life/post/get-schwifty/</guid>
       <description>Each year Apple organizes a conference for their third party platform developers. The conference is called WWDC (world wide developers conference) and takes place in California, USA. Although the tickets are extremly expensive (1,599$ each) it is almost impossible to get the chance to buy one due to the mass of people who try their luck.
 The conference is all about the software; Apple uses the opening keynote to introduce the new major versions of their platform operating systems, iOS and macOS.</description>
     </item>
