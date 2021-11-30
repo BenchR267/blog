@@ -22,7 +22,7 @@
 
   	<meta property="og:title" content="React Native Example &middot; benchr" />
   	<meta property="og:site_name" content="benchr" />
-  	<meta property="og:url" content="https://blog.bens.life/post/rn-example/" />
+  	<meta property="og:url" content="https://blog.benchr.de/post/rn-example/" />
 
     
        <meta property="og:image" content="/images/react-native.jpg"/>
@@ -47,22 +47,22 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="https://blog.bens.life/images/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://blog.bens.life/images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="https://blog.benchr.de/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://blog.benchr.de/images/apple-touch-icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="https://blog.bens.life/css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="https://blog.bens.life/css/nav.css" />
-
-    
+    <link rel="stylesheet" type="text/css" href="https://blog.benchr.de/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://blog.benchr.de/css/nav.css" />
 
     
 
     
-        <link href="https://blog.bens.life/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
-    
-    <meta name="generator" content="Hugo 0.70.0" />
 
-    <link rel="canonical" href="https://blog.bens.life/post/rn-example/" />
+    
+        <link href="https://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
+    
+    <meta name="generator" content="Hugo 0.89.4" />
+
+    <link rel="canonical" href="https://blog.benchr.de/post/rn-example/" />
 
     
       
@@ -79,7 +79,7 @@
         "@type": "Person",
         "name":  null ,
         
-        "url": "https://bens.life",
+        "url": "https://blog.benchr.me",
         "sameAs": [
             
             
@@ -101,13 +101,13 @@
       "@type": "Language",
       "alternateName": "en"
     },
-    "url": "https://blog.bens.life/post/rn-example/",
+    "url": "https://blog.benchr.de/post/rn-example/",
     "datePublished": "2017-04-04T18:00Z",
     "dateModified": "2017-04-04T18:00Z",
     
     "image": {
         "@type": "ImageObject",
-        "url": "https://blog.bens.lifeimages/react-native.jpg",
+        "url": "https://blog.benchr.de/images/react-native.jpg",
         "width": 3000,
         "height": 1445
     },
@@ -116,7 +116,7 @@
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://blog.bens.life/post/rn-example/"
+        "@id": "https://blog.benchr.de/post/rn-example/"
     }
 }
     </script>
@@ -147,7 +147,7 @@
         
             <h2>Contact me</h2>
             <li class="nav-opened" role="presentation">
-            	<a href="mailto:mail@bens.life">Mail</a>
+            	<a href="mailto:mail@benchr.de">Mail</a>
             </li>
         
             
@@ -157,24 +157,24 @@
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/index.xml">RSS feed</a>
+            	<a href="https://blog.benchr.de/index.xml">RSS feed</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/imprint/">Imprint</a>
+            	<a href="https://blog.benchr.de/imprint/">Imprint</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/">Blog</a>
+            	<a href="https://blog.benchr.de/">Blog</a>
             </li>
         
         
     </ul>
 
     
-    <a class="subscribe-button icon-feed" href="https://blog.bens.life/index.xml">Subscribe</a> </div>
+    <a class="subscribe-button icon-feed" href="https://blog.benchr.de/index.xml">Subscribe</a> </div>
     
 </div>
 <span class="nav-cover"></span>
@@ -218,27 +218,27 @@
           </time>
         
          
-          <span class="post-tag small"><a href="https://blog.bens.lifetags/react/">#react</a></span>
+          <span class="post-tag small"><a href="https://blog.benchr.de/tags/react/">#react</a></span>
          
         </section>
     </header>
 
     <section class="post-content">
-      <p>In this post I am going to describe what steps are necessary to create an app in React Native. The example I want to build is the same one I created during my Cocoaheads talk. If you would like to see this in action or get more information check out my last post <a href="https://blog.bens.life/post/about-rn/">here</a>.</p>
+      <p>In this post I am going to describe what steps are necessary to create an app in React Native. The example I want to build is the same one I created during my Cocoaheads talk. If you would like to see this in action or get more information check out my last post <a href="https://blog.benchr.de/post/about-rn/">here</a>.</p>
 <h3 id="installing-dependencies">Installing dependencies</h3>
 <p>You may already know this: in Javascript it is all about dependencies. The language itself is pretty easy and does not have a lot functionality. In other environments you have rich SDKs <em>(like iOS/Android SDK, .Net, …)</em> in Javascript this is mostly not the case. Since you do not want to reinvent the wheel with every project it is common to use different libraries for different tasks.</p>
 <p>I am not sure if this is a good or a bad thing. In general using dependencies makes you depending on those, that is where the name is coming from. But it is still good to see that the community created solutions for everything and it is very easy to build on top of that.</p>
 <p>To install the dependencies you need to create this example app I recommend using the package managers <a href="https://brew.sh">brew</a> and <a href="https://yarnpkg.com/en/">yarn</a>. yarn is a replacement for the node package manager (<a href="https://www.npmjs.com">npm</a>) built by Facebook. It is not needed, you can also use npm. Just translate my given yarn commands to npm commands (mostly replace <code>add</code> by <code>install</code>).</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash"><span style="color:#999;font-style:italic"># install node, watchman and yarn via brew</span>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash"><span style="color:#999;font-style:italic"># install node, watchman and yarn via brew</span>
 $ brew install node watchman yarn
 
 <span style="color:#999;font-style:italic"># install the command line tool to create a pre-configured React Native app</span>
 $ yarn global add create-react-native-app
 </code></pre></div><p>It is not needed to create a React Native app via the command line interface; you could instead also configure all the files by your own. To create an app execute the following command:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">$ create-react-native-app AwesomeProject
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">$ create-react-native-app AwesomeProject
 $ <span style="color:#24909d">cd</span> AwesomeProject <span style="color:#999;font-style:italic"># change directory to the created one</span>
 </code></pre></div><p>The creacted file structure should look similiar to this:</p>
-<pre><code>.
+<pre tabindex="0"><code>.
 |-- App.js
 |-- App.test.js
 |-- README.md
@@ -250,9 +250,9 @@ $ <span style="color:#24909d">cd</span> AwesomeProject <span style="color:#999;f
 </code></pre><p>Inside the <code>package.json</code> there are a few defined commands you can use via <code>yarn</code>. <code>start</code> starts the development server <em>(useful when the app is already compiled and installed in the simulator)</em>. <code>android</code> and <code>ios</code> compiles the respective platform native app and opens an iOS simulator or Android emulator. As it is native code, it takes some time to finish but it is not necessary to do this often or even twice. <code>test</code> starts jest to execute tests written for the app code.</p>
 <p>Another one is <code>eject</code> which changes the structure of the whole directory. Currently the setup is built on top of <a href="https://expo.io">Expo</a> which makes it possible to create React Native apps written on your computer and run them immediately in your devices via the Expo native app. This is very cool since you don&rsquo;t even need to have the SDKs <em>(Xcode/Android Studio)</em> installed. The drawback is that you do not even have a dedicated native project so it is not possible to upload the app to the App/Play Store for example. It is also not possible to create native extensions for your app.</p>
 <p><code>eject</code> fixes this by re-structuring your app. After running</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">$ yarn eject
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">$ yarn eject
 </code></pre></div><p>your file structure should look like this:</p>
-<pre><code>.
+<pre tabindex="0"><code>.
 |-- App.js
 |-- App.test.js
 |-- README.md
@@ -276,12 +276,12 @@ $ <span style="color:#24909d">cd</span> AwesomeProject <span style="color:#999;f
 <h3 id="building-the-app">Building the app</h3>
 <p>Since this blog post is only about getting started I would like to create a very simple project showing recipes for a hard coded ingredients list. The data is coming from <a href="http://www.recipepuppy.com">Receipt Puppy</a> and will be requested via <code>http://www.recipepuppy.com/api/?i=eggs,bread</code>, so our ingredients are eggs and bread.</p>
 <p>Since we would like to use <code>FlatList</code> we need to use some unstable versions of react and react-native. Replace the dependencies in the package.json file with this:</p>
-<pre><code>&quot;dependencies&quot;: {
+<pre tabindex="0"><code>&quot;dependencies&quot;: {
 	&quot;react&quot;: &quot;16.0.0-alpha.6&quot;,
 	&quot;react-native&quot;: &quot;0.44.0-rc.0&quot;
 }
 </code></pre><p>After <code>yarn install</code> we are ready to start. In the app we open the App.js and replace the <code>class App</code> with the following code:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#6ab825;font-weight:bold">export</span> <span style="color:#6ab825;font-weight:bold">default</span> <span style="color:#6ab825;font-weight:bold">class</span> App <span style="color:#6ab825;font-weight:bold">extends</span> React.Component {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#6ab825;font-weight:bold">export</span> <span style="color:#6ab825;font-weight:bold">default</span> <span style="color:#6ab825;font-weight:bold">class</span> App <span style="color:#6ab825;font-weight:bold">extends</span> React.Component {
 
   constructor(props) {
     <span style="color:#6ab825;font-weight:bold">super</span>(props)
@@ -313,7 +313,7 @@ $ <span style="color:#24909d">cd</span> AwesomeProject <span style="color:#999;f
   }
 }
 </code></pre></div><p>As you see, wee set the state to an initial value in the constructor of the class. In the <code>componentWillMount</code> lifecycle method we execute the http request and reload the state with the manipulated data <em>(we only want to see the title)</em>. For rendering the items we pass in a function which returns a <code>Cell</code>. <code>Cell</code> is another component we define in this file:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#6ab825;font-weight:bold">class</span> Cell <span style="color:#6ab825;font-weight:bold">extends</span> React.Component {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#6ab825;font-weight:bold">class</span> Cell <span style="color:#6ab825;font-weight:bold">extends</span> React.Component {
   render() {
     <span style="color:#6ab825;font-weight:bold">return</span> (
       &lt;View&gt;
@@ -325,7 +325,7 @@ $ <span style="color:#24909d">cd</span> AwesomeProject <span style="color:#999;f
 </code></pre></div><p>To keep things simple we only display the title of the meal with any more user interface.</p>
 <p>You can now build the app and run it by executing <code>yarn ios</code> in the Terminal. You will realize that it is not working. After all React-Native is a wrapper over UIKit; so every http request is implemented using <code>URLRequest</code>. Apple introduced earlier that iOS apps only allow https calls by default. The webservice we are using is <em>(unfortunately)</em> not available via https, so we need to define an exception in the <code>Info.plist</code>. Open the <code>Info.plist</code> file by typing <code>open ios/AwesomeProject/Info.plist</code> in the Terminal. You should add an entry &lsquo;Allow Arbitrary Loads&rsquo; to the &lsquo;App Transport Security Settings&rsquo; entry with a value of &lsquo;YES&rsquo;.</p>
 <p>After that change the app needs to be re-compiled by executing <code>yarn ios</code>. Then you should see a screen similiar to this:</p>
-<p><img src="https://blog.bens.life/images/posts/react-native-example.png" alt=""></p>
+<p><img src="https://blog.benchr.de/images/posts/react-native-example.png" alt=""></p>
 <p>Yes, it is not pretty but already functional! Using other components like <code>Image</code> or <code>TextInput</code> could improve this also. Feel free to add additionally functionality and improvements in the design!</p>
 
     </section>
@@ -343,13 +343,13 @@ $ <span style="color:#24909d">cd</span> AwesomeProject <span style="color:#999;f
 
 
 <section class="author">
-  <h4><a href="https://blog.bens.life">Benjamin Herzog</a></h4>
+  <h4><a href="https://blog.benchr.de/">Benjamin Herzog</a></h4>
   
   <p>iOS developer, master degree student in computer science</p>
   
   <div class="author-meta">
     <span class="author-location icon-location">Dresden, Germany</span>
-    <span class="author-link icon-link"><a href="https://bens.life">https://bens.life</a></span>
+    <span class="author-link icon-link"><a href="https://blog.benchr.me">https://blog.benchr.me</a></span>
   </div>
 </section>
 
@@ -358,19 +358,19 @@ $ <span style="color:#24909d">cd</span> AwesomeProject <span style="color:#999;f
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=React%20Native%20Example&nbsp;-&nbsp;benchr&amp;url=https%3a%2f%2fblog.bens.life%2fpost%2frn-example%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=React%20Native%20Example&nbsp;-&nbsp;benchr&amp;url=https%3a%2f%2fblog.benchr.de%2fpost%2frn-example%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.bens.life%2fpost%2frn-example%2f"
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.benchr.de%2fpost%2frn-example%2f"
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.bens.life%2fpost%2frn-example%2f&amp;description=React%20Native%20Example"
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.benchr.de%2fpost%2frn-example%2f&amp;description=React%20Native%20Example"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fblog.bens.life%2fpost%2frn-example%2f"
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fblog.benchr.de%2fpost%2frn-example%2f"
      onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
       <span class="hidden">Google+</span>
   </a>
@@ -391,7 +391,7 @@ $ <span style="color:#24909d">cd</span> AwesomeProject <span style="color:#999;f
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="background-image: url(/images/get_schwifty.JPG)" href="https://blog.bens.life/post/get-schwifty/">
+      <a class="read-next-story" style="background-image: url(/images/get_schwifty.JPG)" href="https://blog.benchr.de/post/get-schwifty/">
           <section class="post">
               <h2>Introducing Get Schwifty!</h2>
               
@@ -399,7 +399,7 @@ $ <span style="color:#24909d">cd</span> AwesomeProject <span style="color:#999;f
       </a>
   
   
-      <a class="read-next-story prev" style="background-image: url(/images/react-native.jpg)" href="https://blog.bens.life/post/about-rn/">
+      <a class="read-next-story prev" style="background-image: url(/images/react-native.jpg)" href="https://blog.benchr.de/post/about-rn/">
           <section class="post">
               <h2>About React Native</h2>
           </section>
@@ -416,9 +416,9 @@ $ <span style="color:#24909d">cd</span> AwesomeProject <span style="color:#999;f
         
     </footer>
     </div>
-    <script type="text/javascript" src="https://blog.bens.life/js/jquery.js"></script>
-    <script type="text/javascript" src="https://blog.bens.life/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://blog.bens.life/js/index.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/jquery.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/index.js"></script>
     
 </body>
 </html>

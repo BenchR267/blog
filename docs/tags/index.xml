@@ -2,148 +2,144 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on benchr</title>
-    <link>https://blog.bens.life/tags/</link>
+    <link>https://blog.benchr.de/tags/</link>
     <description>Recent content in Tags on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
-    <lastBuildDate>Tue, 27 Jun 2017 19:00:00 +0100</lastBuildDate>
-    
-	<atom:link href="https://blog.bens.life/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 27 Jun 2017 19:00:00 +0100</lastBuildDate><atom:link href="https://blog.benchr.de/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>swift</title>
-      <link>https://blog.bens.life/tags/swift/</link>
+      <link>https://blog.benchr.de/tags/swift/</link>
       <pubDate>Tue, 27 Jun 2017 19:00:00 +0100</pubDate>
       
-      <guid>https://blog.bens.life/tags/swift/</guid>
+      <guid>https://blog.benchr.de/tags/swift/</guid>
       <description></description>
     </item>
     
     <item>
       <title>typescript</title>
-      <link>https://blog.bens.life/tags/typescript/</link>
+      <link>https://blog.benchr.de/tags/typescript/</link>
       <pubDate>Wed, 03 May 2017 11:00:00 +0100</pubDate>
       
-      <guid>https://blog.bens.life/tags/typescript/</guid>
+      <guid>https://blog.benchr.de/tags/typescript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>halloswift</title>
-      <link>https://blog.bens.life/tags/halloswift/</link>
+      <link>https://blog.benchr.de/tags/halloswift/</link>
       <pubDate>Thu, 20 Apr 2017 11:00:00 +0100</pubDate>
       
-      <guid>https://blog.bens.life/tags/halloswift/</guid>
+      <guid>https://blog.benchr.de/tags/halloswift/</guid>
       <description></description>
     </item>
     
     <item>
       <title>schwifty</title>
-      <link>https://blog.bens.life/tags/schwifty/</link>
+      <link>https://blog.benchr.de/tags/schwifty/</link>
       <pubDate>Thu, 20 Apr 2017 11:00:00 +0100</pubDate>
       
-      <guid>https://blog.bens.life/tags/schwifty/</guid>
+      <guid>https://blog.benchr.de/tags/schwifty/</guid>
       <description></description>
     </item>
     
     <item>
       <title>react</title>
-      <link>https://blog.bens.life/tags/react/</link>
+      <link>https://blog.benchr.de/tags/react/</link>
       <pubDate>Tue, 04 Apr 2017 18:00:00 +0200</pubDate>
       
-      <guid>https://blog.bens.life/tags/react/</guid>
+      <guid>https://blog.benchr.de/tags/react/</guid>
       <description></description>
     </item>
     
     <item>
       <title>compiler</title>
-      <link>https://blog.bens.life/tags/compiler/</link>
+      <link>https://blog.benchr.de/tags/compiler/</link>
       <pubDate>Sat, 18 Mar 2017 14:00:00 +0200</pubDate>
       
-      <guid>https://blog.bens.life/tags/compiler/</guid>
+      <guid>https://blog.benchr.de/tags/compiler/</guid>
       <description></description>
     </item>
     
     <item>
       <title>blog</title>
-      <link>https://blog.bens.life/tags/blog/</link>
+      <link>https://blog.benchr.de/tags/blog/</link>
       <pubDate>Wed, 22 Feb 2017 15:30:00 +0200</pubDate>
       
-      <guid>https://blog.bens.life/tags/blog/</guid>
+      <guid>https://blog.benchr.de/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>exams</title>
-      <link>https://blog.bens.life/tags/exams/</link>
+      <link>https://blog.benchr.de/tags/exams/</link>
       <pubDate>Wed, 22 Feb 2017 15:30:00 +0200</pubDate>
       
-      <guid>https://blog.bens.life/tags/exams/</guid>
+      <guid>https://blog.benchr.de/tags/exams/</guid>
       <description></description>
     </item>
     
     <item>
       <title>university</title>
-      <link>https://blog.bens.life/tags/university/</link>
+      <link>https://blog.benchr.de/tags/university/</link>
       <pubDate>Wed, 22 Feb 2017 15:30:00 +0200</pubDate>
       
-      <guid>https://blog.bens.life/tags/university/</guid>
+      <guid>https://blog.benchr.de/tags/university/</guid>
       <description></description>
     </item>
     
     <item>
       <title>code</title>
-      <link>https://blog.bens.life/tags/code/</link>
+      <link>https://blog.benchr.de/tags/code/</link>
       <pubDate>Sun, 12 Feb 2017 18:00:00 +0200</pubDate>
       
-      <guid>https://blog.bens.life/tags/code/</guid>
+      <guid>https://blog.benchr.de/tags/code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pop</title>
-      <link>https://blog.bens.life/tags/pop/</link>
+      <link>https://blog.benchr.de/tags/pop/</link>
       <pubDate>Sun, 12 Feb 2017 18:00:00 +0200</pubDate>
       
-      <guid>https://blog.bens.life/tags/pop/</guid>
+      <guid>https://blog.benchr.de/tags/pop/</guid>
       <description></description>
     </item>
     
     <item>
       <title>master</title>
-      <link>https://blog.bens.life/tags/master/</link>
+      <link>https://blog.benchr.de/tags/master/</link>
       <pubDate>Sun, 22 Jan 2017 23:00:00 +0200</pubDate>
       
-      <guid>https://blog.bens.life/tags/master/</guid>
+      <guid>https://blog.benchr.de/tags/master/</guid>
       <description></description>
     </item>
     
     <item>
       <title>decisions</title>
-      <link>https://blog.bens.life/tags/decisions/</link>
+      <link>https://blog.benchr.de/tags/decisions/</link>
       <pubDate>Sun, 15 Jan 2017 10:00:00 +0200</pubDate>
       
-      <guid>https://blog.bens.life/tags/decisions/</guid>
+      <guid>https://blog.benchr.de/tags/decisions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>impressum</title>
-      <link>https://blog.bens.life/tags/impressum/</link>
+      <link>https://blog.benchr.de/tags/impressum/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://blog.bens.life/tags/impressum/</guid>
+      <guid>https://blog.benchr.de/tags/impressum/</guid>
       <description></description>
     </item>
     
     <item>
       <title>imprint</title>
-      <link>https://blog.bens.life/tags/imprint/</link>
+      <link>https://blog.benchr.de/tags/imprint/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://blog.bens.life/tags/imprint/</guid>
+      <guid>https://blog.benchr.de/tags/imprint/</guid>
       <description></description>
     </item>
     

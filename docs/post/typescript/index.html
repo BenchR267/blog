@@ -22,7 +22,7 @@
 
   	<meta property="og:title" content="Typescript &middot; benchr" />
   	<meta property="og:site_name" content="benchr" />
-  	<meta property="og:url" content="https://blog.bens.life/post/typescript/" />
+  	<meta property="og:url" content="https://blog.benchr.de/post/typescript/" />
 
     
        <meta property="og:image" content="/images/typescript.jpg"/>
@@ -47,22 +47,22 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="https://blog.bens.life/images/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://blog.bens.life/images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="https://blog.benchr.de/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://blog.benchr.de/images/apple-touch-icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="https://blog.bens.life/css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="https://blog.bens.life/css/nav.css" />
-
-    
+    <link rel="stylesheet" type="text/css" href="https://blog.benchr.de/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://blog.benchr.de/css/nav.css" />
 
     
 
     
-        <link href="https://blog.bens.life/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
-    
-    <meta name="generator" content="Hugo 0.70.0" />
 
-    <link rel="canonical" href="https://blog.bens.life/post/typescript/" />
+    
+        <link href="https://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
+    
+    <meta name="generator" content="Hugo 0.89.4" />
+
+    <link rel="canonical" href="https://blog.benchr.de/post/typescript/" />
 
     
       
@@ -79,7 +79,7 @@
         "@type": "Person",
         "name":  null ,
         
-        "url": "https://bens.life",
+        "url": "https://blog.benchr.me",
         "sameAs": [
             
             
@@ -101,13 +101,13 @@
       "@type": "Language",
       "alternateName": "en"
     },
-    "url": "https://blog.bens.life/post/typescript/",
+    "url": "https://blog.benchr.de/post/typescript/",
     "datePublished": "2017-05-03T11:00Z",
     "dateModified": "2017-05-03T11:00Z",
     
     "image": {
         "@type": "ImageObject",
-        "url": "https://blog.bens.lifeimages/typescript.jpg",
+        "url": "https://blog.benchr.de/images/typescript.jpg",
         "width": 3000,
         "height": 1445
     },
@@ -116,7 +116,7 @@
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://blog.bens.life/post/typescript/"
+        "@id": "https://blog.benchr.de/post/typescript/"
     }
 }
     </script>
@@ -147,7 +147,7 @@
         
             <h2>Contact me</h2>
             <li class="nav-opened" role="presentation">
-            	<a href="mailto:mail@bens.life">Mail</a>
+            	<a href="mailto:mail@benchr.de">Mail</a>
             </li>
         
             
@@ -157,24 +157,24 @@
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/index.xml">RSS feed</a>
+            	<a href="https://blog.benchr.de/index.xml">RSS feed</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/imprint/">Imprint</a>
+            	<a href="https://blog.benchr.de/imprint/">Imprint</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/">Blog</a>
+            	<a href="https://blog.benchr.de/">Blog</a>
             </li>
         
         
     </ul>
 
     
-    <a class="subscribe-button icon-feed" href="https://blog.bens.life/index.xml">Subscribe</a> </div>
+    <a class="subscribe-button icon-feed" href="https://blog.benchr.de/index.xml">Subscribe</a> </div>
     
 </div>
 <span class="nav-cover"></span>
@@ -218,7 +218,7 @@
           </time>
         
          
-          <span class="post-tag small"><a href="https://blog.bens.lifetags/typescript/">#typescript</a></span>
+          <span class="post-tag small"><a href="https://blog.benchr.de/tags/typescript/">#typescript</a></span>
          
         </section>
     </header>
@@ -227,7 +227,7 @@
       <p>In this blog post I am going to write about a programming language which I have not checked out before. Typescript is a super set of Javascript and is developed by Microsoft. The syntax is exactly the same as Javascript with one very important difference: in comparison to Javascript Typescript knows the concept of types and checks them with a built in type system.</p>
 <p>To make type failure messages more useful Typescript is also a compiled language while Javascript is an interpreted language. That means that Typescript files are checked by a program <em>(the compiler)</em> which checks for general syntax problems or undefined property access. The biggest advantage of Javascript is at the same time also the biggest problem: its dynamic behaviour. You can create cery rich and cool prototypes in no time but it is hard scalable.</p>
 <p>Creating interfaces for modules or functions depends often on rich documentation. Documentation is great and important but it is in this case nothing else than a type system written down in plain english instead of something the computer could understand to help you write your code the right way. Typescript adds this with its type system. Look at this method declaration and usage in Javascript:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#6ab825;font-weight:bold">function</span> getName(obj) {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#6ab825;font-weight:bold">function</span> getName(obj) {
 	<span style="color:#6ab825;font-weight:bold">return</span> obj.name
 }
 
@@ -240,21 +240,21 @@
 <span style="color:#6ab825;font-weight:bold">let</span> number = <span style="color:#3677a9">5</span>
 <span style="color:#6ab825;font-weight:bold">let</span> name2 = getName(number)
 </code></pre></div><p>This is totally valid Javascript but will set <code>name2</code> to <code>undefined</code> since the <code>number</code> does not have a name property. A compiler with a type system like Typescript checks for this violation and does not compile the code without an error. The same code in Typescript looks like this:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">function</span> getName(obj: { name: <span style="color:#6ab825;font-weight:bold">string</span> }): <span style="color:#6ab825;font-weight:bold">string</span> {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">function</span> getName(obj: { name: <span style="color:#6ab825;font-weight:bold">string</span> }): <span style="color:#6ab825;font-weight:bold">string</span> {
   <span style="color:#6ab825;font-weight:bold">return</span> obj.name
 }
 </code></pre></div><p>As you see, the compiler shows an error if you try to use the function with a wrong parameter:</p>
-<p><img src="https://blog.bens.life/images/posts/typescript1.jpeg" alt=""></p>
+<p><img src="https://blog.benchr.de/images/posts/typescript1.jpeg" alt=""></p>
 <p>By the way: I use Visual Studio Code for programming, it has very great Typescript-functionality built it and works really great. Since Typescript is a super set of Javascript you can also just write Javascript in your .ts-files and spare the convenience of type information.</p>
 <p>Before I continue with the most important features of the type system, here is a short introduction how to install the compiler and use it with other editors:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">$ <span style="color:#999;font-style:italic"># Install typescript via npm/yarn</span>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">$ <span style="color:#999;font-style:italic"># Install typescript via npm/yarn</span>
 $ yarn global add typescript
 $ <span style="color:#999;font-style:italic"># Use the Typescript compiler (tsc) to compile a given .ts file</span>
 $ tsc main.ts
 </code></pre></div><p>When compiling a file, the compiler creates the generated Javascript file. Pay attention: the file is also created if the compiler shows an error! You can compile multiple files at once and even specify an output directory for the generated code. But if your project gets bigger than a file I would still recommend to use Visual Studio Code instead.</p>
 <h4 id="the-type-system">The Type System</h4>
 <p>To declare a variable with a given type, you use the <code>let variable: string</code> syntax. If you than try to assign a value of an expression that does not match the given type, you will get a useful error. I already showed that it is also possible to declare the type by giving an object like syntax with types to enforce special properties: <code>let human: {name: string, gender: Gender}</code>. To make this more scalable, it is also possible to define interfaces:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">enum</span> Gender {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">enum</span> Gender {
   male, female
 }
 
@@ -268,7 +268,7 @@ $ tsc main.ts
   gender: <span style="color:#6ab825;font-weight:bold">Gender.male</span>
 }
 </code></pre></div><p>A very helpful feature is the autocompletion of Visual Studio Code while defining the actual object. This is something that is not possible in Javascript since objects are so dynamic that they could contain literally anything. In Typescript you can also create classes which implements defined interfaces:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">class</span> Student <span style="color:#6ab825;font-weight:bold">implements</span> Person {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">class</span> Student <span style="color:#6ab825;font-weight:bold">implements</span> Person {
   name: <span style="color:#6ab825;font-weight:bold">string</span>
   gender: <span style="color:#6ab825;font-weight:bold">Gender</span>
   discipline: <span style="color:#6ab825;font-weight:bold">string</span>
@@ -287,7 +287,7 @@ $ tsc main.ts
 <span style="color:#6ab825;font-weight:bold">let</span> p = <span style="color:#6ab825;font-weight:bold">new</span> Student(<span style="color:#ed9d13">&#34;Benjamin Herzog&#34;</span>, Gender.male, <span style="color:#ed9d13">&#34;Computer science&#34;</span>)
 p.greet()
 </code></pre></div><p>Another very important feature is the presence of optional parameters. Sometimes when defining an interface you would like to give the implementing types some freedom. Some properties are not necessary but if they are present, they should be handled. That can be done with optional properties:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">interface</span> Person {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">interface</span> Person {
   name: <span style="color:#6ab825;font-weight:bold">string</span>
   phoneNumber?: <span style="color:#6ab825;font-weight:bold">string</span>
 }
@@ -303,11 +303,11 @@ p.greet()
 }
 </code></pre></div><h5 id="generics">Generics</h5>
 <p>A strong type system should of course also provide the possibility to use generics. Generics gives the programmer the possibility to write functions that work dynamic with different types without the need of writing multiple functions. The function also does not need to know which specific type it operates it, often only a given property or method is needed. This can be achieved with interfaces. Here is a simple example:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">interface</span> Namable {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">interface</span> Namable {
   name: <span style="color:#6ab825;font-weight:bold">string</span>
 }
 
-<span style="color:#6ab825;font-weight:bold">function</span> getName&lt;T <span style="color:#6ab825;font-weight:bold">extends</span> Namable&gt;(obj: <span style="color:#6ab825;font-weight:bold">T</span>): <span style="color:#6ab825;font-weight:bold">string</span> {
+<span style="color:#6ab825;font-weight:bold">function</span> getName&lt;<span style="color:#6ab825;font-weight:bold">T</span> <span style="color:#bbb">extends</span> <span style="color:#bbb">Namable</span>&gt;(obj: <span style="color:#6ab825;font-weight:bold">T</span>): <span style="color:#6ab825;font-weight:bold">string</span> {
   <span style="color:#6ab825;font-weight:bold">return</span> obj.name
 }
 
@@ -315,7 +315,7 @@ getName({name: <span style="color:#ed9d13">&#34;Ben&#34;</span>})          <span
 </span><span style="color:#999;font-style:italic"></span>getName({age: <span style="color:#6ab825;font-weight:bold">25</span>})              <span style="color:#999;font-style:italic">// invalid
 </span><span style="color:#999;font-style:italic"></span>getName({name: <span style="color:#ed9d13">&#34;Ben&#34;</span>, age: <span style="color:#6ab825;font-weight:bold">25</span>}) <span style="color:#999;font-style:italic">// valid
 </span></code></pre></div><p>Another example shows the strong type system in the dynamic world of Javascript:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">function</span> getProperty&lt;T, K <span style="color:#6ab825;font-weight:bold">extends</span> keyof T&gt;(obj: <span style="color:#6ab825;font-weight:bold">T</span>, key: <span style="color:#6ab825;font-weight:bold">K</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">function</span> getProperty&lt;<span style="color:#6ab825;font-weight:bold">T</span><span style="color:#a61717;background-color:#e3d2d2">,</span> <span style="color:#bbb">K</span> <span style="color:#bbb">extends</span> <span style="color:#bbb">keyof</span> <span style="color:#bbb">T</span>&gt;(obj: <span style="color:#6ab825;font-weight:bold">T</span>, key: <span style="color:#6ab825;font-weight:bold">K</span>) {
     <span style="color:#6ab825;font-weight:bold">return</span> obj[key];
 }
 
@@ -330,7 +330,7 @@ getProperty(obj, <span style="color:#ed9d13">&#34;name&#34;</span>)	<span style=
 </span></code></pre></div><p>Since objects in Javascript are like dictionaries/maps in other languages they are very dynamic and their properties can even be accessed through subscripts. In the example above the type system checks that the string <em>(!!)</em> that is given to the method as the second parameter is a valid property name of the first parameter. For me as a Swift developer this is totally crazy and really cool!</p>
 <p>Now some other advanced type constructs that are not possible in Swift:</p>
 <p>Merged types:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">const</span> p1 = {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">const</span> p1 = {
   name: <span style="color:#ed9d13">&#34;Ben&#34;</span>
 }
 
@@ -338,13 +338,13 @@ getProperty(obj, <span style="color:#ed9d13">&#34;name&#34;</span>)	<span style=
   age: <span style="color:#6ab825;font-weight:bold">25</span>
 }
 
-<span style="color:#6ab825;font-weight:bold">function</span> mergedPerson&lt;T, U&gt;(obj1: <span style="color:#6ab825;font-weight:bold">T</span>, obj2: <span style="color:#6ab825;font-weight:bold">U</span>): T &amp; U {
-  <span style="color:#6ab825;font-weight:bold">let</span> r = &lt;T &amp; U&gt;{}
+<span style="color:#6ab825;font-weight:bold">function</span> mergedPerson&lt;<span style="color:#6ab825;font-weight:bold">T</span><span style="color:#a61717;background-color:#e3d2d2">,</span> <span style="color:#bbb">U</span>&gt;(obj1: <span style="color:#6ab825;font-weight:bold">T</span>, obj2: <span style="color:#6ab825;font-weight:bold">U</span>): T &amp; U {
+  <span style="color:#6ab825;font-weight:bold">let</span> r = &lt;<span style="color:#6ab825;font-weight:bold">T</span> <span style="color:#a61717;background-color:#e3d2d2">&amp;</span> <span style="color:#bbb">U</span>&gt;{}
   <span style="color:#6ab825;font-weight:bold">for</span> (<span style="color:#6ab825;font-weight:bold">let</span> p <span style="color:#6ab825;font-weight:bold">in</span> obj1) {
-    (&lt;any&gt;r)[p] = obj1[p]
+    (&lt;<span style="color:#6ab825;font-weight:bold">any</span>&gt;r)[p] = obj1[p]
   }
   <span style="color:#6ab825;font-weight:bold">for</span> (<span style="color:#6ab825;font-weight:bold">let</span> p <span style="color:#6ab825;font-weight:bold">in</span> obj2) {
-    (&lt;any&gt;r)[p] = obj2[p]
+    (&lt;<span style="color:#6ab825;font-weight:bold">any</span>&gt;r)[p] = obj2[p]
   }
   <span style="color:#6ab825;font-weight:bold">return</span> r
 }
@@ -353,14 +353,14 @@ getProperty(obj, <span style="color:#ed9d13">&#34;name&#34;</span>)	<span style=
 p3.name <span style="color:#999;font-style:italic">// &#34;Ben&#34;
 </span><span style="color:#999;font-style:italic"></span>p3.age  <span style="color:#999;font-style:italic">// 25
 </span></code></pre></div><p>Union types: (Could in Swift be expressed with enums)</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">function</span> getSringOrNumber(parameter: <span style="color:#6ab825;font-weight:bold">number</span>): <span style="color:#6ab825;font-weight:bold">string</span> | <span style="color:#6ab825;font-weight:bold">number</span> {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">function</span> getSringOrNumber(parameter: <span style="color:#6ab825;font-weight:bold">number</span>): <span style="color:#6ab825;font-weight:bold">string</span> | <span style="color:#6ab825;font-weight:bold">number</span> {
   <span style="color:#6ab825;font-weight:bold">if</span> (parameter == <span style="color:#3677a9">42</span>) {
     <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#ed9d13">&#34;Answer of life&#34;</span>
   }
   <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#3677a9">42</span>
 }
 </code></pre></div><p>More string checking:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript">type HTTPMethod = <span style="color:#ed9d13">&#39;GET&#39;</span> | <span style="color:#ed9d13">&#39;POST&#39;</span> | <span style="color:#ed9d13">&#39;PUT&#39;</span> | <span style="color:#ed9d13">&#39;DELETE&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Typescript" data-lang="Typescript"><span style="color:#6ab825;font-weight:bold">type</span> HTTPMethod = <span style="color:#ed9d13">&#39;GET&#39;</span> | <span style="color:#ed9d13">&#39;POST&#39;</span> | <span style="color:#ed9d13">&#39;PUT&#39;</span> | <span style="color:#ed9d13">&#39;DELETE&#39;</span>
 
 <span style="color:#6ab825;font-weight:bold">function</span> request(method: <span style="color:#6ab825;font-weight:bold">HTTPMethod</span>) {
   <span style="color:#999;font-style:italic">// do something
@@ -386,13 +386,13 @@ request(<span style="color:#ed9d13">&#39;GET&#39;</span>)		<span style="color:#9
 
 
 <section class="author">
-  <h4><a href="https://blog.bens.life">Benjamin Herzog</a></h4>
+  <h4><a href="https://blog.benchr.de/">Benjamin Herzog</a></h4>
   
   <p>iOS developer, master degree student in computer science</p>
   
   <div class="author-meta">
     <span class="author-location icon-location">Dresden, Germany</span>
-    <span class="author-link icon-link"><a href="https://bens.life">https://bens.life</a></span>
+    <span class="author-link icon-link"><a href="https://blog.benchr.me">https://blog.benchr.me</a></span>
   </div>
 </section>
 
@@ -401,19 +401,19 @@ request(<span style="color:#ed9d13">&#39;GET&#39;</span>)		<span style="color:#9
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Typescript&nbsp;-&nbsp;benchr&amp;url=https%3a%2f%2fblog.bens.life%2fpost%2ftypescript%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Typescript&nbsp;-&nbsp;benchr&amp;url=https%3a%2f%2fblog.benchr.de%2fpost%2ftypescript%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.bens.life%2fpost%2ftypescript%2f"
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.benchr.de%2fpost%2ftypescript%2f"
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.bens.life%2fpost%2ftypescript%2f&amp;description=Typescript"
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.benchr.de%2fpost%2ftypescript%2f&amp;description=Typescript"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fblog.bens.life%2fpost%2ftypescript%2f"
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fblog.benchr.de%2fpost%2ftypescript%2f"
      onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
       <span class="hidden">Google+</span>
   </a>
@@ -434,7 +434,7 @@ request(<span style="color:#ed9d13">&#39;GET&#39;</span>)		<span style="color:#9
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="background-image: url(/images/autoclosure.jpg)" href="https://blog.bens.life/post/autoclosure/">
+      <a class="read-next-story" style="background-image: url(/images/autoclosure.jpg)" href="https://blog.benchr.de/post/autoclosure/">
           <section class="post">
               <h2>Replacing @autoclosure in Swift</h2>
               
@@ -442,7 +442,7 @@ request(<span style="color:#ed9d13">&#39;GET&#39;</span>)		<span style="color:#9
       </a>
   
   
-      <a class="read-next-story prev" style="background-image: url(/images/announcements.jpg)" href="https://blog.bens.life/post/announcements/">
+      <a class="read-next-story prev" style="background-image: url(/images/announcements.jpg)" href="https://blog.benchr.de/post/announcements/">
           <section class="post">
               <h2>Announcements</h2>
           </section>
@@ -459,9 +459,9 @@ request(<span style="color:#ed9d13">&#39;GET&#39;</span>)		<span style="color:#9
         
     </footer>
     </div>
-    <script type="text/javascript" src="https://blog.bens.life/js/jquery.js"></script>
-    <script type="text/javascript" src="https://blog.bens.life/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://blog.bens.life/js/index.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/jquery.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/index.js"></script>
     
 </body>
 </html>

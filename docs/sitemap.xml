@@ -1,189 +1,115 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://blog.bens.life/post/</loc>
+    <loc>https://blog.benchr.de/</loc>
     <lastmod>2017-06-27T19:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/autoclosure/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/</loc>
     <lastmod>2017-06-27T19:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/swift/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/autoclosure/</loc>
     <lastmod>2017-06-27T19:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/swift/</loc>
     <lastmod>2017-06-27T19:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/typescript/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/</loc>
+    <lastmod>2017-06-27T19:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://blog.benchr.de/post/typescript/</loc>
     <lastmod>2017-05-03T11:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/typescript/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/typescript/</loc>
     <lastmod>2017-05-03T11:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/announcements/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/announcements/</loc>
     <lastmod>2017-04-20T11:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/halloswift/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/halloswift/</loc>
     <lastmod>2017-04-20T11:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/schwifty/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/schwifty/</loc>
     <lastmod>2017-04-20T11:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/technical-details-gs/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/technical-details-gs/</loc>
     <lastmod>2017-04-09T13:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/get-schwifty/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/get-schwifty/</loc>
     <lastmod>2017-04-04T20:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/react/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/react/</loc>
     <lastmod>2017-04-04T18:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/rn-example/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/rn-example/</loc>
     <lastmod>2017-04-04T18:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/about-rn/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/about-rn/</loc>
     <lastmod>2017-03-21T11:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/compiler/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/compiler/</loc>
     <lastmod>2017-03-18T14:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/first-repl/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/first-repl/</loc>
     <lastmod>2017-03-18T14:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/mvp-lexer/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/mvp-lexer/</loc>
     <lastmod>2017-03-03T20:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/starting-the-challenge/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/starting-the-challenge/</loc>
     <lastmod>2017-02-24T20:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/blog/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/blog/</loc>
     <lastmod>2017-02-22T15:30:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/exams/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/exams/</loc>
     <lastmod>2017-02-22T15:30:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/i-am-done/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/i-am-done/</loc>
     <lastmod>2017-02-22T15:30:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/university/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/university/</loc>
     <lastmod>2017-02-22T15:30:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/code/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/code/</loc>
     <lastmod>2017-02-12T18:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/pop-network-3/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/pop-network-3/</loc>
     <lastmod>2017-02-12T18:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/pop/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/pop/</loc>
     <lastmod>2017-02-12T18:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/pop-network-2/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/pop-network-2/</loc>
     <lastmod>2017-02-05T08:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/pop-network-1/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/pop-network-1/</loc>
     <lastmod>2017-02-03T15:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/exams/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/exams/</loc>
     <lastmod>2017-01-22T23:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/master/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/master/</loc>
     <lastmod>2017-01-22T23:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/decisions/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/decisions/</loc>
     <lastmod>2017-01-15T10:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/thoughts/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/thoughts/</loc>
     <lastmod>2017-01-15T10:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/post/beginning/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/post/beginning/</loc>
     <lastmod>2017-01-07T15:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/impressum/</loc>
     <lastmod>2016-01-01T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/impressum/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/imprint/</loc>
     <lastmod>2016-01-01T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/imprint/</loc>
+  </url><url>
+    <loc>https://blog.benchr.de/tags/imprint/</loc>
     <lastmod>2016-01-01T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.benchr.de/categories/</loc>
   </url>
-  
-  <url>
-    <loc>https://blog.bens.life/tags/imprint/</loc>
-    <lastmod>2016-01-01T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.bens.life/categories/</loc>
-  </url>
-  
 </urlset>

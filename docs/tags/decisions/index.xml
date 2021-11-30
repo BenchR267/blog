@@ -2,22 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>decisions on benchr</title>
-    <link>https://blog.bens.life/tags/decisions/</link>
+    <link>https://blog.benchr.de/tags/decisions/</link>
     <description>Recent content in decisions on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
-    <lastBuildDate>Sun, 15 Jan 2017 10:00:00 +0200</lastBuildDate>
-    
-	<atom:link href="https://blog.bens.life/tags/decisions/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 15 Jan 2017 10:00:00 +0200</lastBuildDate><atom:link href="https://blog.benchr.de/tags/decisions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Some Thoughts</title>
-      <link>https://blog.bens.life/post/thoughts/</link>
+      <link>https://blog.benchr.de/post/thoughts/</link>
       <pubDate>Sun, 15 Jan 2017 10:00:00 +0200</pubDate>
       
-      <guid>https://blog.bens.life/post/thoughts/</guid>
+      <guid>https://blog.benchr.de/post/thoughts/</guid>
       <description>This week I want to share some of my thoughts about my new programming language. Or to be a bit more specific: about some technical details for building the toolchain. There are a lot of things that need to be decided which are also very important for the planning process. Here is an overview over some of them:
  Will the language be compiled or interpreted? What exact features will the language support?</description>
     </item>

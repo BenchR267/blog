@@ -2,25 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>imprint on benchr</title>
-    <link>https://blog.bens.life/tags/imprint/</link>
+    <link>https://blog.benchr.de/tags/imprint/</link>
     <description>Recent content in imprint on benchr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2017</copyright>
-    <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0200</lastBuildDate>
-    
-	<atom:link href="https://blog.bens.life/tags/imprint/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0200</lastBuildDate><atom:link href="https://blog.benchr.de/tags/imprint/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Imprint</title>
-      <link>https://blog.bens.life/imprint/</link>
+      <link>https://blog.benchr.de/imprint/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://blog.bens.life/imprint/</guid>
+      <guid>https://blog.benchr.de/imprint/</guid>
       <description>Legal Disclosure
 Information in accordance with section 5 TMG
-Benjamin HerzogBerliner Str. 12413187 BerlinE-Mail: mail@benchr.deInternet: https://benchr.deAccountability for content The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents&amp;rsquo; accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this context, please note that we are accordingly not obliged to monitor merely the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity.</description>
+Benjamin HerzogBerliner Str. 12413187 BerlinE-Mail: mail@benchr.deInternet: https://benchr.deAccountability for content The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents&#39; accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this context, please note that we are accordingly not obliged to monitor merely the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity.</description>
     </item>
     
   </channel>

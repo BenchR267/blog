@@ -22,7 +22,7 @@
 
   	<meta property="og:title" content="Fast feedback using a REPL &middot; benchr" />
   	<meta property="og:site_name" content="benchr" />
-  	<meta property="og:url" content="https://blog.bens.life/post/first-repl/" />
+  	<meta property="og:url" content="https://blog.benchr.de/post/first-repl/" />
 
     
        <meta property="og:image" content="/images/mvp-repl.jpg"/>
@@ -47,22 +47,22 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="https://blog.bens.life/images/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://blog.bens.life/images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="https://blog.benchr.de/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://blog.benchr.de/images/apple-touch-icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="https://blog.bens.life/css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="https://blog.bens.life/css/nav.css" />
-
-    
+    <link rel="stylesheet" type="text/css" href="https://blog.benchr.de/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://blog.benchr.de/css/nav.css" />
 
     
 
     
-        <link href="https://blog.bens.life/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
-    
-    <meta name="generator" content="Hugo 0.70.0" />
 
-    <link rel="canonical" href="https://blog.bens.life/post/first-repl/" />
+    
+        <link href="https://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
+    
+    <meta name="generator" content="Hugo 0.89.4" />
+
+    <link rel="canonical" href="https://blog.benchr.de/post/first-repl/" />
 
     
       
@@ -79,7 +79,7 @@
         "@type": "Person",
         "name":  null ,
         
-        "url": "https://bens.life",
+        "url": "https://blog.benchr.me",
         "sameAs": [
             
             
@@ -101,13 +101,13 @@
       "@type": "Language",
       "alternateName": "en"
     },
-    "url": "https://blog.bens.life/post/first-repl/",
+    "url": "https://blog.benchr.de/post/first-repl/",
     "datePublished": "2017-03-18T14:00Z",
     "dateModified": "2017-03-18T14:00Z",
     
     "image": {
         "@type": "ImageObject",
-        "url": "https://blog.bens.lifeimages/mvp-repl.jpg",
+        "url": "https://blog.benchr.de/images/mvp-repl.jpg",
         "width": 3000,
         "height": 1445
     },
@@ -116,7 +116,7 @@
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://blog.bens.life/post/first-repl/"
+        "@id": "https://blog.benchr.de/post/first-repl/"
     }
 }
     </script>
@@ -147,7 +147,7 @@
         
             <h2>Contact me</h2>
             <li class="nav-opened" role="presentation">
-            	<a href="mailto:mail@bens.life">Mail</a>
+            	<a href="mailto:mail@benchr.de">Mail</a>
             </li>
         
             
@@ -157,24 +157,24 @@
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/index.xml">RSS feed</a>
+            	<a href="https://blog.benchr.de/index.xml">RSS feed</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/imprint/">Imprint</a>
+            	<a href="https://blog.benchr.de/imprint/">Imprint</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/">Blog</a>
+            	<a href="https://blog.benchr.de/">Blog</a>
             </li>
         
         
     </ul>
 
     
-    <a class="subscribe-button icon-feed" href="https://blog.bens.life/index.xml">Subscribe</a> </div>
+    <a class="subscribe-button icon-feed" href="https://blog.benchr.de/index.xml">Subscribe</a> </div>
     
 </div>
 <span class="nav-cover"></span>
@@ -218,35 +218,35 @@
           </time>
         
          
-          <span class="post-tag small"><a href="https://blog.bens.lifetags/compiler/">#compiler</a></span>
+          <span class="post-tag small"><a href="https://blog.benchr.de/tags/compiler/">#compiler</a></span>
          
         </section>
     </header>
 
     <section class="post-content">
-      <p>In this blog post I would like to write about the REPL which I built to get a <em>fast</em> feedback cycle for my <a href="https://blog.bens.life/post/mvp-lexer/">lexer</a>. Before going into the topic, here is a short description of what REPL stands for and what its purpose is. REPL stands for Read-Evaluate-Print-Loop. So in the end it is an endless loop which is waiting for input from the user to evaluate it and print the outcome afterwards.</p>
+      <p>In this blog post I would like to write about the REPL which I built to get a <em>fast</em> feedback cycle for my <a href="https://blog.benchr.de/post/mvp-lexer/">lexer</a>. Before going into the topic, here is a short description of what REPL stands for and what its purpose is. REPL stands for Read-Evaluate-Print-Loop. So in the end it is an endless loop which is waiting for input from the user to evaluate it and print the outcome afterwards.</p>
 <p>Mostly every programming language is shipped with a REPL to try out language specific features. <a href="https://www.github.com/BenchR267/lbd">lbd</a> will also have a REPL to try out its features.</p>
 <p>The word &lsquo;evaluate&rsquo; is broadly defined in this context. When the language is usable it will mean that you are able to define variables and functions and execute them to get results back. At the moment this evaluation process is a lot less complex since the parser and all the following stuff is not written yet.</p>
-<p>In this implementation the REPL only accepts lines of lbd-code and prints out the tokenized version of this line produced by the <a href="https://blog.bens.life/post/mvp-lexer/">lexer</a>. This is of course nothing useful when the compiler has all needed functionality but it is quite helpful when testing the lexer, especially when new features are added. So I think about adding a flag which starts the REPL in different modes, one of them would be the lexer only mode to test tokenizing. If tokens are not produced correctly it could cause some serious bugs in the compiler that are quite hard to catch.</p>
+<p>In this implementation the REPL only accepts lines of lbd-code and prints out the tokenized version of this line produced by the <a href="https://blog.benchr.de/post/mvp-lexer/">lexer</a>. This is of course nothing useful when the compiler has all needed functionality but it is quite helpful when testing the lexer, especially when new features are added. So I think about adding a flag which starts the REPL in different modes, one of them would be the lexer only mode to test tokenizing. If tokens are not produced correctly it could cause some serious bugs in the compiler that are quite hard to catch.</p>
 <p>So, lets get into the code! <code>repl</code> is a new package inside the <code>lbd</code> package (like <code>lexer</code>). It has only one function which starts the loop, <code>repl.Start()</code>. First, I wanted to create a new lexer each time a line is produced and that would technically be totally fine since the lexer does not need to know any context like previously defined variables. But later, when the parser is added, I need that context, so I wanted to create some workflow that allows it to reuse my only instance of <code>lexer.Lexer</code>.</p>
 <p>Since the lexer is working with a rune channel, I needed to create this one first. But the lexer is initialized with this channel and that makes it really hard to reuse the instance. To fix this, I <a href="https://github.com/BenchR267/lbd/commit/0c061cd3d7926b194c34f826b540d862f56fcdd0">changed the interface</a> of the lexer to take the input channel as an argument of the <code>Start</code> function instead of <code>New</code>. This makes it possible to create one <code>Lexer</code>, one <code>bufio.Scanner</code> and create just the channels inside the loop.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go">lex := lexer.<span style="color:#447fcf">New</span>()
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go">lex := lexer.<span style="color:#447fcf">New</span>()
 scanner := bufio.<span style="color:#447fcf">NewScanner</span>(reader)
 </code></pre></div><p>An endless loop in Go is created with the only loop that exists: <code>for {}</code>. Without any condition or iteration this does the same as a <code>while</code> loop in other languages. Inside the loop the REPL prints its prefix (<code>lbd $ </code>), waits for input and evaluates this.</p>
 <p>To read the input from the user I use a <code>bufio.Scanner</code> instance. It is initialized with a global defined <code>io.Reader</code> instance which is by default set to <code>os.Stdin</code>. This is a great work around to mock input when unit testing this method. If I would just use <code>os.Stdin</code> without setting it to this variable, I would hardly be able to write unit tests. The other very important part that needs to be mocked is the <code>io.Writer</code> where the output is written to. This is by default also set to the obvious one, <code>os.Stdout</code>.</p>
 <p>If you are not familiar with those two interfaces in Go: they are the most powerful ones. Go is a truly interface oriented language since interfaces are used for everything to make code more generic usable <em>(especially due to the lack of <a href="https://github.com/golang/proposal/blob/master/design/15292-generics.md">generics itself</a>)</em>. Interfaces are especially powerful when they define only one or two methods. <code>io.Reader</code> for example only defines one method:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">type</span> Reader <span style="color:#6ab825;font-weight:bold">interface</span> {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">type</span> Reader <span style="color:#6ab825;font-weight:bold">interface</span> {
 	<span style="color:#447fcf">Read</span>(p []<span style="color:#6ab825;font-weight:bold">byte</span>) (n <span style="color:#6ab825;font-weight:bold">int</span>, err <span style="color:#6ab825;font-weight:bold">error</span>)
 }
 </code></pre></div><p>Since interface conformance is implicit every type that implements this method is automatically an <code>io.Reader</code> and can therefor be used as a parameter to every method that accepts an <code>io.Reader</code>. In the test case I am just using <code>strings.NewReader()</code> to create input for the REPL and <code>bytes.Buffer</code> to create a buffer for the output.</p>
 <p>When the text is scanned from the reader, the REPL sends the given runes to the lexer and waits for its evaluation. The sending of each individual rune is done by the already introduced helper function <code>StreamFromString</code> from the lexer package.</p>
-<p>If you <a href="https://blog.bens.life/post/mvp-lexer/">remember</a> the <a href="https://github.com/BenchR267/lbd/blob/c2923d5b3c47f0bfab7a7af25ce5576b71182f99/lexer/lexer.go#L45">implementation</a> of lexers <code>Start()</code> method, you know that it is creating its own go routine, so the call itself is not blocking.</p>
+<p>If you <a href="https://blog.benchr.de/post/mvp-lexer/">remember</a> the <a href="https://github.com/BenchR267/lbd/blob/c2923d5b3c47f0bfab7a7af25ce5576b71182f99/lexer/lexer.go#L45">implementation</a> of lexers <code>Start()</code> method, you know that it is creating its own go routine, so the call itself is not blocking.</p>
 <p>The lexer is closing its channel after evaluating all runes from the input stream. So to print every evaluated token I am just using a for-range-loop on the channel:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">for</span> t := <span style="color:#6ab825;font-weight:bold">range</span> lex.NextToken {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#6ab825;font-weight:bold">for</span> t := <span style="color:#6ab825;font-weight:bold">range</span> lex.NextToken {
 	fmt.<span style="color:#447fcf">Fprintln</span>(writer, t)
 }
 </code></pre></div><p>Using the REPL looks like this currently:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">lbd $ <span style="color:#40ffff">a</span> = <span style="color:#3677a9">5</span>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">lbd $ <span style="color:#40ffff">a</span> = <span style="color:#3677a9">5</span>
 {{<span style="color:#3677a9">0</span> <span style="color:#3677a9">0</span> 1} Identifier a}
 {{<span style="color:#3677a9">0</span> <span style="color:#3677a9">2</span> 1} <span style="color:#40ffff">Assign</span> =}
 {{<span style="color:#3677a9">0</span> <span style="color:#3677a9">4</span> 1} Integer 5}
@@ -275,13 +275,13 @@ lbd $ <span style="color:#40ffff">b</span> = <span style="color:#40ffff">a</span
 
 
 <section class="author">
-  <h4><a href="https://blog.bens.life">Benjamin Herzog</a></h4>
+  <h4><a href="https://blog.benchr.de/">Benjamin Herzog</a></h4>
   
   <p>iOS developer, master degree student in computer science</p>
   
   <div class="author-meta">
     <span class="author-location icon-location">Dresden, Germany</span>
-    <span class="author-link icon-link"><a href="https://bens.life">https://bens.life</a></span>
+    <span class="author-link icon-link"><a href="https://blog.benchr.me">https://blog.benchr.me</a></span>
   </div>
 </section>
 
@@ -290,19 +290,19 @@ lbd $ <span style="color:#40ffff">b</span> = <span style="color:#40ffff">a</span
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Fast%20feedback%20using%20a%20REPL&nbsp;-&nbsp;benchr&amp;url=https%3a%2f%2fblog.bens.life%2fpost%2ffirst-repl%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Fast%20feedback%20using%20a%20REPL&nbsp;-&nbsp;benchr&amp;url=https%3a%2f%2fblog.benchr.de%2fpost%2ffirst-repl%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.bens.life%2fpost%2ffirst-repl%2f"
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.benchr.de%2fpost%2ffirst-repl%2f"
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.bens.life%2fpost%2ffirst-repl%2f&amp;description=Fast%20feedback%20using%20a%20REPL"
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.benchr.de%2fpost%2ffirst-repl%2f&amp;description=Fast%20feedback%20using%20a%20REPL"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fblog.bens.life%2fpost%2ffirst-repl%2f"
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fblog.benchr.de%2fpost%2ffirst-repl%2f"
      onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
       <span class="hidden">Google+</span>
   </a>
@@ -323,7 +323,7 @@ lbd $ <span style="color:#40ffff">b</span> = <span style="color:#40ffff">a</span
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="background-image: url(/images/react-native.jpg)" href="https://blog.bens.life/post/about-rn/">
+      <a class="read-next-story" style="background-image: url(/images/react-native.jpg)" href="https://blog.benchr.de/post/about-rn/">
           <section class="post">
               <h2>About React Native</h2>
               
@@ -331,7 +331,7 @@ lbd $ <span style="color:#40ffff">b</span> = <span style="color:#40ffff">a</span
       </a>
   
   
-      <a class="read-next-story prev" style="background-image: url(/images/mvp-lexer.jpg)" href="https://blog.bens.life/post/mvp-lexer/">
+      <a class="read-next-story prev" style="background-image: url(/images/mvp-lexer.jpg)" href="https://blog.benchr.de/post/mvp-lexer/">
           <section class="post">
               <h2>Writing a lexer</h2>
           </section>
@@ -348,9 +348,9 @@ lbd $ <span style="color:#40ffff">b</span> = <span style="color:#40ffff">a</span
         
     </footer>
     </div>
-    <script type="text/javascript" src="https://blog.bens.life/js/jquery.js"></script>
-    <script type="text/javascript" src="https://blog.bens.life/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://blog.bens.life/js/index.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/jquery.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/index.js"></script>
     
 </body>
 </html>

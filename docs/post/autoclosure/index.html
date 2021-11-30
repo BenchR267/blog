@@ -22,7 +22,7 @@
 
   	<meta property="og:title" content="Replacing @autoclosure in Swift &middot; benchr" />
   	<meta property="og:site_name" content="benchr" />
-  	<meta property="og:url" content="https://blog.bens.life/post/autoclosure/" />
+  	<meta property="og:url" content="https://blog.benchr.de/post/autoclosure/" />
 
     
        <meta property="og:image" content="/images/autoclosure.jpg"/>
@@ -47,22 +47,22 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="https://blog.bens.life/images/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://blog.bens.life/images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="https://blog.benchr.de/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://blog.benchr.de/images/apple-touch-icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="https://blog.bens.life/css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="https://blog.bens.life/css/nav.css" />
-
-    
+    <link rel="stylesheet" type="text/css" href="https://blog.benchr.de/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://blog.benchr.de/css/nav.css" />
 
     
 
     
-        <link href="https://blog.bens.life/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
-    
-    <meta name="generator" content="Hugo 0.70.0" />
 
-    <link rel="canonical" href="https://blog.bens.life/post/autoclosure/" />
+    
+        <link href="https://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
+    
+    <meta name="generator" content="Hugo 0.89.4" />
+
+    <link rel="canonical" href="https://blog.benchr.de/post/autoclosure/" />
 
     
       
@@ -79,7 +79,7 @@
         "@type": "Person",
         "name":  null ,
         
-        "url": "https://bens.life",
+        "url": "https://blog.benchr.me",
         "sameAs": [
             
             
@@ -101,13 +101,13 @@
       "@type": "Language",
       "alternateName": "en"
     },
-    "url": "https://blog.bens.life/post/autoclosure/",
+    "url": "https://blog.benchr.de/post/autoclosure/",
     "datePublished": "2017-06-27T19:00Z",
     "dateModified": "2017-06-27T19:00Z",
     
     "image": {
         "@type": "ImageObject",
-        "url": "https://blog.bens.lifeimages/autoclosure.jpg",
+        "url": "https://blog.benchr.de/images/autoclosure.jpg",
         "width": 3000,
         "height": 1445
     },
@@ -116,7 +116,7 @@
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://blog.bens.life/post/autoclosure/"
+        "@id": "https://blog.benchr.de/post/autoclosure/"
     }
 }
     </script>
@@ -147,7 +147,7 @@
         
             <h2>Contact me</h2>
             <li class="nav-opened" role="presentation">
-            	<a href="mailto:mail@bens.life">Mail</a>
+            	<a href="mailto:mail@benchr.de">Mail</a>
             </li>
         
             
@@ -157,24 +157,24 @@
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/index.xml">RSS feed</a>
+            	<a href="https://blog.benchr.de/index.xml">RSS feed</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/imprint/">Imprint</a>
+            	<a href="https://blog.benchr.de/imprint/">Imprint</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/">Blog</a>
+            	<a href="https://blog.benchr.de/">Blog</a>
             </li>
         
         
     </ul>
 
     
-    <a class="subscribe-button icon-feed" href="https://blog.bens.life/index.xml">Subscribe</a> </div>
+    <a class="subscribe-button icon-feed" href="https://blog.benchr.de/index.xml">Subscribe</a> </div>
     
 </div>
 <span class="nav-cover"></span>
@@ -218,7 +218,7 @@
           </time>
         
          
-          <span class="post-tag small"><a href="https://blog.bens.lifetags/swift/">#swift</a></span>
+          <span class="post-tag small"><a href="https://blog.benchr.de/tags/swift/">#swift</a></span>
          
         </section>
     </header>
@@ -227,24 +227,24 @@
       <p>A short preamble before the actual topic: yes, I let the blog slide. I am pretty sure that not that many people are reading my posts and those few are not mad reading a bit less but I have to admit that I failed the challenge I started beginning this year. It is not about that it is hard writing blog posts every week (what it is), it is more about writing posts weekly just to have them written and published. I would love to write more posts on the blog but I would like to write them when I have a great topic I would like to write about. So in the future there are no regulary posts on this blog but hopefully some better ones. Now, let&rsquo;s start with this posts topic.</p>
 <p>Before I start with this: I really love Swift! It is the best language in my eyes that is currently available. But I also hate a lot of stuff about the language design that I would like to help getting it fixed.</p>
 <p>One of those things is the way <code>@autoclosure</code> is implemented. But let me first explain what it is and why it is needed. Imagine you have a function that takes a boolean value and a string. If the boolean is false it prints the string to the console, otherwise it does nothing. This function actually exists and is called assert, it also stops the execution of the program.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">assert</span>(<span style="color:#6ab825;font-weight:bold">_</span> condition: <span style="color:#24909d">Bool</span>, <span style="color:#6ab825;font-weight:bold">_</span> message: <span style="color:#24909d">String</span>) {<span style="color:#a61717;background-color:#e3d2d2">…</span>}
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">assert</span>(<span style="color:#6ab825;font-weight:bold">_</span> condition: <span style="color:#24909d">Bool</span>, <span style="color:#6ab825;font-weight:bold">_</span> message: <span style="color:#24909d">String</span>) {<span style="color:#a61717;background-color:#e3d2d2">…</span>}
 </code></pre></div><p>The problem with this definition is, that the message might be heavily computed because we need to have a lot of information if the condition fails. Since Swift is strictly evaluated <em>(every computation is done when the execution pointer reaches the line)</em> this would mean the heavy computation is also done when the condition is true, so it would be useless since the string is not needed.</p>
 <p>A way to fix this is to use a closure that produces the value instead of the value itself:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">assert</span>(<span style="color:#6ab825;font-weight:bold">_</span> condition: <span style="color:#24909d">Bool</span>, <span style="color:#6ab825;font-weight:bold">_</span> message: () -&gt; <span style="color:#24909d">String</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">assert</span>(<span style="color:#6ab825;font-weight:bold">_</span> condition: <span style="color:#24909d">Bool</span>, <span style="color:#6ab825;font-weight:bold">_</span> message: () -&gt; <span style="color:#24909d">String</span>) {
     <span style="color:#6ab825;font-weight:bold">guard</span> !condition <span style="color:#6ab825;font-weight:bold">else</span> { <span style="color:#6ab825;font-weight:bold">return</span> }
     print(message())
 }
 </code></pre></div><p>This would only produce the value when it is needed. Since message is now a function instead of a String, we need now to call the function to get its value.</p>
 <p>On the call side this changes a lot:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift">assert(something &gt; <span style="color:#3677a9">0</span>, { <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#ed9d13">&#34;something is </span><span style="color:#ed9d13">\(</span>something<span style="color:#ed9d13">)</span><span style="color:#ed9d13"> 😱&#34;</span> })
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift">assert(something &gt; <span style="color:#3677a9">0</span>, { <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#ed9d13">&#34;something is </span><span style="color:#ed9d13">\(</span>something<span style="color:#ed9d13">)</span><span style="color:#ed9d13"> 😱&#34;</span> })
 </code></pre></div><p>This is not great and that is where <code>@autoclosure</code> comes into play. It wraps the given value automatically in a closure so that you do not call the function differently even if it is now using lazy evaluation. <em>(lazy evaluation is the name for evaluating an expression only when and if you need the value)</em></p>
 <p>I worked a bit with Scala recently and saw that they have a similar functionality in the language but I like the implementation much better. Here is the same function from above in Scala:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Scala" data-lang="Scala"><span style="color:#6ab825;font-weight:bold">def</span> assert(c<span style="color:#6ab825;font-weight:bold">:</span> <span style="color:#6ab825;font-weight:bold">Boolean</span>, msg<span style="color:#6ab825;font-weight:bold">:</span> =&gt; <span style="color:#447fcf;text-decoration:underline">String</span>)
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Scala" data-lang="Scala"><span style="color:#6ab825;font-weight:bold">def</span> assert(c<span style="color:#6ab825;font-weight:bold">:</span> <span style="color:#6ab825;font-weight:bold">Boolean</span>, msg<span style="color:#6ab825;font-weight:bold">:</span> =&gt; <span style="color:#447fcf;text-decoration:underline">String</span>)
 </code></pre></div><p>A normal closure declaration in Scala is pretty similar:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Scala" data-lang="Scala"><span style="color:#6ab825;font-weight:bold">def</span> function(f<span style="color:#6ab825;font-weight:bold">:</span> <span style="color:#6ab825;font-weight:bold">String</span> =&gt; <span style="color:#447fcf;text-decoration:underline">String</span>)
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Scala" data-lang="Scala"><span style="color:#6ab825;font-weight:bold">def</span> function(f<span style="color:#6ab825;font-weight:bold">:</span> <span style="color:#6ab825;font-weight:bold">String</span> =&gt; <span style="color:#447fcf;text-decoration:underline">String</span>)
 </code></pre></div><p>So in the end they only omit the parameters in the declaration. Parameters are also not possible for @autoclosure because the value needs to be produced without any if it is not written in a closure.</p>
 <p>I really like this syntax and would love to see it in Swift as well! What do you think about it? The proposed solution would be to replace @autoclosure with this:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">assert</span>(<span style="color:#6ab825;font-weight:bold">_</span> c: <span style="color:#24909d">Bool</span>, <span style="color:#6ab825;font-weight:bold">_</span> message: -&gt; <span style="color:#24909d">String</span>)
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Swift" data-lang="Swift"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">assert</span>(<span style="color:#6ab825;font-weight:bold">_</span> c: <span style="color:#24909d">Bool</span>, <span style="color:#6ab825;font-weight:bold">_</span> message: -&gt; <span style="color:#24909d">String</span>)
 </code></pre></div>
     </section>
 
@@ -261,13 +261,13 @@
 
 
 <section class="author">
-  <h4><a href="https://blog.bens.life">Benjamin Herzog</a></h4>
+  <h4><a href="https://blog.benchr.de/">Benjamin Herzog</a></h4>
   
   <p>iOS developer, master degree student in computer science</p>
   
   <div class="author-meta">
     <span class="author-location icon-location">Dresden, Germany</span>
-    <span class="author-link icon-link"><a href="https://bens.life">https://bens.life</a></span>
+    <span class="author-link icon-link"><a href="https://blog.benchr.me">https://blog.benchr.me</a></span>
   </div>
 </section>
 
@@ -276,19 +276,19 @@
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Replacing%20%40autoclosure%20in%20Swift&nbsp;-&nbsp;benchr&amp;url=https%3a%2f%2fblog.bens.life%2fpost%2fautoclosure%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Replacing%20%40autoclosure%20in%20Swift&nbsp;-&nbsp;benchr&amp;url=https%3a%2f%2fblog.benchr.de%2fpost%2fautoclosure%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.bens.life%2fpost%2fautoclosure%2f"
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.benchr.de%2fpost%2fautoclosure%2f"
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.bens.life%2fpost%2fautoclosure%2f&amp;description=Replacing%20%40autoclosure%20in%20Swift"
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.benchr.de%2fpost%2fautoclosure%2f&amp;description=Replacing%20%40autoclosure%20in%20Swift"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fblog.bens.life%2fpost%2fautoclosure%2f"
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fblog.benchr.de%2fpost%2fautoclosure%2f"
      onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
       <span class="hidden">Google+</span>
   </a>
@@ -310,7 +310,7 @@
   <aside class="read-next">
   
   
-      <a class="read-next-story prev" style="background-image: url(/images/typescript.jpg)" href="https://blog.bens.life/post/typescript/">
+      <a class="read-next-story prev" style="background-image: url(/images/typescript.jpg)" href="https://blog.benchr.de/post/typescript/">
           <section class="post">
               <h2>Typescript</h2>
           </section>
@@ -327,9 +327,9 @@
         
     </footer>
     </div>
-    <script type="text/javascript" src="https://blog.bens.life/js/jquery.js"></script>
-    <script type="text/javascript" src="https://blog.bens.life/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://blog.bens.life/js/index.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/jquery.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/index.js"></script>
     
 </body>
 </html>

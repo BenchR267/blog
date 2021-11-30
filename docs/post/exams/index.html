@@ -22,7 +22,7 @@
 
   	<meta property="og:title" content="Exams.. &middot; benchr" />
   	<meta property="og:site_name" content="benchr" />
-  	<meta property="og:url" content="https://blog.bens.life/post/exams/" />
+  	<meta property="og:url" content="https://blog.benchr.de/post/exams/" />
 
     
        <meta property="og:image" content="/images/Exams.jpg"/>
@@ -53,22 +53,22 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="https://blog.bens.life/images/favicon.ico">
-	  <link rel="apple-touch-icon" href="https://blog.bens.life/images/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="https://blog.benchr.de/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://blog.benchr.de/images/apple-touch-icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="https://blog.bens.life/css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="https://blog.bens.life/css/nav.css" />
-
-    
+    <link rel="stylesheet" type="text/css" href="https://blog.benchr.de/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://blog.benchr.de/css/nav.css" />
 
     
 
     
-        <link href="https://blog.bens.life/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
-    
-    <meta name="generator" content="Hugo 0.70.0" />
 
-    <link rel="canonical" href="https://blog.bens.life/post/exams/" />
+    
+        <link href="https://blog.benchr.de/index.xml" rel="alternate" type="application/rss+xml" title="benchr" />
+    
+    <meta name="generator" content="Hugo 0.89.4" />
+
+    <link rel="canonical" href="https://blog.benchr.de/post/exams/" />
 
     
       
@@ -85,7 +85,7 @@
         "@type": "Person",
         "name":  null ,
         
-        "url": "https://bens.life",
+        "url": "https://blog.benchr.me",
         "sameAs": [
             
             
@@ -107,13 +107,13 @@
       "@type": "Language",
       "alternateName": "en"
     },
-    "url": "https://blog.bens.life/post/exams/",
+    "url": "https://blog.benchr.de/post/exams/",
     "datePublished": "2017-01-22T23:00Z",
     "dateModified": "2017-01-22T23:00Z",
     
     "image": {
         "@type": "ImageObject",
-        "url": "https://blog.bens.lifeimages/Exams.jpg",
+        "url": "https://blog.benchr.de/images/Exams.jpg",
         "width": 3000,
         "height": 1445
     },
@@ -122,7 +122,7 @@
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://blog.bens.life/post/exams/"
+        "@id": "https://blog.benchr.de/post/exams/"
     }
 }
     </script>
@@ -153,7 +153,7 @@
         
             <h2>Contact me</h2>
             <li class="nav-opened" role="presentation">
-            	<a href="mailto:mail@bens.life">Mail</a>
+            	<a href="mailto:mail@benchr.de">Mail</a>
             </li>
         
             
@@ -163,24 +163,24 @@
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/index.xml">RSS feed</a>
+            	<a href="https://blog.benchr.de/index.xml">RSS feed</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/imprint/">Imprint</a>
+            	<a href="https://blog.benchr.de/imprint/">Imprint</a>
             </li>
         
             
             <li class="nav-opened" role="presentation">
-            	<a href="https://blog.bens.life/">Blog</a>
+            	<a href="https://blog.benchr.de/">Blog</a>
             </li>
         
         
     </ul>
 
     
-    <a class="subscribe-button icon-feed" href="https://blog.bens.life/index.xml">Subscribe</a> </div>
+    <a class="subscribe-button icon-feed" href="https://blog.benchr.de/index.xml">Subscribe</a> </div>
     
 </div>
 <span class="nav-cover"></span>
@@ -224,13 +224,13 @@
           </time>
         
          
-          <span class="post-tag small"><a href="https://blog.bens.lifetags/exams/">#exams</a></span>
+          <span class="post-tag small"><a href="https://blog.benchr.de/tags/exams/">#exams</a></span>
          
-          <span class="post-tag small"><a href="https://blog.bens.lifetags/university/">#university</a></span>
+          <span class="post-tag small"><a href="https://blog.benchr.de/tags/university/">#university</a></span>
          
-          <span class="post-tag small"><a href="https://blog.bens.lifetags/master/">#master</a></span>
+          <span class="post-tag small"><a href="https://blog.benchr.de/tags/master/">#master</a></span>
          
-          <span class="post-tag small"><a href="https://blog.bens.lifetags/compiler/">#compiler</a></span>
+          <span class="post-tag small"><a href="https://blog.benchr.de/tags/compiler/">#compiler</a></span>
          
         </section>
     </header>
@@ -244,7 +244,7 @@
 <p>For now I want to describe what Xtext does to take the complexity out of the parser to make changes in the language not that complex anymore. Xtext itself is an own programming language which makes it possible to describe how a language is structured. It lets you describe that the condition needs to follow an <em>if</em> statement and that a function needs to start with the <em>fn</em> keyword.</p>
 <p>The framework generates code for parsing and creates an <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a> out of the given code. The abstract syntax tree groups the content of the source code in logical groups for better abstraction which is then necessary for machine code generation or the runtime. So a function name, its parameters and their name are logically grouped together.</p>
 <p>Here is an example content of a very basic xtext file:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Equal:
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Equal:
 	Variable &#39;==&#39; Variable
 ;
 Variable:
@@ -270,13 +270,13 @@ Variable:
 
 
 <section class="author">
-  <h4><a href="https://blog.bens.life">Benjamin Herzog</a></h4>
+  <h4><a href="https://blog.benchr.de/">Benjamin Herzog</a></h4>
   
   <p>iOS developer, master degree student in computer science</p>
   
   <div class="author-meta">
     <span class="author-location icon-location">Dresden, Germany</span>
-    <span class="author-link icon-link"><a href="https://bens.life">https://bens.life</a></span>
+    <span class="author-link icon-link"><a href="https://blog.benchr.me">https://blog.benchr.me</a></span>
   </div>
 </section>
 
@@ -285,19 +285,19 @@ Variable:
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Exams..&nbsp;-&nbsp;benchr&amp;url=https%3a%2f%2fblog.bens.life%2fpost%2fexams%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Exams..&nbsp;-&nbsp;benchr&amp;url=https%3a%2f%2fblog.benchr.de%2fpost%2fexams%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.bens.life%2fpost%2fexams%2f"
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.benchr.de%2fpost%2fexams%2f"
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.bens.life%2fpost%2fexams%2f&amp;description=Exams.."
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.benchr.de%2fpost%2fexams%2f&amp;description=Exams.."
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fblog.bens.life%2fpost%2fexams%2f"
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fblog.benchr.de%2fpost%2fexams%2f"
      onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
       <span class="hidden">Google+</span>
   </a>
@@ -318,7 +318,7 @@ Variable:
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="background-image: url(/images/pop-network-1.jpg)" href="https://blog.bens.life/post/pop-network-1/">
+      <a class="read-next-story" style="background-image: url(/images/pop-network-1.jpg)" href="https://blog.benchr.de/post/pop-network-1/">
           <section class="post">
               <h2>Part 1/3 - Writing a protocol oriented network abstraction in Swift</h2>
               
@@ -326,7 +326,7 @@ Variable:
       </a>
   
   
-      <a class="read-next-story prev" style="background-image: url(/images/Some_Thoughts.jpg)" href="https://blog.bens.life/post/thoughts/">
+      <a class="read-next-story prev" style="background-image: url(/images/Some_Thoughts.jpg)" href="https://blog.benchr.de/post/thoughts/">
           <section class="post">
               <h2>Some Thoughts</h2>
           </section>
@@ -343,9 +343,9 @@ Variable:
         
     </footer>
     </div>
-    <script type="text/javascript" src="https://blog.bens.life/js/jquery.js"></script>
-    <script type="text/javascript" src="https://blog.bens.life/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://blog.bens.life/js/index.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/jquery.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://blog.benchr.de/js/index.js"></script>
     
 </body>
 </html>
